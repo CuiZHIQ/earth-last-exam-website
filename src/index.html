@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Earth Last Exam is an EvolventAI research initiative evaluating frontier agents in Earth science. Explore research tasks and domain environments, contribute a problem, or join our scientific advisory team.">
+<meta name="ele-title" data-en="Earth Last Exam — Research agents in Earth science" data-zh="Earth Last Exam — 地球科学科研 Agent 评测">
+<title>Earth Last Exam — Research agents in Earth science</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/InterVariable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="styles.css">
+<script src="locales.js" defer></script>
+<script src="i18n.js" defer></script>
+<script src="config.js" defer>
+</script>
+<script src="proposal.js" defer>
+</script>
+<script src="community-data.js" defer></script>
+<script src="community.js" defer></script>
+<script src="app.js" defer>
+</script>
+<script src="motion.js" defer></script>
+<meta name="theme-color" content="#fbfcf8">
+<meta name="author" content="EvolventAI">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Earth Last Exam">
+</head>
+<body class="home">
+<a class="skip" href="#main" data-en="Skip to content" data-zh="跳至正文">Skip to content</a>
+<header class="site-header">
+<div class="wrap header-inner">
+<a class="brand" href="index.html">
+<svg viewBox="0 0 64 64" fill="none" aria-hidden="true">
+  <g stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M43.5 12.94A24 24 0 1 0 55.63 29.8"/>
+    <path d="M8.35 30C19 30 20 23 30 23S44 30 55.63 29.8"/>
+    <path d="M9.37 42C22 42 24 34 35 34S47 39 55.47 39"/>
+    <path d="M16.5 52.32C27 52 30 45 40 45C44 45 47 47 50.07 49.8"/>
+  </g>
+  <circle cx="53" cy="14" r="4.5" fill="currentColor"/>
+</svg>
+<span>Earth Last Exam</span>
+</a>
+<nav class="nav" aria-label="Main navigation" data-aria-en="Main navigation" data-aria-zh="主导航">
+<a href="index.html#mission" class="nav-link">
+<span data-en="Our work" data-zh="我们的工作" >Our work</span>
+<span aria-hidden="true">↗</span>
+</a>
+<a href="typhoon.html" class="nav-link">
+<span data-en="The task" data-zh="原创任务" >The task</span>
+<span aria-hidden="true">↗</span>
+</a>
+<a href="benchmark.html" class="nav-link">
+<span data-en="Evaluation" data-zh="评测设计" >Evaluation</span>
+<span aria-hidden="true">↗</span>
+</a>
+<a href="contribute.html" class="nav-cta">
+<span data-en="Join us" data-zh="参与共建" >Join us</span>
+<span aria-hidden="true">↗</span>
+</a>
+</nav>
+<label class="language-switch">
+<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c5 5 5 13 0 18-5-5-5-13 0-18Z"/></svg>
+<span class="sr-only" data-en="Language" data-zh="语言">Language</span>
+<select class="language-select" data-language aria-label="Language" data-aria-en="Language" data-aria-zh="语言">
+<option value="en" lang="en">English</option><option value="zh" lang="zh-CN">简体中文</option><option value="ja" lang="ja">日本語</option><option value="ko" lang="ko">한국어</option><option value="fr" lang="fr">Français</option><option value="es" lang="es">Español</option>
+</select>
+</label>
+</div>
+</header>
+<main id="main">
+<section class="observatory" aria-labelledby="project-title">
+<div class="wrap">
+<div class="hero-masthead">
+<div class="hero-heading" data-enter>
+<p class="hero-kicker" data-en="Earth science · Research agent evaluation" data-zh="地球科学 · 科研 Agent 评测">Earth science · Research agent evaluation</p>
+<h1 id="project-title"><span>Earth</span> <span>Last Exam</span></h1>
+</div>
+<div class="hero-copy" data-enter data-enter-delay="90">
+<p class="hero-purpose" data-en="What research can an agent carry out independently?" data-zh="Agent 能独立完成怎样的研究？">What research can an agent carry out independently?</p>
+<p class="intro" data-en="We work with Earth scientists to design difficult tasks using real data and specialist software. We assess the research decisions an agent makes and whether its findings hold up." data-zh="我们与地球科学研究者共同设计高难度任务，让 Agent 使用真实数据和专业软件开展实验。评测关注它做出的研究判断，以及最终结果是否成立。">We work with Earth scientists to design difficult tasks using real data and specialist software. We assess the research decisions an agent makes and whether its findings hold up.</p>
+<div class="actions">
+<a href="typhoon.html" class="button"><span data-en="Explore a research task" data-zh="了解原创任务">Explore a research task</span><span aria-hidden="true">↗</span></a>
+<a href="contribute.html?route=advisor#advisory-team" class="button secondary"><span data-en="Join as an advisor" data-zh="加入顾问团队">Join as an advisor</span><span aria-hidden="true">↗</span></a>
+</div>
+</div>
+<figure class="hero-earth" data-enter data-enter-delay="160">
+<a href="images/earth-epic.jpg" class="hero-earth-image" target="_blank" rel="noopener noreferrer" aria-label="Open the full-resolution EPIC Earth image" data-aria-en="Open the full-resolution EPIC Earth image" data-aria-zh="打开完整分辨率的 EPIC 地球影像"><img src="images/earth-epic.jpg" width="1041" height="1041" fetchpriority="high" decoding="async" alt="NASA DSCOVR EPIC image of the sunlit Earth on 6 July 2015, with North and Central America visible beneath cloud systems." data-alt-en="NASA DSCOVR EPIC image of the sunlit Earth on 6 July 2015, with North and Central America visible beneath cloud systems." data-alt-zh="NASA DSCOVR EPIC 于 2015 年 7 月 6 日拍摄的受光地球，北美洲和中美洲位于云系下方。"></a>
+<figcaption>
+<span class="hero-observation-label" data-en="The sunlit Earth" data-zh="从太空观测地球">The sunlit Earth</span>
+<a href="https://science.nasa.gov/earth/earth-observatory/an-epic-new-view-of-earth-86257/" target="_blank" rel="noopener noreferrer">NASA / DSCOVR EPIC <span aria-hidden="true">↗</span></a>
+<span class="hero-observation-date" data-en="6 July 2015" data-zh="2015 年 7 月 6 日">6 July 2015</span>
+</figcaption>
+</figure>
+</div>
+</div>
+</section>
+<div class="wrap hero-attribution">
+<p class="initiative-byline"><span data-en="Initiated by" data-zh="发起方">Initiated by</span><a href="https://evolvent.co/" target="_blank" rel="noopener noreferrer" aria-label="EvolventAI company website" data-aria-en="EvolventAI company website" data-aria-zh="EvolventAI 公司网站"><img src="evolvent-wordmark.svg" width="174" height="24" alt="EvolventAI" data-alt-en="EvolventAI" data-alt-zh="EvolventAI"></a></p>
+<a href="#mission" class="text-link"><span data-en="Discover the project" data-zh="走进 Earth Last Exam">Discover the project</span><span aria-hidden="true">↓</span></a>
+</div>
+<section class="wrap manifesto" id="mission">
+<div class="section-label">
+<span class="number">01</span>
+<span data-en="Our work" data-zh="我们的工作" >Our work</span>
+</div>
+<div class="manifesto-layout" data-enter>
+<h2 data-en="Assessing the ability to do research" data-zh="怎样判断 Agent 会做研究">Assessing the ability to do research</h2>
+<div>
+<p data-en="Earth Last Exam asks an agent to take over a research problem with work still to do. It must decide which evidence to use, run the experiments it needs and revise its explanation when the results disagree." data-zh="Earth Last Exam 让 Agent 接手一项尚未完成的研究。它需要判断哪些证据可靠，决定还要做什么实验；结果与预期不符时，也需要重新审视自己的解释。" class="lead">Earth Last Exam asks an agent to take over a research problem with work still to do. It must decide which evidence to use, run the experiments it needs and revise its explanation when the results disagree.</p>
+<p data-en="Earth science is a demanding setting for this work. Observations often leave gaps, and several physical processes can explain the same pattern. A useful result must account for that ambiguity and still work when tested on another event or region." data-zh="地球科学适合检验这种能力。观测常有缺口，同一种现象可能有几种物理解释。研究者需要在这些限制下作出判断，并检验结论换到另一场事件或另一个区域后是否仍然成立。" class="">Earth science is a demanding setting for this work. Observations often leave gaps, and several physical processes can explain the same pattern. A useful result must account for that ambiguity and still work when tested on another event or region.</p>
+<a href="benchmark.html" class="text-link">
+<span data-en="Read our approach" data-zh="了解我们的评测设计" >Read our approach</span>
+<span aria-hidden="true">↗</span>
+</a>
+</div>
+</div>
+<figure class="orbital-observation" data-enter>
+<a href="images/maysak-eye.jpg" class="observation-image" target="_blank" rel="noopener noreferrer" aria-label="Open the full-resolution ISS photograph of Typhoon Maysak" data-aria-en="Open the full-resolution ISS photograph of Typhoon Maysak" data-aria-zh="打开完整分辨率的空间站美莎克台风照片"><img src="images/maysak-eye.jpg" width="1800" height="1197" loading="lazy" decoding="async" alt="An astronaut photograph of Typhoon Maysak with its eye, cloud field and Earth's curved horizon." data-alt-en="An astronaut photograph of Typhoon Maysak with its eye, cloud field and Earth's curved horizon." data-alt-zh="宇航员拍摄的美莎克台风，可见风眼、云系与地球弧形地平线。"></a>
+<figcaption>
+<p class="observation-topic" data-en="Earth from orbit / ISS" data-zh="轨道上的地球 / ISS">Earth from orbit / ISS</p>
+<h3 data-en="The eye of Typhoon Maysak" data-zh="美莎克台风的风眼">The eye of Typhoon Maysak</h3>
+<p class="observation-description" data-en="Photographed from the International Space Station, Maysak’s eye sits within a broad cloud field. Earth’s curved horizon is visible beyond it." data-zh="国际空间站拍摄的美莎克台风。风眼位于大片云系之中，远处可见地球弧形地平线。">Photographed from the International Space Station, Maysak’s eye sits within a broad cloud field. Earth’s curved horizon is visible beyond it.</p>
+<a href="#environments" class="text-link"><span data-en="Explore the environments" data-zh="了解专业环境">Explore the environments</span><span aria-hidden="true">↓</span></a>
+<p class="observation-credit">ESA/NASA / Samantha Cristoforetti<br><span data-en="31 March 2015" data-zh="2015 年 3 月 31 日">31 March 2015</span> · <a href="https://science.nasa.gov/earth/earth-observatory/typhoon-maysak-from-the-space-station-85630/" target="_blank" rel="noopener noreferrer"><span data-en="Observation source ↗" data-zh="观测来源 ↗">Observation source ↗</span></a></p>
+</figcaption>
+</figure>
+</section>
+<section class="workspace-band" id="environments">
+<div class="wrap workspace-layout">
+<div class="workspace-copy" data-enter>
+<div class="section-label">
+<span class="number">02</span>
+<span data-en="The research environment" data-zh="专业研究环境" >The research environment</span>
+</div>
+<h2 data-en="The tools the research needs" data-zh="为每道题准备专业环境" >The tools the research needs</h2>
+<p data-en="A task needs the software and working materials its field relies on. We prepare the data and documentation alongside an existing analysis, so the agent can inspect how it was done and try a different approach." data-zh="每道题都需要相应的领域软件和研究资料。我们将数据、使用文档与已有分析一起交给 Agent，让它能检查原有方法，也能动手尝试新的思路。" class="">A task needs the software and working materials its field relies on. We prepare the data and documentation alongside an existing analysis, so the agent can inspect how it was done and try a different approach.</p>
+</div>
+<div class="workspace-inspector" data-enter>
+<div class="instrument-top">
+<span class="instrument-dot">
+</span>
+<span data-en="Research environments" data-zh="专业研究环境">Research environments</span>
+</div>
+<div class="environment">
+<div class="tabs" role="tablist" aria-label="Scientific environments" data-aria-en="Scientific environments" data-aria-zh="专业研究环境">
+<button class="tab" type="button" id="tab-atmosphere" role="tab" aria-controls="panel-atmosphere" aria-selected="true" tabindex="0">
+<span data-en="Atmosphere" data-zh="大气" >Atmosphere</span>
+</button>
+<button class="tab" type="button" id="tab-ocean" role="tab" aria-controls="panel-ocean" aria-selected="false" tabindex="-1">
+<span data-en="Ocean" data-zh="海洋" >Ocean</span>
+</button>
+<button class="tab" type="button" id="tab-solid" role="tab" aria-controls="panel-solid" aria-selected="false" tabindex="-1">
+<span data-en="Solid Earth" data-zh="固体地球" >Solid Earth</span>
+</button>
+</div>
+<div class="env-panel" id="panel-atmosphere" role="tabpanel" aria-labelledby="tab-atmosphere" >
+<h3 data-en="Forecast fields and storm diagnostics" data-zh="预报场与台风诊断" >Forecast fields and storm diagnostics</h3>
+<p  data-en="Our atmospheric workspace brings together archived forecasts, calibrated satellite observations and tracking diagnostics. WRF/WPS configurations provide the starting point for the model experiments in the full task." data-zh="大气工作区已接入存档预报、定标卫星观测和路径诊断。WRF／WPS 配置为完整任务中的模式实验提供起点。">Our atmospheric workspace brings together archived forecasts, calibrated satellite observations and tracking diagnostics. WRF/WPS configurations provide the starting point for the model experiments in the full task.</p>
+<div class="env-stack">WRF / WPS · GFS / GEFS · NetCDF · MPI</div>
+</div>
+<div class="env-panel" id="panel-ocean" role="tabpanel" aria-labelledby="tab-ocean" hidden>
+<h3 data-en="Ocean models and observations" data-zh="海洋模式与观测资料" >Ocean models and observations</h3>
+<p data-en="An ocean task can pair a model grid and boundary conditions with temperature, salinity and current observations. Transport and conservation diagnostics help determine which processes explain a model’s errors." data-zh="海洋任务可以配备模式网格、边界条件和温盐流观测。Agent 通过输运诊断与守恒分析，判断哪些过程造成了模式与观测之间的偏差。" class="">An ocean task can pair a model grid and boundary conditions with temperature, salinity and current observations. Transport and conservation diagnostics help determine which processes explain a model’s errors.</p>
+<div class="env-stack">MODEL GRIDS · FORCING · OBSERVATIONS · DIAGNOSTICS</div>
+</div>
+<div class="env-panel" id="panel-solid" role="tabpanel" aria-labelledby="tab-solid" hidden>
+<h3 data-en="Geophysical observations and inversion" data-zh="地球物理观测与反演" >Geophysical observations and inversion</h3>
+<p data-en="Waveforms or deformation records come with station metadata and instrument responses. With forward models and an existing inversion, the agent can test which interpretations the observations actually constrain." data-zh="波形或形变资料配套台站信息与仪器响应。结合正演工具和已有反演结果，Agent 需要检验观测能约束哪些解释，哪些仍无法区分。" class="">Waveforms or deformation records come with station metadata and instrument responses. With forward models and an existing inversion, the agent can test which interpretations the observations actually constrain.</p>
+<div class="env-stack">WAVEFORMS · RESPONSE · FORWARD MODEL · INVERSION</div>
+</div>
+</div>
+</div>
+<dl class="resource-boundary">
+<div><dt data-en="Given to the agent" data-zh="提供给 Agent">Given to the agent</dt><dd data-en="Observations, baseline, domain software and manuals." data-zh="观测资料、基线实验、专业软件与手册。">Observations, baseline, domain software and manuals.</dd></div>
+<div><dt data-en="Open to investigation" data-zh="由 Agent 探索">Open to investigation</dt><dd data-en="Code, hypotheses, experiments and reproducible outputs." data-zh="代码、科学假设、实验与可复现产物。">Code, hypotheses, experiments and reproducible outputs.</dd></div>
+<div><dt data-en="Held by the evaluator" data-zh="留在评测端">Held by the evaluator</dt><dd data-en="Independent cases, reference evidence and scientific checks." data-zh="独立个例、参照证据与科学验证。">Independent cases, reference evidence and scientific checks.</dd></div>
+</dl>
+</div>
+</section>
+<section class="wrap task-showcase" id="example">
+<div class="showcase-heading" data-enter>
+<div class="section-label">
+<span class="number">03</span>
+<span data-en="Inside a task" data-zh="走进任务" >Inside a task</span>
+</div>
+<h2 data-en="Investigating errors in typhoon forecasts" data-zh="研究台风预报中的误差">Investigating errors in typhoon forecasts</h2>
+</div>
+<div class="research-preview" data-enter>
+<div class="preview-topline"><span  data-en="Infrared observations" data-zh="红外观测">Infrared observations</span><span>HIMAWARI-9 / AHI B13</span></div>
+<a href="typhoon.html#reference" class="preview-image"><img src="images/typhoon-ahi-b13.png" width="3408" height="1944" loading="lazy" decoding="async" alt="Himawari-9 infrared brightness temperature" data-alt-en="Himawari-9 infrared brightness temperature" data-alt-zh="葵花 9 号红外亮温"></a>
+<div class="preview-caption"><p  data-en="The typhoon task uses Himawari-9 infrared observations alongside GFS and GEFS forecasts. The figures show the tracking experiments completed so far, including cases where two methods locate different storm centers." data-zh="台风任务结合葵花 9 号红外观测与 GFS、GEFS 预报资料。已有实验展示了台风追踪结果，也保留了两种方法选出不同中心的情况，供进一步分析。">The typhoon task uses Himawari-9 infrared observations alongside GFS and GEFS forecasts. The figures show the tracking experiments completed so far, including cases where two methods locate different storm centers.</p><a class="text-link" href="typhoon.html#reference"><span  data-en="View the experiments" data-zh="查看已有实验">View the experiments</span><span aria-hidden="true">↗</span></a></div>
+</div>
+<div class="task-feature">
+<div class="task-copy" data-enter>
+<div class="eyebrow">
+<span data-en="Atmosphere / Typhoon research" data-zh="大气 / 台风研究" >Atmosphere / Typhoon research</span>
+</div>
+<h3 data-en="Why does a typhoon turn?" data-zh="台风为什么会转向？">Why does a typhoon turn?</h3>
+<p data-en="Investigate how steering flow, vortex structure and convection contribute to forecast error. Use controlled experiments to test the explanation, then see whether it predicts another storm’s response. Improved forecasts must be supported by physical evidence." data-zh="分析引导气流、涡旋结构和对流过程各自如何影响预报误差。用受控实验检验解释，再判断它能否预言另一场台风的响应。路径与登陆预报的改进，需要相应的物理证据支持。" class="">Investigate how steering flow, vortex structure and convection contribute to forecast error. Use controlled experiments to test the explanation, then see whether it predicts another storm’s response. Improved forecasts must be supported by physical evidence.</p>
+</div>
+<div class="task-details">
+<dl class="task-spec">
+<div>
+<dt>
+<span data-en="Inputs" data-zh="研究资料" >Inputs</span>
+</dt>
+<dd>GFS / GEFS · Himawari · IBTrACS</dd>
+</div>
+<div>
+<dt>
+<span data-en="Environment" data-zh="专业环境" >Environment</span>
+</dt>
+<dd>WRF / WPS · MPI · NetCDF</dd>
+</div>
+<div>
+<dt>
+<span data-en="Deliverables" data-zh="科学产物" >Deliverables</span>
+</dt>
+<dd>
+<span data-en="Tracks, probabilities &amp; reproducible evidence" data-zh="轨迹、概率与可复现的实验依据" >Tracks, probabilities &amp; reproducible evidence</span>
+</dd>
+</div>
+</dl>
+<a href="typhoon.html" class="text-link">
+<span data-en="Explore the full task" data-zh="阅读完整任务" >Explore the full task</span>
+<span aria-hidden="true">↗</span>
+</a>
+</div>
+</div>
+</section>
+<section class="wrap research-fields" id="fields">
+<div class="section-label">
+<span class="number">04</span>
+<span data-en="Across Earth science" data-zh="覆盖地球科学" >Across Earth science</span>
+</div>
+<div class="field-heading" data-enter>
+<h2 data-en="Research fields" data-zh="研究方向">Research fields</h2>
+<p data-en="We welcome questions from across Earth science, including work that spans several fields. These topics are a starting point; contributors help decide which problems to pursue." data-zh="我们面向地球科学各方向征集问题，也欢迎交叉学科研究。下面列出一些方向，具体选题由参与研究者共同提出。" class="">We welcome questions from across Earth science, including work that spans several fields. These topics are a starting point; contributors help decide which problems to pursue.</p>
+</div>
+<div class="topic-list">
+<span data-en="Geology" data-zh="地质" >Geology</span>
+<span data-en="Geochemistry" data-zh="地球化学" >Geochemistry</span>
+<span data-en="Geophysics" data-zh="地球物理" >Geophysics</span>
+<span data-en="Atmosphere" data-zh="大气" >Atmosphere</span>
+<span data-en="Climate" data-zh="气候" >Climate</span>
+<span data-en="Ocean" data-zh="海洋" >Ocean</span>
+<span data-en="Hydrology" data-zh="水文" >Hydrology</span>
+<span data-en="Cryosphere" data-zh="冰冻圈" >Cryosphere</span>
+<span data-en="Surface processes" data-zh="地表过程" >Surface processes</span>
+<span data-en="Remote sensing" data-zh="遥感" >Remote sensing</span>
+<span data-en="Geodesy" data-zh="大地测量" >Geodesy</span>
+<span data-en="Ecology" data-zh="生态" >Ecology</span>
+<span data-en="Biogeochemistry" data-zh="生物地球化学" >Biogeochemistry</span>
+<span data-en="Environment" data-zh="环境" >Environment</span>
+<span data-en="Subsurface systems" data-zh="地下系统" >Subsurface systems</span>
+<span data-en="Planetary science" data-zh="行星科学" >Planetary science</span>
+</div>
+<div class="observation-atlas" aria-label="Earth observation images" data-aria-en="Earth observation images" data-aria-zh="地球观测影像">
+<figure class="observation-card" data-enter>
+<div class="observation-topic" data-en="Hydrology · Surface processes" data-zh="水文 · 地表过程">Hydrology · Surface processes</div>
+<a href="images/lena-delta.jpg" class="observation-image" target="_blank" rel="noopener noreferrer" aria-label="Open image: Landsat 9 observation of the Lena River Delta: branching channels and lakes meet coastal sea ice and dark water." data-aria-en="Open image: Landsat 9 observation of the Lena River Delta: branching channels and lakes meet coastal sea ice and dark water." data-aria-zh="打开影像：Landsat 9 观测的勒拿河三角洲，分汊河道与湖泊连接近海浮冰及深色水面。"><img src="images/lena-delta.jpg" width="1200" height="1225" loading="lazy" decoding="async" alt="Landsat 9 observation of the Lena River Delta: branching channels and lakes meet coastal sea ice and dark water." data-alt-en="Landsat 9 observation of the Lena River Delta: branching channels and lakes meet coastal sea ice and dark water." data-alt-zh="Landsat 9 观测的勒拿河三角洲，分汊河道与湖泊连接近海浮冰及深色水面。"></a>
+<figcaption>
+<h3 data-en="Lena River Delta" data-zh="勒拿河三角洲">Lena River Delta</h3>
+<p class="observation-meta" data-en="Landsat 9 / OLI-2 · 17 June 2022" data-zh="Landsat 9 / OLI-2 · 2022 年 6 月 17 日">Landsat 9 / OLI-2 · 17 June 2022</p>
+<p class="observation-description" data-en="River channels, permafrost lakes and coastal sea ice in one observation." data-zh="河道、冻土湖泊与近岸海冰，出现在同一幅观测中。">River channels, permafrost lakes and coastal sea ice in one observation.</p>
+<p class="observation-credit">NASA Earth Observatory / Joshua Stevens · USGS<br><a href="https://science.nasa.gov/earth/earth-observatory/lena-river-sedimentation-150076/" target="_blank" rel="noopener noreferrer"><span data-en="Image source" data-zh="影像来源">Image source</span> <span aria-hidden="true">↗</span></a></p>
+</figcaption>
+</figure>
+<figure class="observation-card" data-enter>
+<div class="observation-topic" data-en="Ocean · Biogeochemistry" data-zh="海洋 · 生物地球化学">Ocean · Biogeochemistry</div>
+<a href="images/barents-bloom.jpg" class="observation-image" target="_blank" rel="noopener noreferrer" aria-label="Open image: Terra MODIS image showing turquoise phytoplankton bloom patterns between clouds in the Barents Sea." data-aria-en="Open image: Terra MODIS image showing turquoise phytoplankton bloom patterns between clouds in the Barents Sea." data-aria-zh="打开影像：Terra MODIS 拍摄的巴伦支海，云层之间可见蓝绿色浮游植物水华。"><img src="images/barents-bloom.jpg" width="1600" height="1066" loading="lazy" decoding="async" alt="Terra MODIS image showing turquoise phytoplankton bloom patterns between clouds in the Barents Sea." data-alt-en="Terra MODIS image showing turquoise phytoplankton bloom patterns between clouds in the Barents Sea." data-alt-zh="Terra MODIS 拍摄的巴伦支海，云层之间可见蓝绿色浮游植物水华。"></a>
+<figcaption>
+<h3 data-en="A bloom in the Barents Sea" data-zh="巴伦支海的藻华">A bloom in the Barents Sea</h3>
+<p class="observation-meta" data-en="Terra / MODIS · 3 August 2023" data-zh="Terra / MODIS · 2023 年 8 月 3 日">Terra / MODIS · 3 August 2023</p>
+<p class="observation-description" data-en="A break in the clouds reveals large-scale patterns in ocean color." data-zh="云隙之间，海洋水色的空间分布清晰可见。">A break in the clouds reveals large-scale patterns in ocean color.</p>
+<p class="observation-credit">NASA Earth Observatory / Michala Garrison<br><a href="https://science.nasa.gov/earth/earth-observatory/a-bloom-in-a-changing-barents-sea-151667/" target="_blank" rel="noopener noreferrer"><span data-en="Image source" data-zh="影像来源">Image source</span> <span aria-hidden="true">↗</span></a></p>
+</figcaption>
+</figure>
+<figure class="observation-card" data-enter>
+<div class="observation-topic" data-en="Geology · Remote sensing" data-zh="地质 · 遥感">Geology · Remote sensing</div>
+<a href="images/zagros-folds.jpg" class="observation-image" target="_blank" rel="noopener noreferrer" aria-label="Open image: Astronaut photograph of parallel folded ridges, valleys and salt domes in the Zagros Mountains beside the Persian Gulf." data-aria-en="Open image: Astronaut photograph of parallel folded ridges, valleys and salt domes in the Zagros Mountains beside the Persian Gulf." data-aria-zh="打开影像：宇航员拍摄的波斯湾附近扎格罗斯山脉，可见平行褶皱山脊、山谷与盐丘。"><img src="images/zagros-folds.jpg" width="1600" height="1066" loading="lazy" decoding="async" alt="Astronaut photograph of parallel folded ridges, valleys and salt domes in the Zagros Mountains beside the Persian Gulf." data-alt-en="Astronaut photograph of parallel folded ridges, valleys and salt domes in the Zagros Mountains beside the Persian Gulf." data-alt-zh="宇航员拍摄的波斯湾附近扎格罗斯山脉，可见平行褶皱山脊、山谷与盐丘。"></a>
+<figcaption>
+<h3 data-en="Ridges of the Zagros Mountains" data-zh="扎格罗斯山脉的褶皱">Ridges of the Zagros Mountains</h3>
+<p class="observation-meta" data-en="ISS / Nikon D5 · 7 February 2022" data-zh="ISS / Nikon D5 · 2022 年 2 月 7 日">ISS / Nikon D5 · 7 February 2022</p>
+<p class="observation-description" data-en="Folded ridges and intervening valleys record the structure of the terrain." data-zh="延伸的山脊与谷地，显露出地层褶皱的形态。">Folded ridges and intervening valleys record the structure of the terrain.</p>
+<p class="observation-credit">NASA / ISS Crew Earth Observations · JSC<br><a href="https://science.nasa.gov/earth/earth-observatory/ridges-and-valleys-of-the-zagros-mountains-150811/" target="_blank" rel="noopener noreferrer"><span data-en="Image source" data-zh="影像来源">Image source</span> <span aria-hidden="true">↗</span></a></p>
+</figcaption>
+</figure>
+</div>
+</section>
+<section class="evidence-band" id="evaluation">
+<div class="wrap evidence-layout" data-enter>
+<div>
+<div class="section-label">
+<span class="number">05</span>
+<span data-en="What success means" data-zh="如何判定成功" >What success means</span>
+</div>
+<h2 data-en="What the evaluation measures" data-zh="我们怎样评价研究结果">What the evaluation measures</h2>
+<p data-en="Scores reflect progress on the research question. We examine the results and the experiments supporting them, then check whether the method still works on data it has not seen." data-zh="评分对应题目要求的研究进展。我们检查实验是否支持结论，也检验方法用到新的资料后是否仍然有效。" class="">Scores reflect progress on the research question. We examine the results and the experiments supporting them, then check whether the method still works on data it has not seen.</p>
+<a href="benchmark.html#rubric" class="hero-link">
+<span data-en="See the evaluation protocol" data-zh="查看完整评测规则" >See the evaluation protocol</span>
+<span aria-hidden="true">↗</span>
+</a>
+</div>
+<ol class="evidence-list">
+<li>
+<h3 data-en="Results on new cases" data-zh="新情形下的表现" >Results on new cases</h3>
+<p data-en="Apply the method to new events or regions and compare it with the established baselines." data-zh="把方法用于新的事件或区域，与已有方法比较改进幅度。" class="">Apply the method to new events or regions and compare it with the established baselines.</p>
+</li>
+<li>
+<h3 data-en="A physical explanation" data-zh="有物理依据的解释" >A physical explanation</h3>
+<p data-en="Connect the result to physical processes and quantify what remains uncertain." data-zh="把结果与物理过程联系起来，量化仍然存在的不确定性。" class="">Connect the result to physical processes and quantify what remains uncertain.</p>
+</li>
+<li>
+<h3 data-en="Experiments that distinguish explanations" data-zh="能够区分解释的实验" >Experiments that distinguish explanations</h3>
+<p data-en="Use matched controls and repeat experiments to establish why a method works." data-zh="通过配对对照和重复实验，说明一种方法为什么有效。" class="">Use matched controls and repeat experiments to establish why a method works.</p>
+</li>
+</ol>
+</div>
+</section>
+<section class="wrap community-section" id="advisors">
+<div class="section-label">
+<span class="number">06</span>
+<span data-en="Build it with us" data-zh="一起建设" >Build it with us</span>
+</div>
+<div class="community-heading" data-enter>
+<h2 data-en="Take part in Earth Last Exam" data-zh="参与 Earth Last Exam" >Take part in Earth Last Exam</h2>
+<p data-en="EvolventAI is inviting researchers to help select tasks and review their scientific requirements. Research engineers can work with them to prepare the software environments and scoring code." data-zh="EvolventAI 正在邀请研究者共同选题、审阅科学要求，也欢迎科研工程师参与环境搭建和评分代码的开发。">EvolventAI is inviting researchers to help select tasks and review their scientific requirements. Research engineers can work with them to prepare the software environments and scoring code.</p>
+</div>
+<div class="community-directory" aria-labelledby="community-heading">
+<div class="directory-heading"><div>
+<h3 class="directory-title" id="community-heading" data-en="Participating institutions and researchers" data-zh="参与机构与研究者">Participating institutions and researchers</h3><p class="directory-intro" data-en="Universities &amp; institutions · Advisors · Contributors" data-zh="高校与研究机构 · 学术顾问 · 共建者">Universities &amp; institutions · Advisors · Contributors</p></div><div class="directory-controls">
+<button id="community-previous" class="scroll-control" type="button" aria-label="Previous entries" data-aria-en="Previous entries" data-aria-zh="上一组" aria-controls="community-rail" hidden><span aria-hidden="true">←</span></button>
+<button id="community-next" class="scroll-control" type="button" aria-label="Next entries" data-aria-en="Next entries" data-aria-zh="下一组" aria-controls="community-rail" hidden><span aria-hidden="true">→</span></button>
+</div></div>
+<div class="community-rail" id="community-rail" role="region" tabindex="0" aria-label="Universities, advisors and contributors" data-aria-en="Universities, advisors and contributors" data-aria-zh="高校、学术顾问与共建者">
+<article class="community-card community-open"><h3 data-en="Universities &amp; institutions" data-zh="高校与研究机构">Universities &amp; institutions</h3><p class="community-detail" data-en="Participating institutions will be announced as collaborations are confirmed." data-zh="参与机构将在合作确认后陆续公布。">Participating institutions will be announced as collaborations are confirmed.</p><a class="text-link" href="contribute.html?route=task#proposal"><span data-en="Join us ↗" data-zh="参与共建 ↗">Join us ↗</span></a></article><article class="community-card community-open"><h3 data-en="Advisors" data-zh="学术顾问">Advisors</h3><p class="community-detail" data-en="Help shape research questions and scientific standards." data-zh="共同判断研究选题与科学标准。">Help shape research questions and scientific standards.</p><a class="text-link" href="contribute.html?route=advisor#proposal"><span data-en="Join us ↗" data-zh="参与共建 ↗">Join us ↗</span></a></article><article class="community-card community-open"><h3 data-en="Contributors" data-zh="共建者">Contributors</h3><p class="community-detail" data-en="Develop tasks, prepare environments and review experiments." data-zh="参与出题、环境准备与实验评审。">Develop tasks, prepare environments and review experiments.</p><a class="text-link" href="contribute.html?route=task#proposal"><span data-en="Join us ↗" data-zh="参与共建 ↗">Join us ↗</span></a></article></div><div class="directory-foot"><p data-en="The roster will be published as participants confirm their involvement." data-zh="名单将在参与者确认后陆续公布。">The roster will be published as participants confirm their involvement.</p><span id="community-status" aria-live="polite" aria-atomic="true"></span></div></div>
+<div class="collaboration-layout">
+<article class="advisor-feature" data-enter>
+<div class="advisor-label"><span class="advisor-signal" aria-hidden="true"></span><span data-en="Scientific advisory team" data-zh="学术顾问团队">Scientific advisory team</span></div>
+<h3 data-en="Join the scientific advisory team" data-zh="加入学术顾问团队">Join the scientific advisory team</h3>
+<p data-en="We invite domain experts to join the advisory team. Advisors help choose research questions and review what a convincing result would require. The role can be shaped around your expertise and availability." data-zh="我们邀请领域专家加入顾问团队，帮助选择研究问题，审阅题目和评分标准。具体参与内容可根据您的研究专长与时间安排。">We invite domain experts to join the advisory team. Advisors help choose research questions and review what a convincing result would require. The role can be shaped around your expertise and availability.</p>
+<ul class="advisor-topics">
+<li data-en="Important and difficult research questions" data-zh="重要且困难的研究问题">Important and difficult research questions</li>
+<li data-en="Scientific judgment and task review" data-zh="研究判断与题目评审">Scientific judgment and task review</li>
+<li data-en="Evidence and acceptance criteria" data-zh="证据要求与验收标准">Evidence and acceptance criteria</li>
+</ul>
+<a href="contribute.html?route=advisor#advisory-team" class="button"><span data-en="Join the advisory team" data-zh="加入学术顾问团队">Join the advisory team</span><span aria-hidden="true">↗</span></a>
+</article>
+<div class="contribution-paths">
+<article class="contribution-path" data-enter>
+<span class="join-index">01 / <span data-en="Research contributions" data-zh="研究供题">Research contributions</span></span>
+<h3 data-en="Bring a research task" data-zh="提供研究任务" >Bring a research task</h3>
+<p data-en="Recommend a question from your work. A few sentences or a paper link are enough to start." data-zh="推荐工作中值得研究的问题。先写几句话，或附上一篇论文，就可以开始。" class="">Recommend a question from your work. A few sentences or a paper link are enough to start.</p>
+<a href="contribute.html?route=idea#proposal" class="text-link">
+<span data-en="Propose a task" data-zh="提出题目" >Propose a task</span>
+<span aria-hidden="true">↗</span>
+</a>
+</article>
+<article class="contribution-path" data-enter>
+<span class="join-index">02 / <span data-en="Research engineering" data-zh="科研工程">Research engineering</span></span>
+<h3 data-en="Build the environment" data-zh="共建专业环境" >Build the environment</h3>
+<p data-en="Help researchers turn existing code and data into a runnable task with a reproducible reference experiment." data-zh="协助研究者整理已有代码与数据，搭建可运行的任务环境，并复现参考实验。" class="">Help researchers turn existing code and data into a runnable task with a reproducible reference experiment.</p>
+<a href="contribute.html?route=task#proposal" class="text-link">
+<span data-en="Join the collaboration" data-zh="参与工程共创" >Join the collaboration</span>
+<span aria-hidden="true">↗</span>
+</a>
+</article>
+</div>
+</div>
+<div class="closing-line">
+<span>EVOLVENTAI / EARTH LAST EXAM</span>
+<a href="contribute.html" class="text-link">
+<span data-en="Let’s build Earth Last Exam" data-zh="一起建设 Earth Last Exam" >Let’s build Earth Last Exam</span>
+<span aria-hidden="true">↗</span>
+</a>
+</div>
+</section>
+</main>
+<footer class="site-footer">
+<div class="wrap">
+<div class="footer-main">
+<div>
+<a class="brand" href="index.html">
+<svg viewBox="0 0 64 64" fill="none" aria-hidden="true">
+  <g stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M43.5 12.94A24 24 0 1 0 55.63 29.8"/>
+    <path d="M8.35 30C19 30 20 23 30 23S44 30 55.63 29.8"/>
+    <path d="M9.37 42C22 42 24 34 35 34S47 39 55.47 39"/>
+    <path d="M16.5 52.32C27 52 30 45 40 45C44 45 47 47 50.07 49.8"/>
+  </g>
+  <circle cx="53" cy="14" r="4.5" fill="currentColor"/>
+</svg>
+<span>Earth Last Exam</span>
+</a>
+<p data-en="Earth Last Exam · An EvolventAI research project" data-zh="Earth Last Exam · 由 EvolventAI 发起">Earth Last Exam · An EvolventAI research project</p>
+</div>
+<div class="footer-links">
+<a href="benchmark.html#task-files" class="text-link"><span data-en="Task file list" data-zh="任务文件清单">Task file list</span><span aria-hidden="true">↗</span></a>
+<a href="benchmark.html" class="text-link">
+<span data-en="How we evaluate" data-zh="如何评测" >How we evaluate</span>
+<span aria-hidden="true">↗</span>
+</a>
+<a href="typhoon.html" class="text-link">
+<span data-en="Explore the example" data-zh="了解原创例题" >Explore the example</span>
+<span aria-hidden="true">↗</span>
+</a>
+<a href="contribute.html?route=advisor#proposal" class="text-link">
+<span data-en="Become an advisor" data-zh="担任学术顾问" >Become an advisor</span>
+<span aria-hidden="true">↗</span>
+</a>
+<a href="contribute.html" class="text-link">
+<span data-en="Contribute a task" data-zh="提供研究任务" >Contribute a task</span>
+<span aria-hidden="true">↗</span>
+</a>
+<a data-github-link hidden target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+</div>
+</div>
+<div class="footer-bottom">
+<a href="https://evolvent.co/" class="footer-parent" target="_blank" rel="noopener noreferrer" aria-label="EvolventAI company website" data-aria-en="EvolventAI company website" data-aria-zh="EvolventAI 公司网站"><img class="evolvent-symbol" src="evolvent-symbol.svg" width="22" height="48" alt="" aria-hidden="true"><img class="evolvent-wordmark" src="evolvent-wordmark.svg" width="174" height="24" alt="EvolventAI" data-alt-en="EvolventAI" data-alt-zh="EvolventAI"><span aria-hidden="true">↗</span></a>
+<span data-en="An invitation to build the benchmark together." data-zh="邀请研究者一起定义科研 Agent 的能力标准。" >An invitation to build the benchmark together.</span>
+</div>
+</div>
+</footer>
+</body>
+</html>

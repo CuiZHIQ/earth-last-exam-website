@@ -1,0 +1,11 @@
+node_modules/
+*.log
+.DS_Store
+dist/
+outreach/
+research/
+docs/
+.env
+.env.*
+*.zip
+src/downloads/

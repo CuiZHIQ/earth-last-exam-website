@@ -1,0 +1,35 @@
+name: Advisory or engineering interest
+description: Help guide research directions, review tasks or build professional environments.
+title: '[Collaboration] '
+body:
+  - type: markdown
+    attributes:
+      value: 'Thank you for considering Earth Last Exam. Share your interests and a public profile if useful. We can continue this conversation through GitHub.'
+  - type: dropdown
+    id: role
+    attributes:
+      label: How would you like to contribute?
+      options:
+        - Scientific advisor
+        - Domain reviewer
+        - Environment or evaluation engineer
+        - Discuss a collaboration
+    validations:
+      required: true
+  - type: input
+    id: field
+    attributes:
+      label: Research area or engineering expertise
+    validations:
+      required: true
+  - type: textarea
+    id: interest
+    attributes:
+      label: Questions you would like the benchmark to address
+      description: Which research problems deserve attention? What would count as a meaningful result?
+    validations:
+      required: true
+  - type: input
+    id: profile
+    attributes:
+      label: Public profile or representative work (optional)

@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Earth Last Exam is an EvolventAI research initiative evaluating frontier agents in Earth science. Explore research tasks and domain environments, contribute a problem, or join our scientific advisory team.">
+<meta name="ele-title" data-en="Benchmark design — Earth Last Exam" data-zh="评测设计 — Earth Last Exam">
+<title>Benchmark design — Earth Last Exam</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/InterVariable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="styles.css">
+<script src="locales.js" defer></script>
+<script src="i18n.js" defer></script>
+<script src="config.js" defer>
+</script>
+<script src="proposal.js" defer>
+</script>
+<script src="app.js" defer>
+</script>
+<script src="motion.js" defer></script>
+<meta name="theme-color" content="#fbfcf8">
+<meta name="author" content="EvolventAI">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Earth Last Exam">
+</head>
+<body class="inner-page">
+<a class="skip" href="#main" data-en="Skip to content" data-zh="跳至正文">Skip to content</a>
+<noscript>
+<div class="no-js">English content is available below. Enable JavaScript for Chinese and proposal export. / 中文切换和提案导出需要 JavaScript。</div>
+</noscript>
+<header class="site-header">
+<div class="wrap header-inner">
+<a class="brand" href="index.html">
+<svg viewBox="0 0 64 64" fill="none" aria-hidden="true">
+  <g stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M43.5 12.94A24 24 0 1 0 55.63 29.8"/>
+    <path d="M8.35 30C19 30 20 23 30 23S44 30 55.63 29.8"/>
+    <path d="M9.37 42C22 42 24 34 35 34S47 39 55.47 39"/>
+    <path d="M16.5 52.32C27 52 30 45 40 45C44 45 47 47 50.07 49.8"/>
+  </g>
+  <circle cx="53" cy="14" r="4.5" fill="currentColor"/>
+</svg>
+<span>Earth Last Exam</span>
+</a>
+<nav class="nav" aria-label="Main navigation" data-aria-en="Main navigation" data-aria-zh="主导航">
+<a href="index.html#mission" class="nav-link">
+<span data-en="Our work" data-zh="我们的工作" >Our work</span>
+<span aria-hidden="true">↗</span>
+</a>
+<a href="typhoon.html" class="nav-link">
+<span data-en="The task" data-zh="原创任务" >The task</span>
+<span aria-hidden="true">↗</span>
+</a>
+<a href="benchmark.html" class="nav-link" aria-current="page">
+<span data-en="Evaluation" data-zh="评测设计" >Evaluation</span>
+<span aria-hidden="true">↗</span>
+</a>
+<a href="contribute.html" class="nav-cta">
+<span data-en="Join us" data-zh="参与共建" >Join us</span>
+<span aria-hidden="true">↗</span>
+</a>
+</nav>
+<label class="language-switch">
+<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c5 5 5 13 0 18-5-5-5-13 0-18Z"/></svg>
+<span class="sr-only" data-en="Language" data-zh="语言">Language</span>
+<select class="language-select" data-language aria-label="Language" data-aria-en="Language" data-aria-zh="语言">
+<option value="en" lang="en">English</option><option value="zh" lang="zh-CN">简体中文</option><option value="ja" lang="ja">日本語</option><option value="ko" lang="ko">한국어</option><option value="fr" lang="fr">Français</option><option value="es" lang="es">Español</option>
+</select>
+</label>
+</div>
+</header>
+<main id="main" class="wrap">
+<header class="article-head" data-enter>
+<div class="eyebrow">
+<i class="dot">
+</i>
+<span data-en="Benchmark design" data-zh="评测设计" >Benchmark design</span>
+</div>
+<h1 data-en="How we evaluate research agents" data-zh="科研 Agent 的评测设计" >How we evaluate research agents</h1>
+<p data-en="Task design, scientific environments and the criteria used to judge the results." data-zh="任务如何设计，环境如何准备，研究结果如何评分。" >Task design, scientific environments and the criteria used to judge the results.</p>
+</header>
+<div class="article-layout">
+<aside class="toc" aria-label="On this page" data-aria-en="On this page" data-aria-zh="本页目录">
+<a href="#question">
+<span data-en="The research question" data-zh="研究目标" >The research question</span>
+</a>
+<a href="#environments">
+<span data-en="Domain environments" data-zh="专业环境" >Domain environments</span>
+</a>
+<a href="#task-package">
+<span data-en="Task package" data-zh="任务结构" >Task package</span>
+</a>
+<a href="#rubric">
+<span data-en="Rubric" data-zh="评分规则" >Rubric</span>
+</a>
+<a href="#trials">
+<span data-en="Evaluation" data-zh="测试设置" >Evaluation</span>
+</a>
+<a href="#community">
+<span data-en="Collaboration" data-zh="共同建设" >Collaboration</span>
+</a>
+
+</aside>
+<article class="article">
+<section id="question">
+<h2 data-en="What does it mean to do research?" data-zh="什么才算完成了研究？" >What does it mean to do research?</h2>
+<p data-en="Earth Last Exam studies how far frontier agents can independently advance Earth science research. We invite tasks drawn from papers and active research: the agent takes over data, models and an existing analysis, chooses what to investigate, and develops a result supported by experiments." data-zh="Earth Last Exam 研究前沿 Agent 能在多大程度上独立推进地球科学研究。我们征集源于论文和实际研究过程的任务，让 Agent 接手数据、模型与已有分析，判断下一步该做什么，并通过实验得到有依据的结果。" >Earth Last Exam studies how far frontier agents can independently advance Earth science research. We invite tasks drawn from papers and active research: the agent takes over data, models and an existing analysis, chooses what to investigate, and develops a result supported by experiments.</p>
+<p data-en="Earth science brings observation, physical models and computation into the same workspace. Measurements have gaps and uncertainty; the same process looks different across scales. A convincing analysis has to connect those pieces and explain where its conclusions hold." data-zh="地球科学把观测、物理模型与计算放在同一个工作空间中。资料存在缺测和不确定性，同一过程在不同尺度下呈现不同面貌。可信的分析需要把这些环节连起来，也需要说明结论在哪些条件下成立。" >Earth science brings observation, physical models and computation into the same workspace. Measurements have gaps and uncertainty; the same process looks different across scales. A convincing analysis has to connect those pieces and explain where its conclusions hold.</p>
+<figure class="observation-feature glacier-observation">
+<a href="images/elephant-foot-glacier.jpg" class="observation-image" target="_blank" rel="noopener noreferrer" aria-label="Open image: Landsat 8 image of the fan-shaped Elephant Foot Glacier in northeastern Greenland, surrounded by snow, exposed rock and mountain ridges." data-aria-en="Open image: Landsat 8 image of the fan-shaped Elephant Foot Glacier in northeastern Greenland, surrounded by snow, exposed rock and mountain ridges." data-aria-zh="打开影像：Landsat 8 拍摄的格陵兰东北部扇形象脚冰川，周围为积雪、裸露岩石与山脊。"><img src="images/elephant-foot-glacier.jpg" width="1400" height="1400" loading="lazy" decoding="async" alt="Landsat 8 image of the fan-shaped Elephant Foot Glacier in northeastern Greenland, surrounded by snow, exposed rock and mountain ridges." data-alt-en="Landsat 8 image of the fan-shaped Elephant Foot Glacier in northeastern Greenland, surrounded by snow, exposed rock and mountain ridges." data-alt-zh="Landsat 8 拍摄的格陵兰东北部扇形象脚冰川，周围为积雪、裸露岩石与山脊。"></a>
+<figcaption>
+<div class="observation-topic" data-en="Cryosphere · Surface processes" data-zh="冰冻圈 · 地表过程">Cryosphere · Surface processes</div>
+<h3 data-en="Ice flow meets terrain" data-zh="冰流与地形">Ice flow meets terrain</h3>
+<p class="observation-description" data-en="Elephant Foot Glacier, Greenland" data-zh="格陵兰象足冰川">Elephant Foot Glacier, Greenland</p>
+<p class="observation-meta" data-en="Landsat 8 / OLI · 21 June 2014" data-zh="Landsat 8 / OLI · 2014 年 6 月 21 日">Landsat 8 / OLI · 21 June 2014</p>
+<p class="observation-description" data-en="An image records the glacier’s shape. Investigating the processes behind it also calls for elevation data, boundary conditions and a physical model." data-zh="影像记录冰川的形态。研究它背后的过程，还需要高程资料、边界条件和物理模型。">An image records the glacier’s shape. Investigating the processes behind it also calls for elevation data, boundary conditions and a physical model.</p>
+<p class="observation-credit">NASA Earth Observatory / Jesse Allen · USGS<br><a href="https://science.nasa.gov/earth/earth-observatory/elephant-foot-glacier-85303/" target="_blank" rel="noopener noreferrer"><span data-en="Image source" data-zh="影像来源">Image source</span> <span aria-hidden="true">↗</span></a></p>
+</figcaption>
+</figure>
+<div class="research-standard" data-enter>
+<h3 data-en="The kind of research we want to measure" data-zh="我们希望评测怎样的研究">The kind of research we want to measure</h3>
+<dl class="standard-grid">
+<div><dt data-en="A question worth resolving" data-zh="值得解决的问题">A question worth resolving</dt><dd data-en="A task comes from a real paper or research workflow. Its author explains what finding or improvement would move the work forward." data-zh="题目来自真实论文或研究工作。供题者说明，得到什么发现或改进，能让这项研究继续向前。">A task comes from a real paper or research workflow. Its author explains what finding or improvement would move the work forward.</dd></div>
+<div><dt data-en="Judgment at the difficult steps" data-zh="关键环节需要专业判断">Judgment at the difficult steps</dt><dd data-en="Several explanations or methods may be plausible. The agent chooses a useful comparison, interprets the result and decides what to try next." data-zh="几种解释或方法都可能成立。Agent 需要选出有意义的对照，解释实验结果，再决定下一步如何推进。">Several explanations or methods may be plausible. The agent chooses a useful comparison, interprets the result and decides what to try next.</dd></div>
+<div><dt data-en="Sustained experimental work" data-zh="能够持续开展实验">Sustained experimental work</dt><dd data-en="The workspace supports hours of computation and repeated experiments, with domain software, substantial data and an existing workflow to build on." data-zh="专业软件、完整资料与已有工作流共同支撑数小时计算和多轮实验，Agent 可以在前一轮结果的基础上继续研究。">The workspace supports hours of computation and repeated experiments, with domain software, substantial data and an existing workflow to build on.</dd></div>
+<div><dt data-en="A result others can use" data-zh="具有实际价值的结果">A result others can use</dt><dd data-en="A result may be a better method, an explanation supported by experiments or a counterexample that changes the interpretation. Each task defines the evidence needed." data-zh="结果可以是更有效的方法、有实验支持的解释，也可以是改变原有判断的反例。每道题明确什么证据足以支持相应结论。">A result may be a better method, an explanation supported by experiments or a counterexample that changes the interpretation. Each task defines the evidence needed.</dd></div>
+</dl>
+<p data-en="Task development combines an expert reference experiment with trials by frontier agents. Review focuses on the research decisions that make the task difficult, and whether the result would matter to a scientist working in that field." data-zh="制题时，将专家参考实验与前沿 Agent 的试跑结合起来，具体判断难点出在哪些研究决策上，以及得到的结果对本领域研究者有什么价值。">Task development combines an expert reference experiment with trials by frontier agents. Review focuses on the research decisions that make the task difficult, and whether the result would matter to a scientist working in that field.</p>
+</div>
+</section>
+<section id="environments">
+<h2 data-en="Preparing the research environment" data-zh="准备研究环境" >Preparing the research environment</h2>
+<p data-en="The agent receives the data and software a researcher would use, along with an analysis it can build on. It can inspect intermediate results, modify the code and run further experiments. The examples below show how this differs across fields." data-zh="Agent 接手研究者实际使用的数据、软件和已有分析，可以检查中间结果、修改代码并开展后续实验。不同领域的环境有各自的要求，下面给出几个例子。" >The agent receives the data and software a researcher would use, along with an analysis it can build on. It can inspect intermediate results, modify the code and run further experiments. The examples below show how this differs across fields.</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th data-en="Research area" data-zh="研究领域" >Research area</th>
+<th data-en="Working tools" data-zh="专业工具" >Working tools</th>
+<th data-en="Research materials" data-zh="研究材料" >Research materials</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-en="Atmosphere &amp; climate" data-zh="大气与气候" >Atmosphere &amp; climate</td>
+<td data-en="WRF/WPS, MPI, NetCDF, ecCodes, xarray and local model documentation." data-zh="WRF/WPS、MPI、NetCDF、ecCodes、xarray 与本地模式文档。" >WRF/WPS, MPI, NetCDF, ecCodes, xarray and local model documentation.</td>
+<td data-en="Initial and boundary fields, model grids, ensemble metadata and station or satellite observations." data-zh="初始与边界场、模式网格、集合信息及台站或卫星观测。" >Initial and boundary fields, model grids, ensemble metadata and station or satellite observations.</td>
+</tr>
+<tr>
+<td data-en="Ocean &amp; cryosphere" data-zh="海洋与冰冻圈" >Ocean &amp; cryosphere</td>
+<td data-en="MITgcm or ROMS; xgcm, TEOS-10 and grid-aware diagnostics." data-zh="MITgcm 或 ROMS；xgcm、TEOS-10 与网格诊断工具。" >MITgcm or ROMS; xgcm, TEOS-10 and grid-aware diagnostics.</td>
+<td data-en="Bathymetry, forcing, open boundaries, Argo profiles and satellite products, with masks and vertical coordinates." data-zh="水深、强迫场、开放边界、Argo 剖面和卫星产品，附掩膜与垂向坐标。" >Bathymetry, forcing, open boundaries, Argo profiles and satellite products, with masks and vertical coordinates.</td>
+</tr>
+<tr>
+<td data-en="Geology &amp; geophysics" data-zh="地质与地球物理" >Geology &amp; geophysics</td>
+<td data-en="ObsPy, ASPECT, SimPEG or task-specific solvers and their tested numerical settings." data-zh="ObsPy、ASPECT、SimPEG 或任务所需的求解器及已验证的数值设置。" >ObsPy, ASPECT, SimPEG or task-specific solvers and their tested numerical settings.</td>
+<td data-en="Waveforms, stations, meshes, laboratory measurements, geological priors and instrument responses." data-zh="波形、台站、网格、实验测量、地质先验和仪器响应。" >Waveforms, stations, meshes, laboratory measurements, geological priors and instrument responses.</td>
+</tr>
+<tr>
+<td data-en="Remote sensing &amp; surface processes" data-zh="遥感与地表过程" >Remote sensing &amp; surface processes</td>
+<td data-en="GDAL, PROJ, SNAP, rasterio and a reproducible geospatial workspace." data-zh="GDAL、PROJ、SNAP、rasterio 与可复现的地理空间工作区。" >GDAL, PROJ, SNAP, rasterio and a reproducible geospatial workspace.</td>
+<td data-en="Image stacks, orbit information, calibration, terrain, quality flags and independent field observations." data-zh="影像序列、轨道信息、定标资料、地形、质量标记与独立实测资料。" >Image stacks, orbit information, calibration, terrain, quality flags and independent field observations.</td>
+</tr>
+<tr>
+<td data-en="Hydrology &amp; environment" data-zh="水文与环境" >Hydrology &amp; environment</td>
+<td data-en="MODFLOW 6, SWAT+ or appropriate process models, with spatial and statistical tools." data-zh="MODFLOW 6、SWAT+ 或适用的过程模型，配合空间与统计工具。" >MODFLOW 6, SWAT+ or appropriate process models, with spatial and statistical tools.</td>
+<td data-en="Catchment geometry, meteorological forcing, discharge, groundwater and water-quality records." data-zh="流域地理资料、气象强迫、径流、地下水及水质记录。" >Catchment geometry, meteorological forcing, discharge, groundwater and water-quality records.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p data-en="The workspace brings together observations, model grids, initial and boundary conditions, local documentation and baseline experiments. Data notes explain coordinates, units and observation times. Large datasets are available through the task environment." data-zh="工作区包含观测资料、模式网格、初始与边界条件、本地文档和基线实验。资料说明交代坐标、单位与观测时间，大型数据通过任务环境提供。" >The workspace brings together observations, model grids, initial and boundary conditions, local documentation and baseline experiments. Data notes explain coordinates, units and observation times. Large datasets are available through the task environment.</p>
+</section>
+<section id="task-package">
+<h2 data-en="Inside an ELE research task" data-zh="一份 ELE 研究任务包含什么">Inside an ELE research task</h2>
+<p data-en="Contributors explain the research question and what would count as a useful result. The task package includes the data and software needed to investigate it, a reference experiment and the scoring criteria." data-zh="供题者需要说明要研究什么，以及怎样的结果才算完成任务。任务包提供相应的数据与软件，并附参考实验和评分标准。">Contributors explain the research question and what would count as a useful result. The task package includes the data and software needed to investigate it, a reference experiment and the scoring criteria.</p>
+<dl class="file-inventory" id="task-files">
+<div data-enter><dt><code>instruction.md</code></dt><dd><span data-en="The research brief" data-zh="研究说明">The research brief</span></dd></div>
+<div data-enter><dt><code>task.toml</code></dt><dd><span data-en="Task configuration" data-zh="任务配置">Task configuration</span></dd></div>
+<div data-enter><dt><code>environment/Dockerfile</code></dt><dd><span data-en="Software environment" data-zh="软件环境">Software environment</span></dd></div>
+<div data-enter><dt><code>environment/workspace/</code></dt><dd><span data-en="Working data and documentation" data-zh="研究资料与文档">Working data and documentation</span></dd></div>
+<div data-enter><dt><code>research/</code></dt><dd><span data-en="Scientific background and data notes" data-zh="科学背景与资料说明">Scientific background and data notes</span></dd></div>
+<div data-enter><dt><code>solution/solve.sh</code></dt><dd><span data-en="The reference experiment" data-zh="参考实验">The reference experiment</span></dd></div>
+<div data-enter><dt><code>tests/test.sh</code></dt><dd><span data-en="Scientific evaluation" data-zh="科学评价">Scientific evaluation</span></dd></div>
+</dl>
+<a class="text-link" href="contribute.html#complete-task"><span data-en="Complete task requirements" data-zh="完整题目提交要求">Complete task requirements</span><span aria-hidden="true">↗</span></a>
+</section>
+<section id="rubric">
+<h2 data-en="What counts as success" data-zh="如何判定成功" >What counts as success</h2>
+<div class="score-contract" data-enter>
+<div>
+<strong>90<span>/100</span>
+</strong>
+<p data-en="Minimum total score" data-zh="总分下限" >Minimum total score</p>
+</div>
+<div>
+<strong>80<span>%</span>
+</strong>
+<p data-en="Minimum in every dimension" data-zh="每个维度的最低得分比例" >Minimum in every dimension</p>
+</div>
+<div>
+<strong>
+<span data-en="All" data-zh="全部" >All</span>
+</strong>
+<p data-en="Core research requirements met" data-zh="核心研究要求全部满足" >Core research requirements met</p>
+</div>
+</div>
+<p data-en="Completion combines the total score, performance in each dimension and the core scientific requirements. Partial scores show useful progress, including a well-supported diagnosis or an experiment that narrows the possible explanations." data-zh="任务完成由总分、各维度表现和核心科学要求共同决定。部分得分也记录有价值的进展，例如有证据支持的误差诊断，或缩小了可能解释范围的实验。" >Completion combines the total score, performance in each dimension and the core scientific requirements. Partial scores show useful progress, including a well-supported diagnosis or an experiment that narrows the possible explanations.</p>
+<p class="rubric-context" data-en="The allocation below illustrates a research rubric. Each task publishes its own dimensions and weights; the typhoon task uses a different allocation suited to track, landfall and probability evidence. The three acceptance conditions remain the same." data-zh="下表展示一种研究题评分分配。每题公布适合其科学目标的维度与权重；台风题根据路径、登陆与概率证据采用不同分配，以上三项通过条件保持一致。">The allocation below illustrates a research rubric. Each task publishes its own dimensions and weights; the typhoon task uses a different allocation suited to track, landfall and probability evidence. The three acceptance conditions remain the same.</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th data-en="Dimension" data-zh="维度" >Dimension</th>
+<th data-en="Points" data-zh="分值" >Points</th>
+<th data-en="Evidence" data-zh="判定依据" >Evidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-en="Core scientific result" data-zh="核心科学结果" >Core scientific result</td>
+<td data-en="30" data-zh="30" >30</td>
+<td data-en="The result answers the research question, with quantitative support from the specified observations and baseline comparisons." data-zh="结果回答了研究问题，并有指定观测与基线比较的量化支持。" >The result answers the research question, with quantitative support from the specified observations and baseline comparisons.</td>
+</tr>
+<tr>
+<td data-en="Performance under independent conditions" data-zh="独立条件下的表现" >Performance under independent conditions</td>
+<td data-en="20" data-zh="20" >20</td>
+<td data-en="The improvement carries over to new events, regions or observation conditions." data-zh="改进能够延续到新的事件、区域或观测条件。" >The improvement carries over to new events, regions or observation conditions.</td>
+</tr>
+<tr>
+<td data-en="Physical consistency &amp; uncertainty" data-zh="物理一致性与不确定度" >Physical consistency &amp; uncertainty</td>
+<td data-en="20" data-zh="20" >20</td>
+<td data-en="Relevant constraints hold; uncertainty is calibrated and supported by evidence." data-zh="满足相关物理约束，不确定度经过校准且有证据支持。" >Relevant constraints hold; uncertainty is calibrated and supported by evidence.</td>
+</tr>
+<tr>
+<td data-en="Research evidence" data-zh="研究证据" >Research evidence</td>
+<td data-en="15" data-zh="15" >15</td>
+<td data-en="Controls and ablations distinguish the proposed explanation from alternatives." data-zh="对照与消融能够区分提出的解释和竞争解释。" >Controls and ablations distinguish the proposed explanation from alternatives.</td>
+</tr>
+<tr>
+<td data-en="Repeatable experiments" data-zh="可重复的实验" >Repeatable experiments</td>
+<td data-en="10" data-zh="10" >10</td>
+<td data-en="The submitted method reproduces its main findings when run again, within the tolerances stated for the task." data-zh="再次运行提交的方法，主要结果在题目给定的容差内保持一致。" >The submitted method reproduces its main findings when run again, within the tolerances stated for the task.</td>
+</tr>
+<tr>
+<td data-en="Use of observations" data-zh="观测资料的使用" >Use of observations</td>
+<td data-en="5" data-zh="5" >5</td>
+<td data-en="The analysis uses observation times, coordinates and units appropriately and accounts for missing or uncertain measurements." data-zh="分析正确处理观测时间、坐标与单位，并考虑缺测和测量不确定性。" >The analysis uses observation times, coordinates and units appropriately and accounts for missing or uncertain measurements.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p data-en="Each rubric item describes a scientific finding and the evidence that earns full or partial credit. Numerical criteria specify their metric, tolerance and weight. Two domain reviewers assess scientific explanations against the same anchors; a third resolves disagreements. Valid alternative methods receive credit under the same criteria." data-zh="每个 rubric 条目写明要判断的科学结果，以及取得满分或部分分所需的证据。数值条目给出指标、容差与权重；科学解释由两名领域评审按同一标准评分，分歧交第三人判断。采用不同的有效方法，也按同样标准获得分数。" >Each rubric item describes a scientific finding and the evidence that earns full or partial credit. Numerical criteria specify their metric, tolerance and weight. Two domain reviewers assess scientific explanations against the same anchors; a third resolves disagreements. Valid alternative methods receive credit under the same criteria.</p>
+</section>
+<section id="trials">
+<h2 data-en="Comparing research capability" data-zh="如何比较科研能力" >Comparing research capability</h2>
+<ol class="protocol-list">
+<li data-en="Define the research goal, available materials, baseline methods and scoring criteria for each task before running the comparison." data-zh="在比较前明确每题的研究目标、可用资料、基线方法与评分标准。" >Define the research goal, available materials, baseline methods and scoring criteria for each task before running the comparison.</li>
+<li data-en="Use different events, regions or periods for method development and final evaluation, keeping related observations together." data-zh="方法开发与最终评价使用不同的事件、区域或时期，同一过程的相关观测放在一起。" >Use different events, regions or periods for method development and final evaluation, keeping related observations together.</li>
+<li data-en="Run each agent three times per task with the same task-specific data, tools and computing allowance. Report the model, agent configuration and resources used alongside the results." data-zh="每个 Agent 在每题上独立运行三次，使用相同的题目资料、工具与计算条件。结果同时说明模型、Agent 配置和实际资源用量。" >Run each agent three times per task with the same task-specific data, tools and computing allowance. Report the model, agent configuration and resources used alongside the results.</li>
+<li data-en="Evaluate the method on new cases and score its scientific results and supporting experiments using the task rubric." data-zh="在新个例上评价方法，按题目 rubric 为科学结果及其支撑实验评分。" >Evaluate the method on new cases and score its scientific results and supporting experiments using the task rubric.</li>
+<li data-en="Average success over the three trials within each task, then weight tasks equally. Report uncertainty, results by research area and the stages where agents made or lost progress. Best-of-k results are reported separately." data-zh="先平均每题三次运行的完成情况，再对题目等权汇总。报告不确定性、各研究领域的表现，以及 Agent 在哪些研究环节取得进展或遇到困难。best-of-k 结果单独报告。" >Average success over the three trials within each task, then weight tasks equally. Report uncertainty, results by research area and the stages where agents made or lost progress. Best-of-k results are reported separately.</li>
+</ol>
+<p>
+<a class="text-link" href="typhoon.html">
+<span data-en="Explore the typhoon task and its research criteria →" data-zh="查看台风任务与研究标准 →" >Explore the typhoon task and its research criteria →</span>
+</a>
+</p>
+</section>
+<section id="community">
+<h2 data-en="Contribute a research question" data-zh="提供研究问题" >Contribute a research question</h2>
+<p data-en="If your work contains a problem that would make a useful task, tell us what remains unresolved. A paper or a short account of the difficulty is enough to begin. We also welcome advisors and engineers who would like to help develop the tasks." data-zh="如果您的研究中有适合出题的问题，可以先告诉我们难点在哪里，附上一篇论文或一段说明即可。我们也欢迎专家加入顾问团队，以及工程合作者参与任务开发。" >If your work contains a problem that would make a useful task, tell us what remains unresolved. A paper or a short account of the difficulty is enough to begin. We also welcome advisors and engineers who would like to help develop the tasks.</p>
+<div class="actions">
+<a class="button" href="contribute.html">
+<span data-en="Propose a research task ↗" data-zh="提供研究任务 ↗" >Propose a research task ↗</span>
+</a>
+<a class="text-link" href="contribute.html?route=advisor#proposal">
+<span data-en="Join as an advisor →" data-zh="参与学术顾问工作 →" >Join as an advisor →</span>
+</a>
+</div>
+</section>
+
+</article>
+</div>
+</main>
+<footer class="site-footer">
+<div class="wrap">
+<div class="footer-main">
+<div>
+<a class="brand" href="index.html">
+<svg viewBox="0 0 64 64" fill="none" aria-hidden="true">
+  <g stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M43.5 12.94A24 24 0 1 0 55.63 29.8"/>
+    <path d="M8.35 30C19 30 20 23 30 23S44 30 55.63 29.8"/>
+    <path d="M9.37 42C22 42 24 34 35 34S47 39 55.47 39"/>
+    <path d="M16.5 52.32C27 52 30 45 40 45C44 45 47 47 50.07 49.8"/>
+  </g>
+  <circle cx="53" cy="14" r="4.5" fill="currentColor"/>
+</svg>
+<span>Earth Last Exam</span>
+</a>
+<p data-en="Earth Last Exam · An EvolventAI research project" data-zh="Earth Last Exam · 由 EvolventAI 发起">Earth Last Exam · An EvolventAI research project</p>
+</div>
+<div class="footer-links">
+<a href="benchmark.html#task-files" class="text-link"><span data-en="Task file list" data-zh="任务文件清单">Task file list</span><span aria-hidden="true">↗</span></a>
+<a href="benchmark.html" class="text-link">
+<span data-en="How we evaluate" data-zh="如何评测" >How we evaluate</span>
+<span aria-hidden="true">↗</span>
+</a>
+<a href="typhoon.html" class="text-link">
+<span data-en="Explore the example" data-zh="了解原创例题" >Explore the example</span>
+<span aria-hidden="true">↗</span>
+</a>
+<a href="contribute.html?route=advisor#proposal" class="text-link">
+<span data-en="Become an advisor" data-zh="担任学术顾问" >Become an advisor</span>
+<span aria-hidden="true">↗</span>
+</a>
+<a href="contribute.html" class="text-link">
+<span data-en="Contribute a task" data-zh="提供研究任务" >Contribute a task</span>
+<span aria-hidden="true">↗</span>
+</a>
+<a data-github-link hidden target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+</div>
+</div>
+<div class="footer-bottom">
+<a href="https://evolvent.co/" class="footer-parent" target="_blank" rel="noopener noreferrer" aria-label="EvolventAI company website" data-aria-en="EvolventAI company website" data-aria-zh="EvolventAI 公司网站"><img class="evolvent-symbol" src="evolvent-symbol.svg" width="22" height="48" alt="" aria-hidden="true"><img class="evolvent-wordmark" src="evolvent-wordmark.svg" width="174" height="24" alt="EvolventAI" data-alt-en="EvolventAI" data-alt-zh="EvolventAI"><span aria-hidden="true">↗</span></a>
+<span data-en="An invitation to build the benchmark together." data-zh="邀请研究者一起定义科研 Agent 的能力标准。" >An invitation to build the benchmark together.</span>
+</div>
+</div>
+</footer>
+</body>
+</html>

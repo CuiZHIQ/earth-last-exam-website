@@ -1,0 +1,3352 @@
+[
+  {
+    "id": "m0001",
+    "en": "Benchmark design — Earth Last Exam",
+    "zh": "评测设计 — Earth Last Exam"
+  },
+  {
+    "id": "m0002",
+    "en": "Skip to content",
+    "zh": "跳至正文"
+  },
+  {
+    "id": "m0003",
+    "en": "Our work",
+    "zh": "我们的工作"
+  },
+  {
+    "id": "m0004",
+    "en": "The task",
+    "zh": "原创任务"
+  },
+  {
+    "id": "m0005",
+    "en": "Evaluation",
+    "zh": "评测设计"
+  },
+  {
+    "id": "m0006",
+    "en": "Join us",
+    "zh": "参与共建"
+  },
+  {
+    "id": "m0007",
+    "en": "Benchmark design",
+    "zh": "评测设计"
+  },
+  {
+    "id": "m0008",
+    "en": "How we evaluate research agents",
+    "zh": "科研 Agent 的评测设计"
+  },
+  {
+    "id": "m0009",
+    "en": "Task design, scientific environments and the criteria used to judge the results.",
+    "zh": "任务如何设计，环境如何准备，研究结果如何评分。"
+  },
+  {
+    "id": "m0010",
+    "en": "The research question",
+    "zh": "研究目标"
+  },
+  {
+    "id": "m0011",
+    "en": "Domain environments",
+    "zh": "专业环境"
+  },
+  {
+    "id": "m0012",
+    "en": "Task package",
+    "zh": "任务结构"
+  },
+  {
+    "id": "m0013",
+    "en": "Rubric",
+    "zh": "评分规则"
+  },
+  {
+    "id": "m0014",
+    "en": "Collaboration",
+    "zh": "共同建设"
+  },
+  {
+    "id": "m0015",
+    "en": "What does it mean to do research?",
+    "zh": "什么才算完成了研究？"
+  },
+  {
+    "id": "m0016",
+    "en": "Earth Last Exam studies how far frontier agents can independently advance Earth science research. We invite tasks drawn from papers and active research: the agent takes over data, models and an existing analysis, chooses what to investigate, and develops a result supported by experiments.",
+    "zh": "Earth Last Exam 研究前沿 Agent 能在多大程度上独立推进地球科学研究。我们征集源于论文和实际研究过程的任务，让 Agent 接手数据、模型与已有分析，判断下一步该做什么，并通过实验得到有依据的结果。"
+  },
+  {
+    "id": "m0017",
+    "en": "Earth science brings observation, physical models and computation into the same workspace. Measurements have gaps and uncertainty; the same process looks different across scales. A convincing analysis has to connect those pieces and explain where its conclusions hold.",
+    "zh": "地球科学把观测、物理模型与计算放在同一个工作空间中。资料存在缺测和不确定性，同一过程在不同尺度下呈现不同面貌。可信的分析需要把这些环节连起来，也需要说明结论在哪些条件下成立。"
+  },
+  {
+    "id": "m0018",
+    "en": "Cryosphere · Surface processes",
+    "zh": "冰冻圈 · 地表过程"
+  },
+  {
+    "id": "m0019",
+    "en": "Ice flow meets terrain",
+    "zh": "冰流与地形"
+  },
+  {
+    "id": "m0020",
+    "en": "Elephant Foot Glacier, Greenland",
+    "zh": "格陵兰象足冰川"
+  },
+  {
+    "id": "m0021",
+    "en": "Landsat 8 / OLI · 21 June 2014",
+    "zh": "Landsat 8 / OLI · 2014 年 6 月 21 日"
+  },
+  {
+    "id": "m0022",
+    "en": "An image records the glacier’s shape. Investigating the processes behind it also calls for elevation data, boundary conditions and a physical model.",
+    "zh": "影像记录冰川的形态。研究它背后的过程，还需要高程资料、边界条件和物理模型。"
+  },
+  {
+    "id": "m0023",
+    "en": "Image source",
+    "zh": "影像来源"
+  },
+  {
+    "id": "m0024",
+    "en": "The kind of research we want to measure",
+    "zh": "我们希望评测怎样的研究"
+  },
+  {
+    "id": "m0025",
+    "en": "A question worth resolving",
+    "zh": "值得解决的问题"
+  },
+  {
+    "id": "m0026",
+    "en": "A task comes from a real paper or research workflow. Its author explains what finding or improvement would move the work forward.",
+    "zh": "题目来自真实论文或研究工作。供题者说明，得到什么发现或改进，能让这项研究继续向前。"
+  },
+  {
+    "id": "m0027",
+    "en": "Judgment at the difficult steps",
+    "zh": "关键环节需要专业判断"
+  },
+  {
+    "id": "m0028",
+    "en": "Several explanations or methods may be plausible. The agent chooses a useful comparison, interprets the result and decides what to try next.",
+    "zh": "几种解释或方法都可能成立。Agent 需要选出有意义的对照，解释实验结果，再决定下一步如何推进。"
+  },
+  {
+    "id": "m0029",
+    "en": "Sustained experimental work",
+    "zh": "能够持续开展实验"
+  },
+  {
+    "id": "m0030",
+    "en": "The workspace supports hours of computation and repeated experiments, with domain software, substantial data and an existing workflow to build on.",
+    "zh": "专业软件、完整资料与已有工作流共同支撑数小时计算和多轮实验，Agent 可以在前一轮结果的基础上继续研究。"
+  },
+  {
+    "id": "m0031",
+    "en": "A result others can use",
+    "zh": "具有实际价值的结果"
+  },
+  {
+    "id": "m0032",
+    "en": "A result may be a better method, an explanation supported by experiments or a counterexample that changes the interpretation. Each task defines the evidence needed.",
+    "zh": "结果可以是更有效的方法、有实验支持的解释，也可以是改变原有判断的反例。每道题明确什么证据足以支持相应结论。"
+  },
+  {
+    "id": "m0033",
+    "en": "Task development combines an expert reference experiment with trials by frontier agents. Review focuses on the research decisions that make the task difficult, and whether the result would matter to a scientist working in that field.",
+    "zh": "制题时，将专家参考实验与前沿 Agent 的试跑结合起来，具体判断难点出在哪些研究决策上，以及得到的结果对本领域研究者有什么价值。"
+  },
+  {
+    "id": "m0034",
+    "en": "Preparing the research environment",
+    "zh": "准备研究环境"
+  },
+  {
+    "id": "m0035",
+    "en": "The agent receives the data and software a researcher would use, along with an analysis it can build on. It can inspect intermediate results, modify the code and run further experiments. The examples below show how this differs across fields.",
+    "zh": "Agent 接手研究者实际使用的数据、软件和已有分析，可以检查中间结果、修改代码并开展后续实验。不同领域的环境有各自的要求，下面给出几个例子。"
+  },
+  {
+    "id": "m0036",
+    "en": "Research area",
+    "zh": "研究领域"
+  },
+  {
+    "id": "m0037",
+    "en": "Working tools",
+    "zh": "专业工具"
+  },
+  {
+    "id": "m0038",
+    "en": "Research materials",
+    "zh": "研究材料"
+  },
+  {
+    "id": "m0039",
+    "en": "Atmosphere & climate",
+    "zh": "大气与气候"
+  },
+  {
+    "id": "m0040",
+    "en": "WRF/WPS, MPI, NetCDF, ecCodes, xarray and local model documentation.",
+    "zh": "WRF/WPS、MPI、NetCDF、ecCodes、xarray 与本地模式文档。"
+  },
+  {
+    "id": "m0041",
+    "en": "Initial and boundary fields, model grids, ensemble metadata and station or satellite observations.",
+    "zh": "初始与边界场、模式网格、集合信息及台站或卫星观测。"
+  },
+  {
+    "id": "m0042",
+    "en": "Ocean & cryosphere",
+    "zh": "海洋与冰冻圈"
+  },
+  {
+    "id": "m0043",
+    "en": "MITgcm or ROMS; xgcm, TEOS-10 and grid-aware diagnostics.",
+    "zh": "MITgcm 或 ROMS；xgcm、TEOS-10 与网格诊断工具。"
+  },
+  {
+    "id": "m0044",
+    "en": "Bathymetry, forcing, open boundaries, Argo profiles and satellite products, with masks and vertical coordinates.",
+    "zh": "水深、强迫场、开放边界、Argo 剖面和卫星产品，附掩膜与垂向坐标。"
+  },
+  {
+    "id": "m0045",
+    "en": "Geology & geophysics",
+    "zh": "地质与地球物理"
+  },
+  {
+    "id": "m0046",
+    "en": "ObsPy, ASPECT, SimPEG or task-specific solvers and their tested numerical settings.",
+    "zh": "ObsPy、ASPECT、SimPEG 或任务所需的求解器及已验证的数值设置。"
+  },
+  {
+    "id": "m0047",
+    "en": "Waveforms, stations, meshes, laboratory measurements, geological priors and instrument responses.",
+    "zh": "波形、台站、网格、实验测量、地质先验和仪器响应。"
+  },
+  {
+    "id": "m0048",
+    "en": "Remote sensing & surface processes",
+    "zh": "遥感与地表过程"
+  },
+  {
+    "id": "m0049",
+    "en": "GDAL, PROJ, SNAP, rasterio and a reproducible geospatial workspace.",
+    "zh": "GDAL、PROJ、SNAP、rasterio 与可复现的地理空间工作区。"
+  },
+  {
+    "id": "m0050",
+    "en": "Image stacks, orbit information, calibration, terrain, quality flags and independent field observations.",
+    "zh": "影像序列、轨道信息、定标资料、地形、质量标记与独立实测资料。"
+  },
+  {
+    "id": "m0051",
+    "en": "Hydrology & environment",
+    "zh": "水文与环境"
+  },
+  {
+    "id": "m0052",
+    "en": "MODFLOW 6, SWAT+ or appropriate process models, with spatial and statistical tools.",
+    "zh": "MODFLOW 6、SWAT+ 或适用的过程模型，配合空间与统计工具。"
+  },
+  {
+    "id": "m0053",
+    "en": "Catchment geometry, meteorological forcing, discharge, groundwater and water-quality records.",
+    "zh": "流域地理资料、气象强迫、径流、地下水及水质记录。"
+  },
+  {
+    "id": "m0054",
+    "en": "The workspace brings together observations, model grids, initial and boundary conditions, local documentation and baseline experiments. Data notes explain coordinates, units and observation times. Large datasets are available through the task environment.",
+    "zh": "工作区包含观测资料、模式网格、初始与边界条件、本地文档和基线实验。资料说明交代坐标、单位与观测时间，大型数据通过任务环境提供。"
+  },
+  {
+    "id": "m0055",
+    "en": "Inside an ELE research task",
+    "zh": "一份 ELE 研究任务包含什么"
+  },
+  {
+    "id": "m0056",
+    "en": "Contributors explain the research question and what would count as a useful result. The task package includes the data and software needed to investigate it, a reference experiment and the scoring criteria.",
+    "zh": "供题者需要说明要研究什么，以及怎样的结果才算完成任务。任务包提供相应的数据与软件，并附参考实验和评分标准。"
+  },
+  {
+    "id": "m0057",
+    "en": "Research task package",
+    "zh": "科研任务包"
+  },
+  {
+    "id": "m0058",
+    "en": "The research brief",
+    "zh": "研究说明"
+  },
+  {
+    "id": "m0059",
+    "en": "The brief brings together the research question, available evidence and expected results. The dossier gives the scientific background; the output specification describes the research files; provenance identifies the data sources.",
+    "zh": "研究说明写清问题、已有证据与预期结果。研究档案介绍科学背景，文件说明列出交付内容，来源记录注明资料出处。"
+  },
+  {
+    "id": "m0060",
+    "en": "The working environment",
+    "zh": "专业工作区"
+  },
+  {
+    "id": "m0061",
+    "en": "The agent receives data, domain software, local documentation and a starting workflow. The task configuration records the runtime settings. Coordinates, units and observation conventions travel with the data.",
+    "zh": "Agent 接手数据、领域软件、本地文档和已有工作流。任务配置记录运行设置；坐标、单位与观测约定随资料一并提供。"
+  },
+  {
+    "id": "m0062",
+    "en": "The reference experiment",
+    "zh": "参考实验"
+  },
+  {
+    "id": "m0063",
+    "en": "The reference experiment shows a viable way to reach the research goal. Its results help set a meaningful level of difficulty and establish comparisons for evaluating other approaches.",
+    "zh": "参考实验给出一条能够达到研究目标的路径，用来判断任务难度，并为评价其他方法提供对照。"
+  },
+  {
+    "id": "m0064",
+    "en": "Scientific evaluation",
+    "zh": "科学评价"
+  },
+  {
+    "id": "m0065",
+    "en": "tests/ · scientific scoring",
+    "zh": "tests/ · 科学评分"
+  },
+  {
+    "id": "m0066",
+    "en": "Task-specific tests measure the submitted results against observations, physical constraints and baseline methods. The output includes both the task result and a breakdown of scientific progress.",
+    "zh": "按题目设计的评分程序，将研究结果与观测、物理约束和基线方法比较，同时给出完成情况与各项研究进展。"
+  },
+  {
+    "id": "m0067",
+    "en": "Research kit",
+    "zh": "研究工具包"
+  },
+  {
+    "id": "m0068",
+    "en": "Download the source, run a small atmospheric task, or prepare the full typhoon study with your own data.",
+    "zh": "下载源码，运行一个小型大气任务，或用自己的资料准备完整的台风研究。"
+  },
+  {
+    "id": "m0069",
+    "en": "Try the atmospheric example",
+    "zh": "先跑通大气示例"
+  },
+  {
+    "id": "m0070",
+    "en": "Download complete source",
+    "zh": "下载完整源码"
+  },
+  {
+    "id": "m0071",
+    "en": "Complete task requirements",
+    "zh": "完整题目提交要求"
+  },
+  {
+    "id": "m0072",
+    "en": "The example runs locally. The full study requires meteorological inputs and reference experiments; Docker builds still need validation on your host.",
+    "zh": "示例可在本地运行。完整研究仍需气象资料与参考实验；Docker 构建也需要在你的主机上验证。"
+  },
+  {
+    "id": "m0073",
+    "en": "What counts as success",
+    "zh": "如何判定成功"
+  },
+  {
+    "id": "m0074",
+    "en": "Minimum total score",
+    "zh": "总分下限"
+  },
+  {
+    "id": "m0075",
+    "en": "Minimum in every dimension",
+    "zh": "每个维度的最低得分比例"
+  },
+  {
+    "id": "m0076",
+    "en": "All",
+    "zh": "全部"
+  },
+  {
+    "id": "m0077",
+    "en": "Core research requirements met",
+    "zh": "核心研究要求全部满足"
+  },
+  {
+    "id": "m0078",
+    "en": "Completion combines the total score, performance in each dimension and the core scientific requirements. Partial scores show useful progress, including a well-supported diagnosis or an experiment that narrows the possible explanations.",
+    "zh": "任务完成由总分、各维度表现和核心科学要求共同决定。部分得分也记录有价值的进展，例如有证据支持的误差诊断，或缩小了可能解释范围的实验。"
+  },
+  {
+    "id": "m0079",
+    "en": "The allocation below illustrates a research rubric. Each task publishes its own dimensions and weights; the typhoon task uses a different allocation suited to track, landfall and probability evidence. The three acceptance conditions remain the same.",
+    "zh": "下表展示一种研究题评分分配。每题公布适合其科学目标的维度与权重；台风题根据路径、登陆与概率证据采用不同分配，以上三项通过条件保持一致。"
+  },
+  {
+    "id": "m0080",
+    "en": "Dimension",
+    "zh": "维度"
+  },
+  {
+    "id": "m0081",
+    "en": "Points",
+    "zh": "分值"
+  },
+  {
+    "id": "m0082",
+    "en": "Evidence",
+    "zh": "判定依据"
+  },
+  {
+    "id": "m0083",
+    "en": "Core scientific result",
+    "zh": "核心科学结果"
+  },
+  {
+    "id": "m0084",
+    "en": "30",
+    "zh": "30"
+  },
+  {
+    "id": "m0085",
+    "en": "The result answers the research question, with quantitative support from the specified observations and baseline comparisons.",
+    "zh": "结果回答了研究问题，并有指定观测与基线比较的量化支持。"
+  },
+  {
+    "id": "m0086",
+    "en": "Performance under independent conditions",
+    "zh": "独立条件下的表现"
+  },
+  {
+    "id": "m0087",
+    "en": "20",
+    "zh": "20"
+  },
+  {
+    "id": "m0088",
+    "en": "The improvement carries over to new events, regions or observation conditions.",
+    "zh": "改进能够延续到新的事件、区域或观测条件。"
+  },
+  {
+    "id": "m0089",
+    "en": "Physical consistency & uncertainty",
+    "zh": "物理一致性与不确定度"
+  },
+  {
+    "id": "m0090",
+    "en": "Relevant constraints hold; uncertainty is calibrated and supported by evidence.",
+    "zh": "满足相关物理约束，不确定度经过校准且有证据支持。"
+  },
+  {
+    "id": "m0091",
+    "en": "Research evidence",
+    "zh": "研究证据"
+  },
+  {
+    "id": "m0092",
+    "en": "15",
+    "zh": "15"
+  },
+  {
+    "id": "m0093",
+    "en": "Controls and ablations distinguish the proposed explanation from alternatives.",
+    "zh": "对照与消融能够区分提出的解释和竞争解释。"
+  },
+  {
+    "id": "m0094",
+    "en": "Repeatable experiments",
+    "zh": "可重复的实验"
+  },
+  {
+    "id": "m0095",
+    "en": "10",
+    "zh": "10"
+  },
+  {
+    "id": "m0096",
+    "en": "The submitted method reproduces its main findings when run again, within the tolerances stated for the task.",
+    "zh": "再次运行提交的方法，主要结果在题目给定的容差内保持一致。"
+  },
+  {
+    "id": "m0097",
+    "en": "Use of observations",
+    "zh": "观测资料的使用"
+  },
+  {
+    "id": "m0098",
+    "en": "5",
+    "zh": "5"
+  },
+  {
+    "id": "m0099",
+    "en": "The analysis uses observation times, coordinates and units appropriately and accounts for missing or uncertain measurements.",
+    "zh": "分析正确处理观测时间、坐标与单位，并考虑缺测和测量不确定性。"
+  },
+  {
+    "id": "m0100",
+    "en": "Each rubric item describes a scientific finding and the evidence that earns full or partial credit. Numerical criteria specify their metric, tolerance and weight. Two domain reviewers assess scientific explanations against the same anchors; a third resolves disagreements. Valid alternative methods receive credit under the same criteria.",
+    "zh": "每个 rubric 条目写明要判断的科学结果，以及取得满分或部分分所需的证据。数值条目给出指标、容差与权重；科学解释由两名领域评审按同一标准评分，分歧交第三人判断。采用不同的有效方法，也按同样标准获得分数。"
+  },
+  {
+    "id": "m0101",
+    "en": "Comparing research capability",
+    "zh": "如何比较科研能力"
+  },
+  {
+    "id": "m0102",
+    "en": "Define the research goal, available materials, baseline methods and scoring criteria for each task before running the comparison.",
+    "zh": "在比较前明确每题的研究目标、可用资料、基线方法与评分标准。"
+  },
+  {
+    "id": "m0103",
+    "en": "Use different events, regions or periods for method development and final evaluation, keeping related observations together.",
+    "zh": "方法开发与最终评价使用不同的事件、区域或时期，同一过程的相关观测放在一起。"
+  },
+  {
+    "id": "m0104",
+    "en": "Run each agent three times per task with the same task-specific data, tools and computing allowance. Report the model, agent configuration and resources used alongside the results.",
+    "zh": "每个 Agent 在每题上独立运行三次，使用相同的题目资料、工具与计算条件。结果同时说明模型、Agent 配置和实际资源用量。"
+  },
+  {
+    "id": "m0105",
+    "en": "Evaluate the method on new cases and score its scientific results and supporting experiments using the task rubric.",
+    "zh": "在新个例上评价方法，按题目 rubric 为科学结果及其支撑实验评分。"
+  },
+  {
+    "id": "m0106",
+    "en": "Average success over the three trials within each task, then weight tasks equally. Report uncertainty, results by research area and the stages where agents made or lost progress. Best-of-k results are reported separately.",
+    "zh": "先平均每题三次运行的完成情况，再对题目等权汇总。报告不确定性、各研究领域的表现，以及 Agent 在哪些研究环节取得进展或遇到困难。best-of-k 结果单独报告。"
+  },
+  {
+    "id": "m0107",
+    "en": "Explore the typhoon task and its research criteria →",
+    "zh": "查看台风任务与研究标准 →"
+  },
+  {
+    "id": "m0108",
+    "en": "Contribute a research question",
+    "zh": "提供研究问题"
+  },
+  {
+    "id": "m0109",
+    "en": "If your work contains a problem that would make a useful task, tell us what remains unresolved. A paper or a short account of the difficulty is enough to begin. We also welcome advisors and engineers who would like to help develop the tasks.",
+    "zh": "如果您的研究中有适合出题的问题，可以先告诉我们难点在哪里，附上一篇论文或一段说明即可。我们也欢迎专家加入顾问团队，以及工程合作者参与任务开发。"
+  },
+  {
+    "id": "m0110",
+    "en": "Propose a research task ↗",
+    "zh": "提供研究任务 ↗"
+  },
+  {
+    "id": "m0111",
+    "en": "Join as an advisor →",
+    "zh": "参与学术顾问工作 →"
+  },
+  {
+    "id": "m0112",
+    "en": "Earth Last Exam · An EvolventAI research project",
+    "zh": "Earth Last Exam · 由 EvolventAI 发起"
+  },
+  {
+    "id": "m0113",
+    "en": "Task repository",
+    "zh": "任务仓库"
+  },
+  {
+    "id": "m0114",
+    "en": "How we evaluate",
+    "zh": "如何评测"
+  },
+  {
+    "id": "m0115",
+    "en": "Explore the example",
+    "zh": "了解原创例题"
+  },
+  {
+    "id": "m0116",
+    "en": "Become an advisor",
+    "zh": "担任学术顾问"
+  },
+  {
+    "id": "m0117",
+    "en": "Contribute a task",
+    "zh": "提供研究任务"
+  },
+  {
+    "id": "m0118",
+    "en": "An invitation to build the benchmark together.",
+    "zh": "邀请研究者一起定义科研 Agent 的能力标准。"
+  },
+  {
+    "id": "m0119",
+    "en": "Join the project — Earth Last Exam",
+    "zh": "参与项目 — Earth Last Exam"
+  },
+  {
+    "id": "m0120",
+    "en": "Join the project",
+    "zh": "参与项目"
+  },
+  {
+    "id": "m0121",
+    "en": "Help design the research tasks",
+    "zh": "共同设计科研任务"
+  },
+  {
+    "id": "m0122",
+    "en": "Tell us about a difficult question in your field. You can suggest an idea, contribute a complete task or apply to join the advisory team.",
+    "zh": "欢迎提出您研究中遇到的难题。可以先介绍想法，也可以提供完整任务，或申请加入顾问团队。"
+  },
+  {
+    "id": "m0123",
+    "en": "Share a question",
+    "zh": "推荐问题"
+  },
+  {
+    "id": "m0124",
+    "en": "Scientific advisors",
+    "zh": "学术顾问团队"
+  },
+  {
+    "id": "m0125",
+    "en": "Suitable questions",
+    "zh": "适合的题目"
+  },
+  {
+    "id": "m0126",
+    "en": "Develop together",
+    "zh": "一起完善"
+  },
+  {
+    "id": "m0127",
+    "en": "Complete task packages",
+    "zh": "完整任务包"
+  },
+  {
+    "id": "m0128",
+    "en": "Questions",
+    "zh": "常见问题"
+  },
+  {
+    "id": "m0129",
+    "en": "Recommend a research question",
+    "zh": "推荐一个研究问题"
+  },
+  {
+    "id": "m0130",
+    "en": "A few sentences are enough to start. We can work out the data, environment and evaluation together.",
+    "zh": "先用几句话说说想法。数据、运行环境和验收方式，我们可以一起完善。"
+  },
+  {
+    "id": "m0131",
+    "en": "Have a complete task? See the package requirements ↗",
+    "zh": "已有完整题目？查看任务包要求 ↗"
+  },
+  {
+    "id": "m0132",
+    "en": "Your contribution",
+    "zh": "您的投稿"
+  },
+  {
+    "id": "m0133",
+    "en": "What would you like an agent to investigate?",
+    "zh": "您希望 Agent 研究什么问题？"
+  },
+  {
+    "id": "m0134",
+    "en": "For example: can an agent explain why a typhoon changes direction when different observations disagree?",
+    "zh": "例如：不同观测给出的线索不一致时，Agent 能否找出台风突然转向的原因？"
+  },
+  {
+    "id": "m0135",
+    "en": "This is the only required field. A research bottleneck or an unfinished idea is welcome.",
+    "zh": "只需填写这一项。可以是研究中遇到的难点，也可以是尚未成形的想法。"
+  },
+  {
+    "id": "m0136",
+    "en": "Paper or materials link · optional",
+    "zh": "论文或资料链接 · 选填"
+  },
+  {
+    "id": "m0137",
+    "en": "Email for a reply · optional",
+    "zh": "联系邮箱 · 选填，方便回复"
+  },
+  {
+    "id": "m0138",
+    "en": "GitHub replies use your account. This email is left out of the public draft.",
+    "zh": "GitHub 投稿通过您的账号回复，邮箱不会写入公开草稿。"
+  },
+  {
+    "id": "m0139",
+    "en": "Add more context",
+    "zh": "补充一点背景"
+  },
+  {
+    "id": "m0140",
+    "en": "Optional",
+    "zh": "选填"
+  },
+  {
+    "id": "m0141",
+    "en": "Name",
+    "zh": "姓名"
+  },
+  {
+    "id": "m0142",
+    "en": "Institution or group",
+    "zh": "机构或团队"
+  },
+  {
+    "id": "m0143",
+    "en": "I would like to…",
+    "zh": "我希望……"
+  },
+  {
+    "id": "m0144",
+    "en": "Recommend a question",
+    "zh": "推荐研究问题"
+  },
+  {
+    "id": "m0145",
+    "en": "Develop a task together",
+    "zh": "共同制作题目"
+  },
+  {
+    "id": "m0146",
+    "en": "Join the advisory team",
+    "zh": "加入顾问团队"
+  },
+  {
+    "id": "m0147",
+    "en": "Data, code or notes you already have",
+    "zh": "已有的数据、代码或研究记录"
+  },
+  {
+    "id": "m0148",
+    "en": "What would a useful result look like?",
+    "zh": "什么样的结果对研究有帮助？"
+  },
+  {
+    "id": "m0149",
+    "en": "Where could we help?",
+    "zh": "希望我们协助哪些部分？"
+  },
+  {
+    "id": "m0150",
+    "en": "Prepare my contribution",
+    "zh": "整理投稿内容"
+  },
+  {
+    "id": "m0151",
+    "en": "Save a copy",
+    "zh": "保存一份草稿"
+  },
+  {
+    "id": "m0152",
+    "en": "The submission channel is not open yet. You can prepare and save your contribution here.",
+    "zh": "投稿接收渠道暂未开放，可先在这里整理并保存内容。"
+  },
+  {
+    "id": "m0153",
+    "en": "Your draft stays in this browser tab.",
+    "zh": "草稿暂存在当前浏览器标签页。"
+  },
+  {
+    "id": "m0154",
+    "en": "Clear draft",
+    "zh": "清空草稿"
+  },
+  {
+    "id": "m0155",
+    "en": "Prepared contribution text",
+    "zh": "整理好的投稿文本"
+  },
+  {
+    "id": "m0156",
+    "en": "Copy text",
+    "zh": "复制内容"
+  },
+  {
+    "id": "m0157",
+    "en": "Continue to submission",
+    "zh": "前往提交"
+  },
+  {
+    "id": "m0158",
+    "en": "Join our scientific advisory team",
+    "zh": "邀请您加入学术顾问团队"
+  },
+  {
+    "id": "m0159",
+    "en": "EvolventAI invites Earth scientists to join the advisory team. We would value your judgment on which questions matter in your field and what evidence an agent would need to answer them well.",
+    "zh": "EvolventAI 邀请地球科学专家加入顾问团队。我们希望请您帮助判断：本领域哪些问题值得作为评测任务，以及 Agent 需要给出怎样的证据，才算把问题研究清楚。"
+  },
+  {
+    "id": "m0160",
+    "en": "Recommend research directions and difficult problems worth exploring.",
+    "zh": "推荐值得探索的研究方向与困难问题。"
+  },
+  {
+    "id": "m0161",
+    "en": "Review whether tasks preserve the substance and complexity of real research.",
+    "zh": "判断题目是否保留了真实研究的科学内容与复杂性。"
+  },
+  {
+    "id": "m0162",
+    "en": "Help establish the experiments and evidence needed to accept a result.",
+    "zh": "帮助确定验收结果所需的实验和证据。"
+  },
+  {
+    "id": "m0163",
+    "en": "You can focus on scientific advice; the engineering team can help with data, software and evaluation code. If you or members of your group would like to develop a task, we would be glad to work with you on it.",
+    "zh": "您可以主要参与科学讨论，数据整理、软件配置和评分程序由工程团队协助准备。如果您或课题组成员希望一起出题，也欢迎共同开发任务。"
+  },
+  {
+    "id": "m0164",
+    "en": "Share your advisory interest",
+    "zh": "填写顾问参与意向"
+  },
+  {
+    "id": "m0165",
+    "en": "What makes a good starting point?",
+    "zh": "什么样的问题适合推荐？"
+  },
+  {
+    "id": "m0166",
+    "en": "A good starting point is a result your current method cannot explain, or a method that fails on a different dataset. Tell us why the problem matters and what has already been tried.",
+    "zh": "可以是现有方法解释不了的结果，也可以是换了一组数据就失效的方法。请说明这个问题为什么重要，以及目前已经做过哪些尝试。"
+  },
+  {
+    "id": "m0167",
+    "en": "Already have research materials?",
+    "zh": "已经有研究材料？"
+  },
+  {
+    "id": "m0168",
+    "en": "You can add links to data, code, papers or existing experiments in the form. For a complete task, we will work together on the environment, reference experiment and scientific checks.",
+    "zh": "可以在表单里附上数据、代码、论文或已有实验的链接。制作完整任务时，我们再一起准备环境、参考实验和科学验收。"
+  },
+  {
+    "id": "m0169",
+    "en": "See the runnable task example",
+    "zh": "查看可运行的任务示例"
+  },
+  {
+    "id": "m0170",
+    "en": "From a research idea to an evaluation",
+    "zh": "从研究线索到正式评测"
+  },
+  {
+    "id": "m0171",
+    "en": "Recommend a question. Start with a few sentences; add a paper or materials link if you have one.",
+    "zh": "推荐问题。先写几句话，有论文或资料链接也可以附上。"
+  },
+  {
+    "id": "m0172",
+    "en": "Develop together. Agree on the scope, prepare the domain environment and build the reference workflow.",
+    "zh": "共同制作。明确范围，准备领域环境和参考流程。"
+  },
+  {
+    "id": "m0173",
+    "en": "Refine and evaluate. Researchers assess the question and its reference results; engineers run the task, and frontier-agent trials show where the difficulty lies.",
+    "zh": "完善与试跑。研究者讨论问题与参考结果，工程合作者运行任务，再通过前沿 Agent 的试跑判断难度来自哪些研究环节。"
+  },
+  {
+    "id": "m0174",
+    "en": "A complete Harbor task contains instruction.md, task.toml, environment/, solution/ and tests/. These hold the research assignment, software and data, a reference experiment and the scoring program.",
+    "zh": "完整 Harbor 题目包含 instruction.md、task.toml、environment/、solution/ 与 tests/，用于组织研究目标、软件与数据、参考实验和评分程序。"
+  },
+  {
+    "id": "m0175",
+    "en": "Download a blank proposal",
+    "zh": "下载空白提案模板"
+  },
+  {
+    "id": "m0176",
+    "en": "Contribute a complete research task",
+    "zh": "提交一套完整的科研题目"
+  },
+  {
+    "id": "m0177",
+    "en": "If you have the data and experiments ready, contribute a complete Harbor task. Include the research assignment, a working environment, a reference experiment and the code that scores the result.",
+    "zh": "如果您已有数据与实验，可以直接提供完整的 Harbor 题目，包含研究说明、可运行的环境、参考实验与评分代码。"
+  },
+  {
+    "id": "m0178",
+    "en": "A precise assignment.",
+    "zh": "明确的题面。"
+  },
+  {
+    "id": "m0179",
+    "en": "State the scientific question, available inputs, tools, required outputs and acceptance criteria in instruction.md.",
+    "zh": "在 instruction.md 中写清科学问题、可用资料与工具、具体交付物，以及怎样的结果算通过。"
+  },
+  {
+    "id": "m0180",
+    "en": "A working domain environment.",
+    "zh": "可用的专业环境。"
+  },
+  {
+    "id": "m0181",
+    "en": "Provide task.toml and environment/ with the required software, model settings, documentation and a runnable baseline. Explain where the data come from, how to obtain them and their terms of use.",
+    "zh": "提供 task.toml 与 environment/，配齐软件、模式设置、文档和可运行基线，说明数据来源、获取方式与使用权限。"
+  },
+  {
+    "id": "m0182",
+    "en": "The reference experiment and scoring program.",
+    "zh": "参考实验与评分程序。"
+  },
+  {
+    "id": "m0183",
+    "en": "Implement solution/solve.sh and tests/test.sh. Use research/ to explain the scientific background, expected research files and data sources. The reference solution runs in the evaluation environment.",
+    "zh": "实现 solution/solve.sh 与 tests/test.sh，在 research/ 中写明科学背景、交付文件和数据来源。参考解由评测环境运行。"
+  },
+  {
+    "id": "m0184",
+    "en": "A scientific rubric and completed runs.",
+    "zh": "科学评分与实际运行结果。"
+  },
+  {
+    "id": "m0185",
+    "en": "Define a 100-point rubric around the scientific result, the experiments behind it and performance on new cases. Include actual reference runs and examples illustrating full, partial and zero credit. Completion requires 90 points overall, 80% in each dimension and all core research requirements.",
+    "zh": "围绕科学结果、支撑实验和新个例表现制定百分制 rubric，提供实际参考运行，以及说明满分、部分分和零分的结果示例。完成标准为总分 90、每个维度达到其分值的 80%，并满足全部核心研究要求。"
+  },
+  {
+    "id": "m0186",
+    "en": "Create a Harbor task package",
+    "zh": "创建 Harbor 题目包"
+  },
+  {
+    "id": "m0187",
+    "en": "Template and commands",
+    "zh": "模板与命令"
+  },
+  {
+    "id": "m0188",
+    "en": "The authoring repository includes the full Harbor 0.24.0 / schema 1.3 scaffold and a runnable example. Use it to add your domain environment, reference experiment and scoring code.",
+    "zh": "供题仓库包含 Harbor 0.24.0 / schema 1.3 的完整模板和可运行示例，可据此补充领域环境、参考实验与评分代码。"
+  },
+  {
+    "id": "m0189",
+    "en": "The repository guide covers the remaining integration steps, including the reference-solution and empty-submission runs in Harbor. These establish that the task environment and scoring code run as intended.",
+    "zh": "仓库指南说明后续接入步骤，包括在 Harbor 中运行参考解和空提交，用来确认题目环境与评分代码能够正常工作。"
+  },
+  {
+    "id": "m0190",
+    "en": "Add a repository or archive link to the form above, with the task revision and run records. Large datasets can stay in versioned storage with retrieval instructions. The short proposal route remains open to anyone who wants help developing a task.",
+    "zh": "在上方表单附上仓库或压缩包链接，注明任务版本和运行记录即可。大型数据可放在有版本记录的存储中，并提供取数说明。希望共同完善题目的研究者，也可以先通过简短提案介绍问题。"
+  },
+  {
+    "id": "m0191",
+    "en": "Get the authoring repository",
+    "zh": "获取供题仓库"
+  },
+  {
+    "id": "m0192",
+    "en": "A few practical questions",
+    "zh": "关于参与的几个问题"
+  },
+  {
+    "id": "m0193",
+    "en": "Do I need a finished container?",
+    "zh": "需要一开始就准备好容器吗？"
+  },
+  {
+    "id": "m0194",
+    "en": "Not for an initial idea. You can start with a question and develop it with us. A complete task submission does require a reproducible environment, reference solution, verifier and run evidence.",
+    "zh": "推荐问题时不需要，可以先和我们一起完善。提交完整任务包时，则需要提供可复现环境、参考解、验证器和运行证据。"
+  },
+  {
+    "id": "m0195",
+    "en": "Can a task come from unpublished work?",
+    "zh": "可以来自未发表的研究吗？"
+  },
+  {
+    "id": "m0196",
+    "en": "Yes. Begin with a short description and the materials you are comfortable discussing. Agree on access and publication with the team before sharing the complete research package.",
+    "zh": "可以。先提供问题概述和便于讨论的材料，完整研究资料的交接与公开范围由双方约定。"
+  },
+  {
+    "id": "m0197",
+    "en": "What would an advisor do?",
+    "zh": "Advisor 主要做什么？"
+  },
+  {
+    "id": "m0198",
+    "en": "Help select important and difficult problems, review scientific assumptions and evaluation criteria, and interpret results. The project team handles day-to-day engineering and coordination.",
+    "zh": "帮助选择重要而困难的问题，审阅科学假设与验收标准，解释评测结果。日常工程和组织由项目团队承担。"
+  },
+  {
+    "id": "m0199",
+    "en": "How are contributions recognized?",
+    "zh": "贡献如何记录？"
+  },
+  {
+    "id": "m0200",
+    "en": "We record task authorship, engineering, review and advisory contributions. Public attribution and paper contributions are agreed according to the work involved.",
+    "zh": "项目记录出题、工程、评审和顾问贡献。公开署名与论文贡献根据实际参与工作共同约定。"
+  },
+  {
+    "id": "m0201",
+    "en": "Earth Last Exam — Research agents in Earth science",
+    "zh": "Earth Last Exam — 地球科学科研 Agent 评测"
+  },
+  {
+    "id": "m0202",
+    "en": "Earth science · Research agent evaluation",
+    "zh": "地球科学 · 科研 Agent 评测"
+  },
+  {
+    "id": "m0203",
+    "en": "What research can an agent carry out independently?",
+    "zh": "Agent 能独立完成怎样的研究？"
+  },
+  {
+    "id": "m0204",
+    "en": "We work with Earth scientists to design difficult tasks using real data and specialist software. We assess the research decisions an agent makes and whether its findings hold up.",
+    "zh": "我们与地球科学研究者共同设计高难度任务，让 Agent 使用真实数据和专业软件开展实验。评测关注它做出的研究判断，以及最终结果是否成立。"
+  },
+  {
+    "id": "m0205",
+    "en": "Explore a research task",
+    "zh": "了解原创任务"
+  },
+  {
+    "id": "m0206",
+    "en": "Join as an advisor",
+    "zh": "加入顾问团队"
+  },
+  {
+    "id": "m0207",
+    "en": "The sunlit Earth",
+    "zh": "从太空观测地球"
+  },
+  {
+    "id": "m0208",
+    "en": "6 July 2015",
+    "zh": "2015 年 7 月 6 日"
+  },
+  {
+    "id": "m0209",
+    "en": "Initiated by",
+    "zh": "发起方"
+  },
+  {
+    "id": "m0210",
+    "en": "Discover the project",
+    "zh": "走进 Earth Last Exam"
+  },
+  {
+    "id": "m0211",
+    "en": "Assessing the ability to do research",
+    "zh": "怎样判断 Agent 会做研究"
+  },
+  {
+    "id": "m0212",
+    "en": "Earth Last Exam asks an agent to take over a research problem with work still to do. It must decide which evidence to use, run the experiments it needs and revise its explanation when the results disagree.",
+    "zh": "Earth Last Exam 让 Agent 接手一项尚未完成的研究。它需要判断哪些证据可靠，决定还要做什么实验；结果与预期不符时，也需要重新审视自己的解释。"
+  },
+  {
+    "id": "m0213",
+    "en": "Earth science is a demanding setting for this work. Observations often leave gaps, and several physical processes can explain the same pattern. A useful result must account for that ambiguity and still work when tested on another event or region.",
+    "zh": "地球科学适合检验这种能力。观测常有缺口，同一种现象可能有几种物理解释。研究者需要在这些限制下作出判断，并检验结论换到另一场事件或另一个区域后是否仍然成立。"
+  },
+  {
+    "id": "m0214",
+    "en": "Read our approach",
+    "zh": "了解我们的评测设计"
+  },
+  {
+    "id": "m0215",
+    "en": "Earth from orbit / ISS",
+    "zh": "轨道上的地球 / ISS"
+  },
+  {
+    "id": "m0216",
+    "en": "The eye of Typhoon Maysak",
+    "zh": "美莎克台风的风眼"
+  },
+  {
+    "id": "m0217",
+    "en": "Photographed from the International Space Station, Maysak’s eye sits within a broad cloud field. Earth’s curved horizon is visible beyond it.",
+    "zh": "国际空间站拍摄的美莎克台风。风眼位于大片云系之中，远处可见地球弧形地平线。"
+  },
+  {
+    "id": "m0218",
+    "en": "Explore the environments",
+    "zh": "了解专业环境"
+  },
+  {
+    "id": "m0219",
+    "en": "31 March 2015",
+    "zh": "2015 年 3 月 31 日"
+  },
+  {
+    "id": "m0220",
+    "en": "Observation source ↗",
+    "zh": "观测来源 ↗"
+  },
+  {
+    "id": "m0221",
+    "en": "Research worth doing",
+    "zh": "有研究价值"
+  },
+  {
+    "id": "m0222",
+    "en": "Questions grounded in papers and working research projects.",
+    "zh": "从论文与实际科研项目中提炼问题。"
+  },
+  {
+    "id": "m0223",
+    "en": "An environment to explore",
+    "zh": "能继续探索的环境"
+  },
+  {
+    "id": "m0224",
+    "en": "Data, domain software and existing experiments, ready to investigate.",
+    "zh": "数据、领域软件和已有实验共同构成研究起点。"
+  },
+  {
+    "id": "m0225",
+    "en": "Evidence that holds up",
+    "zh": "经得起检验的证据"
+  },
+  {
+    "id": "m0226",
+    "en": "Scientific outputs checked against independent observations and experiments.",
+    "zh": "用独立观测和实验验证交付的科学产物。"
+  },
+  {
+    "id": "m0227",
+    "en": "The research environment",
+    "zh": "专业研究环境"
+  },
+  {
+    "id": "m0228",
+    "en": "The tools the research needs",
+    "zh": "为每道题准备专业环境"
+  },
+  {
+    "id": "m0229",
+    "en": "A task needs the software and working materials its field relies on. We prepare the data and documentation alongside an existing analysis, so the agent can inspect how it was done and try a different approach.",
+    "zh": "每道题都需要相应的领域软件和研究资料。我们将数据、使用文档与已有分析一起交给 Agent，让它能检查原有方法，也能动手尝试新的思路。"
+  },
+  {
+    "id": "m0230",
+    "en": "An agent can inspect intermediate fields and change an experiment to test its explanation.",
+    "zh": "Agent 可以检查中间场，调整实验，再检验自己的解释。"
+  },
+  {
+    "id": "m0231",
+    "en": "Research environments",
+    "zh": "专业研究环境"
+  },
+  {
+    "id": "m0232",
+    "en": "Atmosphere",
+    "zh": "大气"
+  },
+  {
+    "id": "m0233",
+    "en": "Ocean",
+    "zh": "海洋"
+  },
+  {
+    "id": "m0234",
+    "en": "Solid Earth",
+    "zh": "固体地球"
+  },
+  {
+    "id": "m0235",
+    "en": "Forecast fields and storm diagnostics",
+    "zh": "预报场与台风诊断"
+  },
+  {
+    "id": "m0236",
+    "en": "Forecast fields, initial and boundary conditions, model configurations, satellite observations and a working baseline. Inspect the fields, rerun the model and test the source of an error.",
+    "zh": "预报场、初始和边界条件、模式配置、卫星观测与可运行基线。Agent 可以检查中间场、重跑模式，并用实验区分误差来源。"
+  },
+  {
+    "id": "m0237",
+    "en": "Ocean models and observations",
+    "zh": "海洋模式与观测资料"
+  },
+  {
+    "id": "m0238",
+    "en": "An ocean task can pair a model grid and boundary conditions with temperature, salinity and current observations. Transport and conservation diagnostics help determine which processes explain a model’s errors.",
+    "zh": "海洋任务可以配备模式网格、边界条件和温盐流观测。Agent 通过输运诊断与守恒分析，判断哪些过程造成了模式与观测之间的偏差。"
+  },
+  {
+    "id": "m0239",
+    "en": "Geophysical observations and inversion",
+    "zh": "地球物理观测与反演"
+  },
+  {
+    "id": "m0240",
+    "en": "Waveforms or deformation records come with station metadata and instrument responses. With forward models and an existing inversion, the agent can test which interpretations the observations actually constrain.",
+    "zh": "波形或形变资料配套台站信息与仪器响应。结合正演工具和已有反演结果，Agent 需要检验观测能约束哪些解释，哪些仍无法区分。"
+  },
+  {
+    "id": "m0241",
+    "en": "Given to the agent",
+    "zh": "提供给 Agent"
+  },
+  {
+    "id": "m0242",
+    "en": "Observations, baseline, domain software and manuals.",
+    "zh": "观测资料、基线实验、专业软件与手册。"
+  },
+  {
+    "id": "m0243",
+    "en": "Open to investigation",
+    "zh": "由 Agent 探索"
+  },
+  {
+    "id": "m0244",
+    "en": "Code, hypotheses, experiments and reproducible outputs.",
+    "zh": "代码、科学假设、实验与可复现产物。"
+  },
+  {
+    "id": "m0245",
+    "en": "Held by the evaluator",
+    "zh": "留在评测端"
+  },
+  {
+    "id": "m0246",
+    "en": "Independent cases, reference evidence and scientific checks.",
+    "zh": "独立个例、参照证据与科学验证。"
+  },
+  {
+    "id": "m0247",
+    "en": "Inside a task",
+    "zh": "走进任务"
+  },
+  {
+    "id": "m0248",
+    "en": "Investigating errors in typhoon forecasts",
+    "zh": "研究台风预报中的误差"
+  },
+  {
+    "id": "m0249",
+    "en": "01 / Observed tracks",
+    "zh": "01 / 实际路径"
+  },
+  {
+    "id": "m0250",
+    "en": "JMA best-track data",
+    "zh": "JMA 最佳路径资料"
+  },
+  {
+    "id": "m0251",
+    "en": "Khanun & Saola · Western North Pacific",
+    "zh": "卡努与苏拉 · 西北太平洋"
+  },
+  {
+    "id": "m0252",
+    "en": "Two storms, distinct changes of direction",
+    "zh": "两场台风，不同的转向过程"
+  },
+  {
+    "id": "m0253",
+    "en": "157 archived positions. Circles mark 00 UTC; squares and triangles mark the first and last records.",
+    "zh": "共 157 个存档位置。圆点标记 00 UTC，方形与三角形分别标记首条和末条记录。"
+  },
+  {
+    "id": "m0254",
+    "en": "Figure by EvolventAI from JMA data · Natural Earth",
+    "zh": "EvolventAI 据 JMA 资料绘制 · Natural Earth 底图"
+  },
+  {
+    "id": "m0255",
+    "en": "Data source ↗",
+    "zh": "数据来源 ↗"
+  },
+  {
+    "id": "m0256",
+    "en": "02 / Typhoon Saola",
+    "zh": "02 / 台风苏拉"
+  },
+  {
+    "id": "m0257",
+    "en": "Satellite observation",
+    "zh": "卫星观测"
+  },
+  {
+    "id": "m0258",
+    "en": "Suomi NPP / VIIRS · 1 September 2023",
+    "zh": "Suomi NPP / VIIRS · 2023 年 9 月 1 日"
+  },
+  {
+    "id": "m0259",
+    "en": "Saola along the coast of southern China",
+    "zh": "中国南部近海的苏拉"
+  },
+  {
+    "id": "m0260",
+    "en": "Saola at left; Haikui east of Taiwan at right.",
+    "zh": "左侧为苏拉；右侧为台湾以东的海葵。"
+  },
+  {
+    "id": "m0261",
+    "en": "Image and data credit",
+    "zh": "影像与数据来源"
+  },
+  {
+    "id": "m0262",
+    "en": "Atmosphere / Typhoon research",
+    "zh": "大气 / 台风研究"
+  },
+  {
+    "id": "m0263",
+    "en": "Why does a typhoon turn?",
+    "zh": "台风为什么会转向？"
+  },
+  {
+    "id": "m0264",
+    "en": "Investigate how steering flow, vortex structure and convection contribute to forecast error. Use controlled experiments to test the explanation, then see whether it predicts another storm’s response. Improved forecasts must be supported by physical evidence.",
+    "zh": "分析引导气流、涡旋结构和对流过程各自如何影响预报误差。用受控实验检验解释，再判断它能否预言另一场台风的响应。路径与登陆预报的改进，需要相应的物理证据支持。"
+  },
+  {
+    "id": "m0265",
+    "en": "Inputs",
+    "zh": "研究资料"
+  },
+  {
+    "id": "m0266",
+    "en": "Environment",
+    "zh": "专业环境"
+  },
+  {
+    "id": "m0267",
+    "en": "Deliverables",
+    "zh": "科学产物"
+  },
+  {
+    "id": "m0268",
+    "en": "Tracks, probabilities & reproducible evidence",
+    "zh": "轨迹、概率与可复现的实验依据"
+  },
+  {
+    "id": "m0269",
+    "en": "Explore the full task",
+    "zh": "阅读完整任务"
+  },
+  {
+    "id": "m0270",
+    "en": "Across Earth science",
+    "zh": "覆盖地球科学"
+  },
+  {
+    "id": "m0271",
+    "en": "Research fields",
+    "zh": "研究方向"
+  },
+  {
+    "id": "m0272",
+    "en": "We welcome questions from across Earth science, including work that spans several fields. These topics are a starting point; contributors help decide which problems to pursue.",
+    "zh": "我们面向地球科学各方向征集问题，也欢迎交叉学科研究。下面列出一些方向，具体选题由参与研究者共同提出。"
+  },
+  {
+    "id": "m0273",
+    "en": "Geology",
+    "zh": "地质"
+  },
+  {
+    "id": "m0274",
+    "en": "Geochemistry",
+    "zh": "地球化学"
+  },
+  {
+    "id": "m0275",
+    "en": "Geophysics",
+    "zh": "地球物理"
+  },
+  {
+    "id": "m0276",
+    "en": "Climate",
+    "zh": "气候"
+  },
+  {
+    "id": "m0277",
+    "en": "Hydrology",
+    "zh": "水文"
+  },
+  {
+    "id": "m0278",
+    "en": "Cryosphere",
+    "zh": "冰冻圈"
+  },
+  {
+    "id": "m0279",
+    "en": "Surface processes",
+    "zh": "地表过程"
+  },
+  {
+    "id": "m0280",
+    "en": "Remote sensing",
+    "zh": "遥感"
+  },
+  {
+    "id": "m0281",
+    "en": "Geodesy",
+    "zh": "大地测量"
+  },
+  {
+    "id": "m0282",
+    "en": "Ecology",
+    "zh": "生态"
+  },
+  {
+    "id": "m0283",
+    "en": "Biogeochemistry",
+    "zh": "生物地球化学"
+  },
+  {
+    "id": "m0284",
+    "en": "Subsurface systems",
+    "zh": "地下系统"
+  },
+  {
+    "id": "m0285",
+    "en": "Planetary science",
+    "zh": "行星科学"
+  },
+  {
+    "id": "m0286",
+    "en": "Hydrology · Surface processes",
+    "zh": "水文 · 地表过程"
+  },
+  {
+    "id": "m0287",
+    "en": "Lena River Delta",
+    "zh": "勒拿河三角洲"
+  },
+  {
+    "id": "m0288",
+    "en": "Landsat 9 / OLI-2 · 17 June 2022",
+    "zh": "Landsat 9 / OLI-2 · 2022 年 6 月 17 日"
+  },
+  {
+    "id": "m0289",
+    "en": "River channels, permafrost lakes and coastal sea ice in one observation.",
+    "zh": "河道、冻土湖泊与近岸海冰，出现在同一幅观测中。"
+  },
+  {
+    "id": "m0290",
+    "en": "Ocean · Biogeochemistry",
+    "zh": "海洋 · 生物地球化学"
+  },
+  {
+    "id": "m0291",
+    "en": "A bloom in the Barents Sea",
+    "zh": "巴伦支海的藻华"
+  },
+  {
+    "id": "m0292",
+    "en": "Terra / MODIS · 3 August 2023",
+    "zh": "Terra / MODIS · 2023 年 8 月 3 日"
+  },
+  {
+    "id": "m0293",
+    "en": "A break in the clouds reveals large-scale patterns in ocean color.",
+    "zh": "云隙之间，海洋水色的空间分布清晰可见。"
+  },
+  {
+    "id": "m0294",
+    "en": "Geology · Remote sensing",
+    "zh": "地质 · 遥感"
+  },
+  {
+    "id": "m0295",
+    "en": "Ridges of the Zagros Mountains",
+    "zh": "扎格罗斯山脉的褶皱"
+  },
+  {
+    "id": "m0296",
+    "en": "ISS / Nikon D5 · 7 February 2022",
+    "zh": "ISS / Nikon D5 · 2022 年 2 月 7 日"
+  },
+  {
+    "id": "m0297",
+    "en": "Folded ridges and intervening valleys record the structure of the terrain.",
+    "zh": "延伸的山脊与谷地，显露出地层褶皱的形态。"
+  },
+  {
+    "id": "m0298",
+    "en": "What success means",
+    "zh": "如何判定成功"
+  },
+  {
+    "id": "m0299",
+    "en": "What the evaluation measures",
+    "zh": "我们怎样评价研究结果"
+  },
+  {
+    "id": "m0300",
+    "en": "Scores reflect progress on the research question. We examine the results and the experiments supporting them, then check whether the method still works on data it has not seen.",
+    "zh": "评分对应题目要求的研究进展。我们检查实验是否支持结论，也检验方法用到新的资料后是否仍然有效。"
+  },
+  {
+    "id": "m0301",
+    "en": "See the evaluation protocol",
+    "zh": "查看完整评测规则"
+  },
+  {
+    "id": "m0302",
+    "en": "Results on new cases",
+    "zh": "新情形下的表现"
+  },
+  {
+    "id": "m0303",
+    "en": "Apply the method to new events or regions and compare it with the established baselines.",
+    "zh": "把方法用于新的事件或区域，与已有方法比较改进幅度。"
+  },
+  {
+    "id": "m0304",
+    "en": "A physical explanation",
+    "zh": "有物理依据的解释"
+  },
+  {
+    "id": "m0305",
+    "en": "Connect the result to physical processes and quantify what remains uncertain.",
+    "zh": "把结果与物理过程联系起来，量化仍然存在的不确定性。"
+  },
+  {
+    "id": "m0306",
+    "en": "Experiments that distinguish explanations",
+    "zh": "能够区分解释的实验"
+  },
+  {
+    "id": "m0307",
+    "en": "Use matched controls and repeat experiments to establish why a method works.",
+    "zh": "通过配对对照和重复实验，说明一种方法为什么有效。"
+  },
+  {
+    "id": "m0308",
+    "en": "Build it with us",
+    "zh": "一起建设"
+  },
+  {
+    "id": "m0309",
+    "en": "Take part in Earth Last Exam",
+    "zh": "参与 Earth Last Exam"
+  },
+  {
+    "id": "m0310",
+    "en": "EvolventAI is inviting researchers to help select tasks and review their scientific requirements. Research engineers can work with them to prepare the software environments and scoring code.",
+    "zh": "EvolventAI 正在邀请研究者共同选题、审阅科学要求，也欢迎科研工程师参与环境搭建和评分代码的开发。"
+  },
+  {
+    "id": "m0311",
+    "en": "Participating institutions and researchers",
+    "zh": "参与机构与研究者"
+  },
+  {
+    "id": "m0312",
+    "en": "Universities & institutions · Advisors · Contributors",
+    "zh": "高校与研究机构 · 学术顾问 · 共建者"
+  },
+  {
+    "id": "m0313",
+    "en": "Previous entries",
+    "zh": "上一组"
+  },
+  {
+    "id": "m0314",
+    "en": "Next entries",
+    "zh": "下一组"
+  },
+  {
+    "id": "m0315",
+    "en": "Universities, advisors and contributors",
+    "zh": "高校、学术顾问与共建者"
+  },
+  {
+    "id": "m0316",
+    "en": "Universities & institutions",
+    "zh": "高校与研究机构"
+  },
+  {
+    "id": "m0317",
+    "en": "Participating institutions will be announced as collaborations are confirmed.",
+    "zh": "参与机构将在合作确认后陆续公布。"
+  },
+  {
+    "id": "m0318",
+    "en": "Join us ↗",
+    "zh": "参与共建 ↗"
+  },
+  {
+    "id": "m0319",
+    "en": "Advisors",
+    "zh": "学术顾问"
+  },
+  {
+    "id": "m0320",
+    "en": "Help shape research questions and scientific standards.",
+    "zh": "共同判断研究选题与科学标准。"
+  },
+  {
+    "id": "m0321",
+    "en": "Contributors",
+    "zh": "共建者"
+  },
+  {
+    "id": "m0322",
+    "en": "Develop tasks, prepare environments and review experiments.",
+    "zh": "参与出题、环境准备与实验评审。"
+  },
+  {
+    "id": "m0323",
+    "en": "The roster will be published as participants confirm their involvement.",
+    "zh": "名单将在参与者确认后陆续公布。"
+  },
+  {
+    "id": "m0324",
+    "en": "Scientific advisory team",
+    "zh": "学术顾问团队"
+  },
+  {
+    "id": "m0325",
+    "en": "Join the scientific advisory team",
+    "zh": "加入学术顾问团队"
+  },
+  {
+    "id": "m0326",
+    "en": "We invite domain experts to join the advisory team. Advisors help choose research questions and review what a convincing result would require. The role can be shaped around your expertise and availability.",
+    "zh": "我们邀请领域专家加入顾问团队，帮助选择研究问题，审阅题目和评分标准。具体参与内容可根据您的研究专长与时间安排。"
+  },
+  {
+    "id": "m0327",
+    "en": "Important and difficult research questions",
+    "zh": "重要且困难的研究问题"
+  },
+  {
+    "id": "m0328",
+    "en": "Scientific judgment and task review",
+    "zh": "研究判断与题目评审"
+  },
+  {
+    "id": "m0329",
+    "en": "Evidence and acceptance criteria",
+    "zh": "证据要求与验收标准"
+  },
+  {
+    "id": "m0330",
+    "en": "Research contributions",
+    "zh": "研究供题"
+  },
+  {
+    "id": "m0331",
+    "en": "Bring a research task",
+    "zh": "提供研究任务"
+  },
+  {
+    "id": "m0332",
+    "en": "Recommend a question from your work. A few sentences or a paper link are enough to start.",
+    "zh": "推荐工作中值得研究的问题。先写几句话，或附上一篇论文，就可以开始。"
+  },
+  {
+    "id": "m0333",
+    "en": "Propose a task",
+    "zh": "提出题目"
+  },
+  {
+    "id": "m0334",
+    "en": "Research engineering",
+    "zh": "科研工程"
+  },
+  {
+    "id": "m0335",
+    "en": "Build the environment",
+    "zh": "共建专业环境"
+  },
+  {
+    "id": "m0336",
+    "en": "Help researchers turn existing code and data into a runnable task with a reproducible reference experiment.",
+    "zh": "协助研究者整理已有代码与数据，搭建可运行的任务环境，并复现参考实验。"
+  },
+  {
+    "id": "m0337",
+    "en": "Join the collaboration",
+    "zh": "参与工程共创"
+  },
+  {
+    "id": "m0338",
+    "en": "Let’s build Earth Last Exam",
+    "zh": "一起建设 Earth Last Exam"
+  },
+  {
+    "id": "m0339",
+    "en": "Typhoon research task — Earth Last Exam",
+    "zh": "台风原创例题 — Earth Last Exam"
+  },
+  {
+    "id": "m0340",
+    "en": "Example task",
+    "zh": "原创例题"
+  },
+  {
+    "id": "m0341",
+    "en": "Atmosphere · Original research task",
+    "zh": "大气 · 原创研究任务"
+  },
+  {
+    "id": "m0342",
+    "en": "Typhoon turns, coastal tracks and landfall uncertainty",
+    "zh": "台风转向、近岸路径与登陆不确定性"
+  },
+  {
+    "id": "m0343",
+    "en": "Explain how environmental flow, vortex structure and diabatic processes shape a typhoon’s path. Use process budgets and controlled experiments to diagnose forecast errors, test the causes and improve predictions across storms.",
+    "zh": "解释环境环流、涡旋结构与非绝热过程如何影响台风路径。通过过程收支和受控实验追查预报误差、检验原因，并在不同台风上验证改进。"
+  },
+  {
+    "id": "m0344",
+    "en": "Forecast horizon",
+    "zh": "预报范围"
+  },
+  {
+    "id": "m0345",
+    "en": "hours",
+    "zh": "小时"
+  },
+  {
+    "id": "m0346",
+    "en": "Paired interventions",
+    "zh": "配对干预"
+  },
+  {
+    "id": "m0347",
+    "en": "design",
+    "zh": "试验设计"
+  },
+  {
+    "id": "m0348",
+    "en": "Scientific acceptance",
+    "zh": "科学验收"
+  },
+  {
+    "id": "m0349",
+    "en": "research criteria",
+    "zh": "项研究标准"
+  },
+  {
+    "id": "m0350",
+    "en": "Research brief",
+    "zh": "研究目标"
+  },
+  {
+    "id": "m0351",
+    "en": "Data & environment",
+    "zh": "数据与环境"
+  },
+  {
+    "id": "m0352",
+    "en": "Research work",
+    "zh": "研究工作"
+  },
+  {
+    "id": "m0353",
+    "en": "Data sources",
+    "zh": "数据来源"
+  },
+  {
+    "id": "m0354",
+    "en": "A method that works across storms",
+    "zh": "在不同台风上验证同一方法"
+  },
+  {
+    "id": "m0355",
+    "en": "Task reading guide",
+    "zh": "任务阅读导引"
+  },
+  {
+    "id": "m0356",
+    "en": "Inspect the workspace",
+    "zh": "接手研究环境"
+  },
+  {
+    "id": "m0357",
+    "en": "Test the explanations",
+    "zh": "检验竞争解释"
+  },
+  {
+    "id": "m0358",
+    "en": "Deliver the evidence",
+    "zh": "交付研究证据"
+  },
+  {
+    "id": "m0359",
+    "en": "Evaluate the results",
+    "zh": "评价研究结果"
+  },
+  {
+    "id": "m0360",
+    "en": "Take over a regional ensemble project whose largest errors occur around recurvature, weak steering and coast-parallel motion. Establish which failures arise in the atmospheric forecast, which are introduced by the tracker, and which are hidden by probability calibration. Deliver one automated method for 0–96 h track and first-landfall forecasts.",
+    "zh": "接手一套区域集合预报工程，其主要误差集中在急转向、弱引导与沿岸移动过程。判断偏差来自大气预报、中心追踪，还是概率校准掩盖了问题。交付一套自动运行的方法，完成 0—96 小时路径与首次登陆预报。"
+  },
+  {
+    "id": "m0361",
+    "en": "Khanun and Saola are the intensive diagnostic cases. Historical storms form separate development, calibration and evaluation sets, with all cycles of a storm kept together. New-event forecasts use the data available at their initialization time.",
+    "zh": "卡努与苏拉用于深入诊断。历史台风分别用于方法开发、参数校准和最终评价，同一台风的所有起报时次放在同一组。新事件预报使用起报时已经发布的资料。"
+  },
+  {
+    "id": "m0362",
+    "en": "Establish why the storms take different paths, why the inherited forecast fails, and which interventions change the responsible processes. Deliver both a forecast method and a physical explanation that survives tests on another storm. A useful result may also rule out a plausible mechanism or locate a limit to predictability.",
+    "zh": "解释台风为什么沿不同路径移动、已有预报为什么出错，以及干预改变了哪些物理过程。交付预报方法，也交付能在另一场台风上接受检验的机制解释。排除一种合理解释，或找出可预报性的边界，同样属于研究结果。"
+  },
+  {
+    "id": "m0363",
+    "en": "03 / The storms through time",
+    "zh": "03 / 风暴的时间演变"
+  },
+  {
+    "id": "m0364",
+    "en": "JMA retrospective analyses",
+    "zh": "JMA 事后分析"
+  },
+  {
+    "id": "m0365",
+    "en": "Open the observed central-pressure figure",
+    "zh": "打开中心气压观测图"
+  },
+  {
+    "id": "m0366",
+    "en": "A track is only one part of the evidence",
+    "zh": "路径只是证据的一部分"
+  },
+  {
+    "id": "m0367",
+    "en": "Central-pressure records place the changing track alongside the storm’s evolution. Both panels use the same pressure scale and retain all archived times. These are observations used for context, not forecast scores.",
+    "zh": "中心气压记录让路径变化与风暴演变可以对照阅读。两图共用气压刻度，保留全部存档时次；这些资料用于理解研究背景，不是预报成绩。"
+  },
+  {
+    "id": "m0368",
+    "en": "JMA best-track archive ↗",
+    "zh": "JMA 最佳路径资料 ↗"
+  },
+  {
+    "id": "m0369",
+    "en": "Resource",
+    "zh": "资源"
+  },
+  {
+    "id": "m0370",
+    "en": "What is available",
+    "zh": "具体内容"
+  },
+  {
+    "id": "m0371",
+    "en": "GRIB2 initial and boundary fields through 96 h, including the control and perturbed members. The data index describes each cycle, forecast lead, release time, vertical level and grid.",
+    "zh": "提供至 96 小时的 GRIB2 初始场与侧边界场，包括控制成员和扰动成员。资料说明列出起报时次、预报时效、发布时间、垂直层次与网格。"
+  },
+  {
+    "id": "m0372",
+    "en": "Calibrated infrared B13 observations up to the decision cutoff, navigation, scan times and quality masks. Missing scans remain identifiable; spatial remapping must preserve their time and quality information.",
+    "zh": "提供决策截止前的 B13 定标红外观测、导航、扫描时间与质量掩膜。缺失扫描须可辨识，空间重采样须保留时间与质量信息。"
+  },
+  {
+    "id": "m0373",
+    "en": "JMA agency-specific development tracks, with IBTrACS identifiers for event matching. The JMA position convention is used consistently; agency intensities are not mixed. Held-out reference tracks remain evaluator-side.",
+    "zh": "提供 JMA 开发事件路径，以 IBTrACS 编号对应事件；位置统一遵循 JMA 约定，不混合不同机构的强度记录。保留事件参照路径留在评测端。"
+  },
+  {
+    "id": "m0374",
+    "en": "Retrospective development diagnostics for pressure-level circulation, potential vorticity, shear and steering flow. These fields are unavailable to the forecast entry point for held-out events.",
+    "zh": "用于开发事件的事后等压面环流、位涡、切变和引导气流诊断；保留事件的预报入口无法读取这些资料。"
+  },
+  {
+    "id": "m0375",
+    "en": "Model geography, land masks, terrain, pre-cutoff SST and a versioned high-resolution coastline segmented along arc length. The plotting basemap is separate from the landfall verification geometry.",
+    "zh": "提供模式地理场、陆海掩膜、地形、截止前海温，以及按弧长分段的固定高分辨率海岸线。展示用底图与登陆验收用几何资料分开。"
+  },
+  {
+    "id": "m0376",
+    "en": "Global-ensemble tracks, original WRF fields and tracking logs, historical bias correction, restart files and notes on completed and failed experiments.",
+    "zh": "提供全球集合路径、原始 WRF 场与追踪日志、历史偏差订正、重启文件，以及既有实验和失败运行的记录。"
+  },
+  {
+    "id": "m0377",
+    "en": "An environment for numerical weather research",
+    "zh": "完整的领域环境"
+  },
+  {
+    "id": "m0378",
+    "en": "WRF-ARW / WPS, MPI, NetCDF and ecCodes are installed with local manuals, compiled executables, geography tables and tested namelists. The baseline uses 27 km and 9 km fixed nests with 61 vertical levels. A supplied 3 km nest configuration supports a controlled sensitivity experiment; its domain is selected from pre-cutoff information. Boundary interpolation, restart handling and failure diagnosis are part of the work.",
+    "zh": "工作区安装 WRF-ARW / WPS、MPI、NetCDF 与 ecCodes，配齐本地手册、编译程序、地理表和验证过的 namelist。基线采用 27 km / 9 km 固定嵌套与 61 个垂直层，另提供 3 km 嵌套配置用于受控敏感性试验，其区域依据截止前信息选定。侧边界插值、重启处理与故障诊断均属于任务的一部分。"
+  },
+  {
+    "id": "m0379",
+    "en": "Python tools include xarray, Dask, cfgrib, wrf-python, MetPy, Satpy, Cartopy, SciPy and a geodesic geometry library. Read-only source data, editable analysis code, scratch space, checkpoints and submission outputs occupy separate paths. A full baseline run and a small input-validation case are supplied.",
+    "zh": "Python 环境包含 xarray、Dask、cfgrib、wrf-python、MetPy、Satpy、Cartopy、SciPy 与大地测量几何库。原始只读资料、可编辑分析代码、临时空间、检查点及提交产物分别存放，提供完整基线运行和小型输入验证个例。"
+  },
+  {
+    "id": "m0380",
+    "en": "Forecast inputs are selected by release time. A cycle published before initialization can supply boundary fields for the next 96 hours. ERA5 and best tracks support retrospective diagnosis; the new-event forecast uses the operational inputs available at initialization.",
+    "zh": "预报输入按发布时间选取。起报前已经发布的预报周期，可提供未来 96 小时的侧边界场。ERA5 与最佳路径用于事后诊断，新事件预报则使用起报时已经发布的业务资料。"
+  },
+  {
+    "id": "m0381",
+    "en": "The investigation",
+    "zh": "需要完成的研究"
+  },
+  {
+    "id": "m0382",
+    "en": "Investigate how much of the error comes from the atmospheric forecast and how much from extracting a track. The paired experiments below distinguish those explanations. Choose the diagnostics and implementation, revise the method as evidence develops, and use further experiments where a mechanism remains uncertain.",
+    "zh": "研究需要分清，大气预报本身和路径提取各自造成了多少误差。以下配对实验用于区分这些解释。具体诊断和实现由 Agent 选择，并根据证据调整方法；机制尚不清楚的地方，需要继续设计实验。"
+  },
+  {
+    "id": "m0383",
+    "en": "CONTROLLED EXPERIMENT",
+    "zh": "受控实验设计"
+  },
+  {
+    "id": "m0384",
+    "en": "Same cases · members · seeds",
+    "zh": "相同事件、成员与种子"
+  },
+  {
+    "id": "m0385",
+    "en": "Two interventions, four matched experiments",
+    "zh": "两种干预，四组配对实验"
+  },
+  {
+    "id": "m0386",
+    "en": "Initial state ↓ / Boundary treatment →",
+    "zh": "初始场 ↓ / 边界处理 →"
+  },
+  {
+    "id": "m0387",
+    "en": "Original boundary",
+    "zh": "原边界处理"
+  },
+  {
+    "id": "m0388",
+    "en": "Boundary intervention",
+    "zh": "边界干预"
+  },
+  {
+    "id": "m0389",
+    "en": "Original initial state",
+    "zh": "原初始场"
+  },
+  {
+    "id": "m0390",
+    "en": "Baseline",
+    "zh": "基线实验"
+  },
+  {
+    "id": "m0391",
+    "en": "Both factors unchanged",
+    "zh": "两项因素均不变"
+  },
+  {
+    "id": "m0392",
+    "en": "Boundary only",
+    "zh": "仅干预边界"
+  },
+  {
+    "id": "m0393",
+    "en": "Keep the initial state",
+    "zh": "保持初始场不变"
+  },
+  {
+    "id": "m0394",
+    "en": "Initial-state intervention",
+    "zh": "初始场干预"
+  },
+  {
+    "id": "m0395",
+    "en": "Initial state only",
+    "zh": "仅干预初始场"
+  },
+  {
+    "id": "m0396",
+    "en": "Keep the boundary treatment",
+    "zh": "保持边界处理不变"
+  },
+  {
+    "id": "m0397",
+    "en": "Joint intervention",
+    "zh": "联合干预"
+  },
+  {
+    "id": "m0398",
+    "en": "Measure the interaction",
+    "zh": "识别交互效应"
+  },
+  {
+    "id": "m0399",
+    "en": "Interaction in loss",
+    "zh": "损失的交互项"
+  },
+  {
+    "id": "m0400",
+    "en": "Compute contrasts on paired cases, then aggregate by storm. A negative interaction means the joint loss reduction exceeds the sum of the two individual reductions. Use circulation diagnostics and ablations to explain which physical process produces that difference.",
+    "zh": "先在配对个例上计算对比，再按台风汇总。交互项为负，表示联合改进超过两项单独改进之和。结合环流诊断与消融实验，解释这一差异对应的物理过程。"
+  },
+  {
+    "id": "m0401",
+    "en": "Reconstruct the inherited experiment",
+    "zh": "重建接手的实验"
+  },
+  {
+    "id": "m0402",
+    "en": "Reproduce the inherited baseline. Bring time, coordinates, units and accumulated fields onto a consistent basis, then compare the archived tracks with centers extracted from the raw model fields. Describe how any differences affect the forecast.",
+    "zh": "复现已有基线，统一时间、坐标、单位与累积变量的处理，再比较存档路径和从原始模式场提取的中心位置，说明这些差异如何影响预报。"
+  },
+  {
+    "id": "m0403",
+    "en": "Separate a misplaced vortex from a lost tracker",
+    "zh": "区分涡旋偏移与追踪失锁"
+  },
+  {
+    "id": "m0404",
+    "en": "Build storm-centered composites using pressure, 850 hPa vorticity, wind symmetry and temporal continuity. Retain competing centers near terrain or interacting systems. Re-run the old and revised trackers on identical fields; then hold the tracker fixed while comparing model configurations.",
+    "zh": "结合气压、850 hPa 涡度、风场对称性与时间连续性构建风暴相对合成。近地形或多系统相互作用时保留竞争中心。先在同一模式场上比较新旧追踪器，再固定追踪器比较模式配置。"
+  },
+  {
+    "id": "m0405",
+    "en": "Locate the mechanism of a failed turn",
+    "zh": "定位转向失败的机制"
+  },
+  {
+    "id": "m0406",
+    "en": "Compare vortex-removed, mass-weighted steering over 850–300 hPa and 700–300 hPa. Examine subtropical-ridge displacement, upstream trough evolution, beta drift and asymmetric convection. Identify when and where the mechanisms diverge, then design an intervention that distinguishes them.",
+    "zh": "比较去涡旋后 850—300 hPa 与 700—300 hPa 的质量加权引导气流，检查副热带高压位移、上游槽演变、β 漂移与非对称对流。找出几种解释在时间和空间上的分歧，再设计能够区分它们的干预实验。"
+  },
+  {
+    "id": "m0407",
+    "en": "Run a controlled intervention matrix",
+    "zh": "完成受控干预矩阵"
+  },
+  {
+    "id": "m0408",
+    "en": "Cross an initialization or vortex treatment with a large-scale boundary or nudging treatment in a 2×2 experiment. Use matched members and random seeds, with nudging fields from the available forecasts. Cover both diagnostic storms and another development event; estimate each effect and their interaction.",
+    "zh": "以初值或涡旋处理为一条轴、大尺度侧边界或约束处理为另一条轴，使用匹配成员与随机种子开展 2×2 试验。约束场采用当时可用的预报资料。实验覆盖两个诊断台风及另一开发事件，分别估计主效应与交互作用。"
+  },
+  {
+    "id": "m0409",
+    "en": "Test resolution and structural uncertainty",
+    "zh": "检验分辨率与结构不确定性"
+  },
+  {
+    "id": "m0410",
+    "en": "Evaluate the supplied 3 km nest on a coastal development case against its 9 km parent. Keep initialization and eligible boundary data matched. Test a physically motivated microphysics or boundary-layer alternative, measure changes in vortex structure, and distinguish a resolution effect from a changed tracking or coast-crossing rule.",
+    "zh": "在近岸开发事件上比较提供的 3 km 嵌套与 9 km 父网格，匹配初值及合格边界资料。检验有物理依据的微物理或边界层方案替代，量化涡旋结构变化，并区分分辨率效应与追踪或海岸穿越规则改变。"
+  },
+  {
+    "id": "m0411",
+    "en": "Use one-way nesting (feedback=0), keeping the parent realization fixed. Record the physical settings that change with resolution. For each experiment, save its hypothesis, model and tracker settings, member seeds and diagnostic results.",
+    "zh": "分辨率对照采用单向嵌套（feedback=0），保持父网格实现一致，并说明随分辨率调整的物理设置。每次实验保存研究假设、模式与追踪器配置、成员种子和诊断结果。"
+  },
+  {
+    "id": "m0412",
+    "en": "Preserve separate trajectory branches",
+    "zh": "保留独立的轨迹分支"
+  },
+  {
+    "id": "m0413",
+    "en": "Represent recurving and coast-following branches in a weighted trajectory distribution. Fit bias correction, member weights and bandwidth on development and calibration storms. Quantify how missing scans, ambiguous centers and model failures change the probability assigned to each branch.",
+    "zh": "用带权轨迹分布保留转向与沿岸移动的不同分支。用开发及校准台风拟合偏差订正、成员权重和带宽，量化卫星缺测、中心歧义与模式失败对各分支概率的影响。"
+  },
+  {
+    "id": "m0414",
+    "en": "Derive landfall from the same forecast",
+    "zh": "从同一预报推导登陆"
+  },
+  {
+    "id": "m0415",
+    "en": "Intersect each weighted trajectory with the fixed coastline and identify its first sea-to-land crossing within 96 h, including island crossings. Resolve segment boundaries and time interpolation deterministically. Produce segment probabilities, conditional crossing times, no-landfall probability and explicit unresolved mass from those same trajectories.",
+    "zh": "让带权轨迹与固定海岸线求交，识别 96 小时内首次由海到陆的穿越，包含岛屿登陆。确定性处理海岸分段边界与时间插值，由同一批轨迹生成区段概率、条件登陆时间、未登陆概率和显式未解析质量。"
+  },
+  {
+    "id": "m0416",
+    "en": "Test the method on new storms and incomplete observations",
+    "zh": "在新台风与不完整观测下检验方法"
+  },
+  {
+    "id": "m0417",
+    "en": "Run leave-one-storm-out validation, a missing-scan experiment and a fixed 10% member-loss experiment. Remove each retained intervention in turn to measure its contribution. Save the final code and calibration, then use the same entry point to forecast new storms.",
+    "zh": "开展逐台风留一验证、扫描缺失试验与固定 10% 成员损失试验。逐项移除保留的干预，测量各项改动的贡献。保存最终代码与校准参数，再用同一入口完成新台风预报。"
+  },
+  {
+    "id": "m0418",
+    "en": "The research files",
+    "zh": "交付的研究文件"
+  },
+  {
+    "id": "m0419",
+    "en": "Deliver a method that forecasts new storms, together with the experiments that explain its improvement. The research files connect individual trajectories, probability estimates and landfall results to the physical interpretation in the report.",
+    "zh": "交付一套能够用于新台风的预报方法，并用实验说明改进从何而来。研究文件把成员轨迹、概率估计和登陆结果，与报告中的物理解释联系起来。"
+  },
+  {
+    "id": "m0420",
+    "en": "Research outputs",
+    "zh": "研究产物"
+  },
+  {
+    "id": "m0421",
+    "en": "Open a file to see what to include",
+    "zh": "点击文件，查看内容要求"
+  },
+  {
+    "id": "m0422",
+    "en": "Data and preparation",
+    "zh": "数据与处理说明"
+  },
+  {
+    "id": "m0423",
+    "en": "Describe the datasets, time coverage, coordinates and units used in the study. Explain interpolation, missing-data treatment and the inputs available at each forecast initialization.",
+    "zh": "说明使用的数据、时间范围、坐标与单位，交代插值、缺测处理，以及各次预报起报时可用的资料。"
+  },
+  {
+    "id": "m0424",
+    "en": "time coverage",
+    "zh": "时间范围"
+  },
+  {
+    "id": "m0425",
+    "en": "coordinates",
+    "zh": "坐标"
+  },
+  {
+    "id": "m0426",
+    "en": "units",
+    "zh": "单位"
+  },
+  {
+    "id": "m0427",
+    "en": "Ensemble trajectories",
+    "zh": "集合路径"
+  },
+  {
+    "id": "m0428",
+    "en": "All members at 3 h intervals from 0–96 h: latitude, longitude, pressure, weight, tracking status and source run. Member IDs persist across all products.",
+    "zh": "所有成员 0—96 小时每 3 小时的经纬度、气压、权重、追踪状态和来源运行；所有产物保持成员编号一致。"
+  },
+  {
+    "id": "m0429",
+    "en": "0–96 h",
+    "zh": "0—96 小时"
+  },
+  {
+    "id": "m0430",
+    "en": "3 h intervals",
+    "zh": "每 3 小时"
+  },
+  {
+    "id": "m0431",
+    "en": "member weights",
+    "zh": "成员权重"
+  },
+  {
+    "id": "m0432",
+    "en": "Position and uncertainty",
+    "zh": "位置与不确定性"
+  },
+  {
+    "id": "m0433",
+    "en": "Weighted 3-D unit-vector samples on the sphere at 24/48/72/96 h, region-grid probabilities, area and unresolved mass. The evaluator derives point estimates and coverage regions.",
+    "zh": "24/48/72/96 小时球面三维单位向量带权样本、区域网格概率、面积及未解析质量；评测端计算点预测和覆盖区域。"
+  },
+  {
+    "id": "m0434",
+    "en": "24 / 48 / 72 / 96 h",
+    "zh": "24 / 48 / 72 / 96 小时"
+  },
+  {
+    "id": "m0435",
+    "en": "weighted samples",
+    "zh": "带权样本"
+  },
+  {
+    "id": "m0436",
+    "en": "First landfall",
+    "zh": "首次登陆"
+  },
+  {
+    "id": "m0437",
+    "en": "Mutually exclusive first-crossing coast segments and no-landfall category; conditional time distributions, unresolved mass and per-trajectory crossing records.",
+    "zh": "互斥的首次登陆区段与未登陆类别；条件时间分布、未解析质量及逐轨迹穿越记录。"
+  },
+  {
+    "id": "m0438",
+    "en": "coast segment",
+    "zh": "海岸区段"
+  },
+  {
+    "id": "m0439",
+    "en": "crossing time",
+    "zh": "登陆时间"
+  },
+  {
+    "id": "m0440",
+    "en": "probability",
+    "zh": "概率"
+  },
+  {
+    "id": "m0441",
+    "en": "Experiment notebook",
+    "zh": "实验记录"
+  },
+  {
+    "id": "m0442",
+    "en": "The hypothesis and paired control for each experiment, model and tracker settings, member seeds, measured effects and paths to the saved results. Include runs that did not complete and their observed failure.",
+    "zh": "记录各次实验的假设与配对对照、模式和追踪器设置、成员种子、测得的效应及结果位置，也保留未完成运行的现象与原因。"
+  },
+  {
+    "id": "m0443",
+    "en": "hypothesis",
+    "zh": "研究假设"
+  },
+  {
+    "id": "m0444",
+    "en": "paired control",
+    "zh": "配对对照"
+  },
+  {
+    "id": "m0445",
+    "en": "measured effect",
+    "zh": "实测效应"
+  },
+  {
+    "id": "m0446",
+    "en": "Results and interpretation",
+    "zh": "实验结果与解释"
+  },
+  {
+    "id": "m0447",
+    "en": "Factorial effects, retained-change ablations, uncertainty estimates, stress tests, failed hypotheses and scientific claims linked to saved outputs.",
+    "zh": "因子与交互效应、保留改动的消融、不确定性估计、压力试验、被否定假设，以及关联产物的科学结论。"
+  },
+  {
+    "id": "m0448",
+    "en": "factorial effects",
+    "zh": "因子效应"
+  },
+  {
+    "id": "m0449",
+    "en": "ablations",
+    "zh": "消融实验"
+  },
+  {
+    "id": "m0450",
+    "en": "uncertainty",
+    "zh": "不确定性"
+  },
+  {
+    "id": "m0451",
+    "en": "Run the method",
+    "zh": "运行方法"
+  },
+  {
+    "id": "m0452",
+    "en": "A single event-independent entry point, fixed calibration assets, software/configuration versions and deterministic seeds.",
+    "zh": "不依赖指定事件的统一入口、冻结校准文件、软件与配置版本及确定性种子。"
+  },
+  {
+    "id": "m0453",
+    "en": "entry point",
+    "zh": "运行入口"
+  },
+  {
+    "id": "m0454",
+    "en": "configuration",
+    "zh": "配置"
+  },
+  {
+    "id": "m0455",
+    "en": "environment",
+    "zh": "软件环境"
+  },
+  {
+    "id": "m0456",
+    "en": "Running the submitted method",
+    "zh": "运行入口与文件约定"
+  },
+  {
+    "id": "m0457",
+    "en": "Technical details",
+    "zh": "技术细节"
+  },
+  {
+    "id": "m0458",
+    "en": "The submission includes the forecast method, its fitted parameters and the research files described above. Keep them together under /workspace/output so the same entry point can process new storms.",
+    "zh": "提交内容包括预报方法、拟合参数和上述研究文件，统一保存在 /workspace/output，用同一入口处理新的台风。"
+  },
+  {
+    "id": "m0459",
+    "en": "Run the method on the supplied event inputs and save the forecasts. Evaluation compares the resulting tracks, position distributions and landfall estimates with the reference observations.",
+    "zh": "用提供的个例资料运行方法并保存预报，再将路径、位置分布和登陆估计与参照观测比较。"
+  },
+  {
+    "id": "m0460",
+    "en": "How the work is evaluated",
+    "zh": "如何评价这项研究"
+  },
+  {
+    "id": "m0461",
+    "en": "A successful solution meets all eight research criteria, earns at least 90/100 overall and at least 80% in each scoring dimension. Compare against three fixed baselines: the global ensemble, the original regional pipeline and historical bias correction. All methods use the same evaluation events.",
+    "zh": "完成任务需满足下列八项研究标准，总分达到 90/100，且每个维度达到该维度分值的 80%。对照包括全球集合、原区域流程与历史偏差订正，使用同一组事件比较各方法的表现。"
+  },
+  {
+    "id": "m0462",
+    "en": "Criterion",
+    "zh": "编号"
+  },
+  {
+    "id": "m0463",
+    "en": "Pass condition",
+    "zh": "通过条件"
+  },
+  {
+    "id": "m0464",
+    "en": "Integrity",
+    "zh": "资料与产物"
+  },
+  {
+    "id": "m0465",
+    "en": "Run every evaluation case with consistent units, coordinates and ensemble members. Probability mass sums to one within 10⁻⁶; unresolved mass is at most 1% per cycle on ordinary inputs. Missing members keep their original probability weight.",
+    "zh": "完成全部评测个例，统一单位、坐标和集合成员。概率质量归一化误差 ≤10⁻⁶；正常输入下每次起报的未解析质量 ≤1%，缺失成员保留原有概率权重。"
+  },
+  {
+    "id": "m0466",
+    "en": "Tracks & turns",
+    "zh": "路径与转向"
+  },
+  {
+    "id": "m0467",
+    "en": "Storm-balanced track error improves ≥20% overall and ≥10% at each of 24/48/72/96 h against every frozen baseline. Turning-time MAE improves ≥15%, with no increase in missed turns or false turns.",
+    "zh": "台风等权轨迹误差相对每个冻结对照总体改善 ≥20%，24/48/72/96 小时各自改善 ≥10%；转向时间 MAE 改善 ≥15%，漏报与误报均不增加。"
+  },
+  {
+    "id": "m0468",
+    "en": "All-event multiclass Brier score improves ≥10% against every baseline. Conditional first-crossing time MAE improves ≥15% on the fixed common set; false-landfall rate does not increase.",
+    "zh": "全事件多分类 Brier score 相对每个对照改善 ≥10%；固定共同事件集上的首次登陆条件时间 MAE 改善 ≥15%，登陆误报率不升高。"
+  },
+  {
+    "id": "m0469",
+    "en": "Distribution quality",
+    "zh": "分布质量"
+  },
+  {
+    "id": "m0470",
+    "en": "Spherical-vector energy score improves ≥15% at every lead. The nominal 90% regions cover 85–95% of references at each lead, while their mean area does not exceed the frozen calibrated reference.",
+    "zh": "各时效球面向量 energy score 改善 ≥15%；名义 90% 区域在各时效达到 85–95% 覆盖率，平均面积不超过冻结的校准参照。"
+  },
+  {
+    "id": "m0471",
+    "en": "Transfer",
+    "zh": "跨事件迁移"
+  },
+  {
+    "id": "m0472",
+    "en": "At least 70% of held-out storms improve against the strongest track baseline selected on calibration storms. No difficult group regresses in track, landfall Brier or energy score; the paired storm-bootstrap 95% lower bound for overall track gain is positive.",
+    "zh": "至少 70% 保留台风优于在校准集选定的最强路径对照；各困难组的路径、登陆 Brier 和 energy score 均不退步；配对台风 bootstrap 的总体路径改进 95% 置信区间下限 >0。"
+  },
+  {
+    "id": "m0473",
+    "en": "Scientific evidence",
+    "zh": "科学证据"
+  },
+  {
+    "id": "m0474",
+    "en": "Complete the factorial, tracker, resolution/physics and ablation experiments, plus M01–M08 below. At least one retained intervention has a positive lower 95% bound for paired improvement evaluated on omitted development storms, with intervention selection inside each training fold. Earn at least 32/40 for scientific evidence, with no mechanism dimension below 3/5.",
+    "zh": "完成四格因子、追踪器、分辨率/物理敏感性与消融试验，并完成下列 M01—M08。干预在各训练折内选择；至少一项保留干预在被留出的开发台风上，其配对改进 95% 置信区间下限 >0。科学证据 ≥32/40，且每项机制维度 ≥3/5。"
+  },
+  {
+    "id": "m0475",
+    "en": "Controlled stress",
+    "zh": "受控压力"
+  },
+  {
+    "id": "m0476",
+    "en": "Under the fixed missing-scan and 10% member-loss inputs, all outputs remain valid, missing weight is explicit and unresolved mass ≤12%. Track error and landfall Brier score, both conditional on resolved mass for this stress check only, degrade by ≤10% relative to the method’s own complete-input result.",
+    "zh": "在固定扫描缺失与 10% 成员损失输入下，产物保持有效，缺失权重显式记录，未解析质量 ≤12%；仅此压力检查对已解析质量条件化评价：相对自身完整输入结果，轨迹误差与登陆 Brier score 的劣化均 ≤10%。"
+  },
+  {
+    "id": "m0477",
+    "en": "Repeatability",
+    "zh": "重复实验"
+  },
+  {
+    "id": "m0478",
+    "en": "Run the same method on the evaluation storms. With the same software and random seeds, two runs agree within 1 km in position, 10⁻⁴ in probability and 1% in aggregate metrics, with the same research-criterion outcomes.",
+    "zh": "在评测台风上运行同一方法。软件环境与随机种子相同时，两次运行的位置差异 ≤1 km、概率差异 ≤10⁻⁴、汇总指标差异 ≤1%，研究标准的判定一致。"
+  },
+  {
+    "id": "m0479",
+    "en": "Exactly what is compared",
+    "zh": "明确比较什么"
+  },
+  {
+    "id": "m0480",
+    "en": "Aggregation and uncertainty",
+    "zh": "汇总与不确定性"
+  },
+  {
+    "id": "m0481",
+    "en": "At each lead, average eligible cycles within a storm, then average storms equally; the overall track metric weights the four leads equally. Gains are 1 − candidate loss / baseline loss. A zero baseline loss must be matched exactly. Use 10,000 paired bootstrap resamples of complete storms, preserving all cycles. The 95% interval is the 2.5th–97.5th percentile range.",
+    "zh": "每个时效先平均台风内的合格起报时次，再对台风等权平均；总体路径指标对四个时效等权。改进定义为 1−候选损失/对照损失；对照为零时须精确达到零。以完整台风为单位进行 10,000 次配对 bootstrap，保留全部起报时次，取 2.5%—97.5% 分位区间。"
+  },
+  {
+    "id": "m0482",
+    "en": "Track geometry and event groups",
+    "zh": "路径几何与事件分组"
+  },
+  {
+    "id": "m0483",
+    "en": "The point track is the weighted geodesic medoid of the resolved samples. Distances use the fixed reference ellipsoid. A turning event changes bearing by ≥60° over 12 h and retains the new direction for the next 6 h, with both compared 6 h displacements ≥30 km and the following 6 h bearing within 30° of the new bearing. Candidate turn times within 12 h of one another are merged at the largest angle change; reference and forecast turns are matched one-to-one within ±12 h. A missing match receives a 96 h penalty. Coastal cases approach within 200 km of the fixed coastline; weak-steering cases have development-diagnostic steering <3 m s⁻¹ for ≥12 h. Event grouping is performed from references, never from a submitted forecast.",
+    "zh": "点轨迹采用已解析样本的带权大地测量 medoid，距离使用固定参考椭球。转向事件定义为 12 小时内方位角变化 ≥60°、新方向在随后 6 小时持续，且用于比较的两段 6 小时位移均 ≥30 km、随后 6 小时的方位角偏离新方向 ≤30°。相距 12 小时以内的候选转向合并至角度变化最大处，参照与预报转向在 ±12 小时内一一匹配，漏配记 96 小时惩罚。近岸组距固定海岸线 ≤200 km；弱引导组在事后诊断中引导速度 <3 m/s 持续 ≥12 小时。分组依参照资料确定，不依赖提交预报。"
+  },
+  {
+    "id": "m0484",
+    "en": "Probability and unresolved members",
+    "zh": "概率与未解析成员"
+  },
+  {
+    "id": "m0485",
+    "en": "Map positions to 3-D unit vectors scaled by Earth’s mean radius. Compute weighted energy score with Euclidean chord distances in that space. With unresolved weight u, the loss is (1−u) × conditional energy score + u × Earth’s diameter. Track loss is (1−u) × medoid error + u × half the circumference. If no mass resolves, only the failure term remains. The landfall Brier vector includes every coast segment, no landfall and unresolved; the observed unresolved category is always zero.",
+    "zh": "位置映射到按地球平均半径缩放的三维单位向量，以该空间中的欧氏弦长计算带权 energy score。设未解析权重为 u，损失为 (1−u)×条件 energy score + u×地球直径；路径损失为 (1−u)×medoid 误差 + u×半周长。全部未解析时只计失败项。登陆 Brier 向量包含所有区段、未登陆与未解析类别，观测的未解析类别恒为零。"
+  },
+  {
+    "id": "m0486",
+    "en": "Landfall and timing",
+    "zh": "登陆与时间"
+  },
+  {
+    "id": "m0487",
+    "en": "The first sea-to-land crossing determines the landfall category; no crossing within 96 h is also an outcome. Use the supplied coastline and geodesic interpolation at steps of at most 15 min, assigning boundary ties in the published segment order. Evaluate timing on the fixed set of observed landfalls where all three baselines give at least 5% landfall probability. Candidate probability below 5% receives a 96 h timing loss. Report the conditional median landfall time and its MAE.",
+    "zh": "首次由海到陆的几何穿越确定登陆类别，96 小时内未登陆也是一种结果。采用提供的海岸线，以不超过 15 分钟的步长进行大地测量插值，边界并列按公布的区段顺序归属。时间评价采用固定事件集：实际发生登陆，且三个对照均给出至少 5% 的登陆概率。候选方法的登陆概率低于 5% 时计 96 小时时间损失；其余报告条件中位登陆时间与 MAE。"
+  },
+  {
+    "id": "m0488",
+    "en": "Coverage and sharpness",
+    "zh": "覆盖率与集中程度"
+  },
+  {
+    "id": "m0489",
+    "en": "Construct 90% highest-density regions on the supplied equal-area grid using the bandwidth selected during development. Include every forecast case and the full grid, with its cell areas. Compare the mean area with the global ensemble calibrated on the separate calibration storms; use those saved parameters throughout evaluation.",
+    "zh": "在提供的等面积网格上，使用开发阶段选定的带宽构建 90% 最高密度区域。评价覆盖全部预报个例与完整网格，并采用相应的网格面积。面积参照为在独立校准台风上完成校准的全球集合，评测期间使用同一组参数。"
+  },
+  {
+    "id": "m0490",
+    "en": "The missing-scan test removes the final two hours of pre-cutoff infrared observations; the member-loss test removes 10% of members by a supplied deterministic mask, rounded up, with weights recorded before the mask. Apply the two tests separately. The ordinary-input gates T01–T05 are evaluated on complete supplied inputs; T07 uses conditional skill on resolved mass and reports the penalized losses separately.",
+    "zh": "扫描缺失试验移除截止前最后两小时红外观测；成员损失试验按提供的确定性掩膜移除 10% 成员，数量向上取整，权重在掩膜施加前记录。两项试验分别运行。T01—T05 在完整提供的输入上评价；T07 检查已解析质量的条件预报水平，并另报含失败惩罚的损失。"
+  },
+  {
+    "id": "m0491",
+    "en": "Evaluation uses a fixed set of forecast cases, with one record per case. The candidate and all baselines share the same storms at each lead, including recorded failed runs. The chord-based position score uses R = 6371.0088 km; multicategory Brier loss is the sum of squared errors across all declared categories.",
+    "zh": "评测使用固定的预报个例集，每个个例对应一条记录；候选方法与各对照在每个时效使用同一组台风，并保留运行失败的记录。弦长位置评分取 R = 6371.0088 km；多分类 Brier 损失为所有类别平方误差之和。"
+  },
+  {
+    "id": "m0492",
+    "en": "Reference uncertainty is part of the report: recompute geometric landfall labels for the nine combinations of ±0.05° and zero latitude/longitude offsets, reflecting the archived coordinate precision. Report which classifications or timing conclusions change. Nominal scoring uses the published central coordinates and the fixed interpolation rule.",
+    "zh": "报告还须检查参照不确定性：对经纬度分别取 −0.05°、0、+0.05° 的九种组合，重新计算几何登陆标签，以反映存档坐标精度；说明哪些类别或时间结论发生改变。正式计分采用发布的中心坐标与固定插值规则。"
+  },
+  {
+    "id": "m0493",
+    "en": "Rubric: 100 points",
+    "zh": "评分：100 分"
+  },
+  {
+    "id": "m0494",
+    "en": "Evidence used",
+    "zh": "依据"
+  },
+  {
+    "id": "m0495",
+    "en": "Observation handling and ensemble consistency",
+    "zh": "观测处理与集合一致性"
+  },
+  {
+    "id": "m0496",
+    "en": "Five components, 2 points each: forecast-time data selection, units and grids, member correspondence, probability conservation and agreement between the research files.",
+    "zh": "起报时的资料选取、单位与网格、成员对应关系、概率守恒、研究文件之间的一致性，各 2 分。"
+  },
+  {
+    "id": "m0497",
+    "en": "Track, turns and transfer",
+    "zh": "路径、转向与迁移"
+  },
+  {
+    "id": "m0498",
+    "en": "Overall gain, all-lead gain, turning gain, storm coverage, and group/interval criteria: 4 points each.",
+    "zh": "总体改进、全部时效改进、转向改进、台风覆盖比例、分组/置信区间要求，各 4 分。"
+  },
+  {
+    "id": "m0499",
+    "en": "Landfall",
+    "zh": "登陆"
+  },
+  {
+    "id": "m0500",
+    "en": "Brier improvement: 4 points. Timing improvement and false-landfall control: 3 points each.",
+    "zh": "Brier 改进 4 分；时间改进、登陆误报控制各 3 分。"
+  },
+  {
+    "id": "m0501",
+    "en": "Probability",
+    "zh": "概率"
+  },
+  {
+    "id": "m0502",
+    "en": "Energy-score improvement: 4 points. Coverage and area: 3 points each.",
+    "zh": "Energy score 改进 4 分；覆盖率、面积各 3 分。"
+  },
+  {
+    "id": "m0503",
+    "en": "Eight mechanism dimensions, M01–M08, worth 5 points each. Score the process diagnosis, the test of competing explanations and the evidence for transfer using the anchors below.",
+    "zh": "M01—M08 八项机制维度各 5 分。按下列分档标准评价过程诊断、竞争解释检验与迁移证据。"
+  },
+  {
+    "id": "m0504",
+    "en": "Incomplete inputs and repeatability",
+    "zh": "缺测条件与重复实验"
+  },
+  {
+    "id": "m0505",
+    "en": "Missing satellite scans and lost ensemble members: 3 points each. Repeated experiments: 4 points.",
+    "zh": "卫星扫描缺失、集合成员损失各 3 分；重复实验 4 分。"
+  },
+  {
+    "id": "m0506",
+    "en": "Numerical criteria retain their stated thresholds. Scientific evidence contributes 40 points and is scored separately from forecast skill. A persuasive mechanism analysis cannot replace a failed forecast requirement, and improved forecast scores cannot replace a missing physical explanation.",
+    "zh": "数值条目仍按原有阈值评价。科学证据占 40 分，与预报表现分别计分；机制分析与预报改进两部分都需要完成。"
+  },
+  {
+    "id": "m0507",
+    "en": "Data and software references",
+    "zh": "数据与软件来源"
+  },
+  {
+    "id": "m0508",
+    "en": "A task from your field?",
+    "zh": "你所在领域有什么难题？"
+  },
+  {
+    "id": "m0509",
+    "en": "Bring a research question or an existing workflow.",
+    "zh": "欢迎提供研究问题或已有工作流。"
+  },
+  {
+    "id": "m0510",
+    "en": "Contribute",
+    "zh": "参与供题"
+  },
+  {
+    "id": "m0511",
+    "en": "Main navigation",
+    "zh": "主导航"
+  },
+  {
+    "id": "m0512",
+    "en": "Language",
+    "zh": "语言"
+  },
+  {
+    "id": "m0513",
+    "en": "On this page",
+    "zh": "本页目录"
+  },
+  {
+    "id": "m0514",
+    "en": "Open image: Landsat 8 image of the fan-shaped Elephant Foot Glacier in northeastern Greenland, surrounded by snow, exposed rock and mountain ridges.",
+    "zh": "打开影像：Landsat 8 拍摄的格陵兰东北部扇形象脚冰川，周围为积雪、裸露岩石与山脊。"
+  },
+  {
+    "id": "m0515",
+    "en": "Landsat 8 image of the fan-shaped Elephant Foot Glacier in northeastern Greenland, surrounded by snow, exposed rock and mountain ridges.",
+    "zh": "Landsat 8 拍摄的格陵兰东北部扇形象脚冰川，周围为积雪、裸露岩石与山脊。"
+  },
+  {
+    "id": "m0516",
+    "en": "EvolventAI company website",
+    "zh": "EvolventAI 公司网站"
+  },
+  {
+    "id": "m0517",
+    "en": "EvolventAI",
+    "zh": "EvolventAI"
+  },
+  {
+    "id": "m0518",
+    "en": "Open the full-resolution EPIC Earth image",
+    "zh": "打开完整分辨率的 EPIC 地球影像"
+  },
+  {
+    "id": "m0519",
+    "en": "NASA DSCOVR EPIC image of the sunlit Earth on 6 July 2015, with North and Central America visible beneath cloud systems.",
+    "zh": "NASA DSCOVR EPIC 于 2015 年 7 月 6 日拍摄的受光地球，北美洲和中美洲位于云系下方。"
+  },
+  {
+    "id": "m0520",
+    "en": "Open the full-resolution ISS photograph of Typhoon Maysak",
+    "zh": "打开完整分辨率的空间站美莎克台风照片"
+  },
+  {
+    "id": "m0521",
+    "en": "An astronaut photograph of Typhoon Maysak with its eye, cloud field and Earth's curved horizon.",
+    "zh": "宇航员拍摄的美莎克台风，可见风眼、云系与地球弧形地平线。"
+  },
+  {
+    "id": "m0522",
+    "en": "Scientific environments",
+    "zh": "专业研究环境"
+  },
+  {
+    "id": "m0523",
+    "en": "Open the data figure of observed Khanun and Saola tracks",
+    "zh": "打开卡努与苏拉的路径观测图"
+  },
+  {
+    "id": "m0524",
+    "en": "Observed 2023 tracks of Khanun and Saola, plotted from 157 JMA records over the western North Pacific. Khanun turns back east before moving north; Saola loops before approaching southern China.",
+    "zh": "根据 JMA 的 157 条记录绘制的 2023 年西北太平洋卡努与苏拉路径。卡努先向东折返再北上；苏拉绕行后接近中国南部。"
+  },
+  {
+    "id": "m0525",
+    "en": "Open the full-resolution satellite image of Saola and Haikui",
+    "zh": "打开苏拉与海葵的完整分辨率卫星影像"
+  },
+  {
+    "id": "m0526",
+    "en": "Suomi NPP VIIRS observation on 1 September 2023: Saola near the coast of southern China at left, Taiwan in the center, and Haikui at right.",
+    "zh": "Suomi NPP VIIRS 于 2023 年 9 月 1 日的观测：左侧为中国南部近海的苏拉，中间为台湾，右侧为海葵。"
+  },
+  {
+    "id": "m0527",
+    "en": "Earth observation images",
+    "zh": "地球观测影像"
+  },
+  {
+    "id": "m0528",
+    "en": "Open image: Landsat 9 observation of the Lena River Delta: branching channels and lakes meet coastal sea ice and dark water.",
+    "zh": "打开影像：Landsat 9 观测的勒拿河三角洲，分汊河道与湖泊连接近海浮冰及深色水面。"
+  },
+  {
+    "id": "m0529",
+    "en": "Landsat 9 observation of the Lena River Delta: branching channels and lakes meet coastal sea ice and dark water.",
+    "zh": "Landsat 9 观测的勒拿河三角洲，分汊河道与湖泊连接近海浮冰及深色水面。"
+  },
+  {
+    "id": "m0530",
+    "en": "Open image: Terra MODIS image showing turquoise phytoplankton bloom patterns between clouds in the Barents Sea.",
+    "zh": "打开影像：Terra MODIS 拍摄的巴伦支海，云层之间可见蓝绿色浮游植物水华。"
+  },
+  {
+    "id": "m0531",
+    "en": "Terra MODIS image showing turquoise phytoplankton bloom patterns between clouds in the Barents Sea.",
+    "zh": "Terra MODIS 拍摄的巴伦支海，云层之间可见蓝绿色浮游植物水华。"
+  },
+  {
+    "id": "m0532",
+    "en": "Open image: Astronaut photograph of parallel folded ridges, valleys and salt domes in the Zagros Mountains beside the Persian Gulf.",
+    "zh": "打开影像：宇航员拍摄的波斯湾附近扎格罗斯山脉，可见平行褶皱山脊、山谷与盐丘。"
+  },
+  {
+    "id": "m0533",
+    "en": "Astronaut photograph of parallel folded ridges, valleys and salt domes in the Zagros Mountains beside the Persian Gulf.",
+    "zh": "宇航员拍摄的波斯湾附近扎格罗斯山脉，可见平行褶皱山脊、山谷与盐丘。"
+  },
+  {
+    "id": "m0534",
+    "en": "JMA archived central-pressure records for Khanun and Saola in 2023, on a common 900–1020 hPa scale. Minimum recorded values are 930 and 920 hPa respectively.",
+    "zh": "JMA 存档的 2023 年卡努与苏拉中心气压，共用 900—1020 hPa 刻度。两者记录中的最低值分别为 930 和 920 hPa。"
+  },
+  {
+    "id": "m0535",
+    "en": "In each leave-one-storm-out fold, refit bias correction, ensemble weights and bandwidth, and select the interventions using the remaining development storms. Keep every cycle of the omitted storm out of fitting and selection. Save the fold forecasts and failures before fitting the final method.",
+    "zh": "每一折逐台风留一验证，都在剩余开发台风上重新拟合偏差订正、成员权重与带宽，并重新选择干预。被留出台风的所有起报时次均不参与拟合和方法选择。先保存各折预报与失败结果，再拟合最终方法。"
+  },
+  {
+    "id": "m0536",
+    "en": "Recompute the ratio of mean losses inside each bootstrap draw; do not average the ratios of individual storms. If any draw has zero baseline loss, report the relative interval as undefined and give the number of such draws. For T05 and T06, use the 95% lower bound of the paired absolute loss reduction in that case. The zero-baseline exact-match requirement still applies.",
+    "zh": "每次 bootstrap 抽样都重新计算平均损失之比，不对单个台风的改进比例直接求平均。若抽样中出现对照损失为零，将相对改进区间记为未定义，并报告这样的抽样次数。此时 T05 与 T06 使用配对绝对损失下降的 95% 区间下限；对照为零时须精确达到零的要求仍然适用。"
+  },
+  {
+    "id": "m0537",
+    "en": "Report the paired loss difference for every storm, the sample size of each difficult group and the overall improvement after omitting each storm in turn. Use this sensitivity analysis to describe how widely the improvement holds. Omitting an already predicted storm measures influence; it does not replace refitted leave-one-storm-out validation.",
+    "zh": "报告每个台风的配对损失差、各困难组的样本量，以及依次移除单个台风后的总体改进。用这些敏感性结果说明改进适用于多大范围。移除已有预报中的一个台风衡量的是影响程度，不能代替重新拟合的逐台风留一验证。"
+  },
+  {
+    "id": "m0538",
+    "en": "Your draft has been restored in this tab.",
+    "zh": "已恢复当前标签页里的草稿。"
+  },
+  {
+    "id": "m0539",
+    "en": "Tell us about your research area and where you would like to advise the project.",
+    "zh": "说说您的研究方向，以及希望在哪些方面为项目提供建议。"
+  },
+  {
+    "id": "m0540",
+    "en": "Where would you like to contribute your expertise?",
+    "zh": "您希望在哪些方向提供指导？"
+  },
+  {
+    "id": "m0541",
+    "en": "This is the only required field. You can add your name and affiliation below.",
+    "zh": "只需填写这一项，姓名与机构可在下方补充。"
+  },
+  {
+    "id": "m0542",
+    "en": "Your research area and the questions you would like to help us explore.",
+    "zh": "您的研究方向，以及希望帮助项目探索的问题。"
+  },
+  {
+    "id": "m0543",
+    "en": "Continue by email",
+    "zh": "通过邮件投稿"
+  },
+  {
+    "id": "m0544",
+    "en": "Continue on GitHub",
+    "zh": "在 GitHub 投稿"
+  },
+  {
+    "id": "m0545",
+    "en": "Review the draft in your mail app, then send it to {email}.",
+    "zh": "将在邮件客户端生成草稿，请检查后发送至 {email}。"
+  },
+  {
+    "id": "m0546",
+    "en": "You will review the draft on GitHub before publishing it as a public issue.",
+    "zh": "下一步在 GitHub 检查草稿，确认后才会公开发布。"
+  },
+  {
+    "id": "m0547",
+    "en": "We will prepare your text to copy into the submission form.",
+    "zh": "先整理好内容，复制后即可带到投稿入口。"
+  },
+  {
+    "id": "m0548",
+    "en": "Please describe your question or advisory interest.",
+    "zh": "请写下研究问题或顾问参与意向。"
+  },
+  {
+    "id": "m0549",
+    "en": "Open GitHub",
+    "zh": "打开 GitHub"
+  },
+  {
+    "id": "m0550",
+    "en": "Copy the text below into a new GitHub issue. Your email field is left out.",
+    "zh": "内容较长，请复制下方正文并粘贴到 GitHub Issue。邮箱字段已排除。"
+  },
+  {
+    "id": "m0551",
+    "en": "Review the draft on GitHub and publish it when ready.",
+    "zh": "请在 GitHub 检查草稿，确认后发布。"
+  },
+  {
+    "id": "m0552",
+    "en": "Open email draft",
+    "zh": "打开邮件草稿"
+  },
+  {
+    "id": "m0553",
+    "en": "Copy the text below, then open the email draft and paste it into the message.",
+    "zh": "内容较长，请复制下方正文，再打开邮件草稿粘贴并发送。"
+  },
+  {
+    "id": "m0554",
+    "en": "Review and send the draft in your mail app. If it did not open, you can copy the text below.",
+    "zh": "请在邮件客户端检查并发送。如果未能打开，可复制下方内容。"
+  },
+  {
+    "id": "m0555",
+    "en": "Open submission form",
+    "zh": "打开投稿入口"
+  },
+  {
+    "id": "m0556",
+    "en": "Copy your text, then continue to the submission form.",
+    "zh": "复制下方内容，再前往投稿入口。"
+  },
+  {
+    "id": "m0557",
+    "en": "Your contribution is ready to copy or save. Nothing has been sent.",
+    "zh": "内容已整理，可以复制或保存；尚未发送。"
+  },
+  {
+    "id": "m0558",
+    "en": "A copy has been downloaded. Nothing has been sent.",
+    "zh": "草稿已下载，尚未发送。"
+  },
+  {
+    "id": "m0559",
+    "en": "Copied. You can paste it into your message or submission.",
+    "zh": "已复制，可粘贴到邮件或投稿入口。"
+  },
+  {
+    "id": "m0560",
+    "en": "The text is selected. Use your device’s Copy command.",
+    "zh": "已选中文本，请使用设备的复制操作。"
+  },
+  {
+    "id": "m0561",
+    "en": "Draft cleared.",
+    "zh": "草稿已清空。"
+  },
+  {
+    "id": "m0562",
+    "en": "Institutional participants will be listed here as collaborations are confirmed.",
+    "zh": "参与机构将在合作确认后陆续公布。"
+  },
+  {
+    "id": "m0563",
+    "en": "Explore a collaboration",
+    "zh": "参与合作"
+  },
+  {
+    "id": "m0564",
+    "en": "We invite Earth scientists to help shape the research questions and standards of evidence.",
+    "zh": "邀请地球科学研究者共同判断选题，完善科学证据与验收标准。"
+  },
+  {
+    "id": "m0565",
+    "en": "Help develop a research task, prepare an environment or review an experiment.",
+    "zh": "一起打磨题目、准备运行环境，或参与实验评审。"
+  },
+  {
+    "id": "m0566",
+    "en": "Contribute to the project",
+    "zh": "参与项目共建"
+  },
+  {
+    "id": "m0567",
+    "en": "Research across institutions",
+    "zh": "汇集不同机构的研究经验"
+  },
+  {
+    "id": "m0568",
+    "en": "Guide the science",
+    "zh": "为研究方向提供指导"
+  },
+  {
+    "id": "m0569",
+    "en": "Build the tasks",
+    "zh": "共同打磨科研任务"
+  },
+  {
+    "id": "m0570",
+    "en": "Profile ↗",
+    "zh": "查看介绍 ↗"
+  },
+  {
+    "id": "m0571",
+    "en": "Showing {first}–{last} / {total}",
+    "zh": "浏览 {first}–{last} / {total}"
+  },
+  {
+    "id": "m0572",
+    "en": "Research question or advisory interest",
+    "zh": "研究问题或顾问意向"
+  },
+  {
+    "id": "m0573",
+    "en": "Related links",
+    "zh": "相关链接"
+  },
+  {
+    "id": "m0574",
+    "en": "Affiliation",
+    "zh": "单位"
+  },
+  {
+    "id": "m0575",
+    "en": "Field",
+    "zh": "方向"
+  },
+  {
+    "id": "m0576",
+    "en": "Available materials",
+    "zh": "已有材料"
+  },
+  {
+    "id": "m0577",
+    "en": "Outcome and verification",
+    "zh": "结果与验证"
+  },
+  {
+    "id": "m0578",
+    "en": "Collaboration needed",
+    "zh": "希望获得的协助"
+  },
+  {
+    "id": "m0579",
+    "en": "Email",
+    "zh": "邮箱"
+  },
+  {
+    "id": "m0580",
+    "en": "Advisory interest",
+    "zh": "顾问参与意向"
+  },
+  {
+    "id": "m0581",
+    "en": "Task collaboration",
+    "zh": "共同出题"
+  },
+  {
+    "id": "m0582",
+    "en": "Research idea",
+    "zh": "研究问题"
+  },
+  {
+    "id": "m0583",
+    "en": "Advisor",
+    "zh": "顾问"
+  },
+  {
+    "id": "m0584",
+    "en": "Task proposal",
+    "zh": "任务投稿"
+  },
+  {
+    "id": "m0585",
+    "en": "Research contribution",
+    "zh": "研究投稿"
+  },
+  {
+    "id": "m0586",
+    "en": "Atmospheric mechanisms",
+    "zh": "大气过程与机制"
+  },
+  {
+    "id": "m0587",
+    "en": "Explain the atmosphere behind the track",
+    "zh": "从路径变化追到大气过程"
+  },
+  {
+    "id": "m0588",
+    "en": "Complete the eight analyses below on Khanun and Saola. Use the same matched runs as the forecast experiments, then test the leading explanation on a third development storm. Start with competing hypotheses and the observations that would distinguish them. The task does not prescribe which mechanism should win.",
+    "zh": "在卡努与苏拉上完成以下八项分析，与预报试验使用同一组配对运行，再用第三场开发台风检验主要解释。先写出相互竞争的假设，以及能够区分它们的观测现象。题目不预设哪一种机制一定成立。"
+  },
+  {
+    "id": "m0589",
+    "en": "Fields for process diagnosis",
+    "zh": "为过程诊断准备的资料"
+  },
+  {
+    "id": "m0590",
+    "en": "The diagnostic package includes native-grid pressure, geopotential, density, three-dimensional winds, potential temperature and all active water species; surface sensible and latent heat fluxes, radiation and precipitation; and scheme-specific accumulated tendencies. It supplies 10-minute state output, integration-step accumulated budget terms for selected experiments, variable definitions and restart-aware readers. Compare finer sampling where closure is sensitive to output frequency.",
+    "zh": "诊断资料包括原生网格上的气压、位势、密度、三维风、位温及当前物理方案中的全部水成物，还包括地表感热与潜热通量、辐射、降水和分物理过程累积倾向。提供 10 分钟状态场、选定试验按积分步累积的收支项、变量定义与支持重启衔接的读取程序；收支对输出频率敏感时，需比较更密的采样。"
+  },
+  {
+    "id": "m0591",
+    "en": "Development diagnostics also include post-initialization AHI scans and GPM IMERG Final precipitation with quality and sampling information. ERA5 supplies environmental context. Match each observation at its actual spatial and temporal support. Infrared cloud-top temperature describes cloud structure, not latent heating; AHI and IMERG also share retrieval information and are not fully independent evidence. These retrospective products belong to the analysis workspace.",
+    "zh": "开发事件的事后分析另配起报后的 AHI 扫描、GPM IMERG Final 降水及其质量与采样说明，并用 ERA5 描述环境环流。按各观测实际的时空分辨率比较。红外云顶亮温描述云系结构，不能直接当作潜热加热；AHI 与 IMERG 还共享部分反演信息，并非完全独立的证据。这些事后资料放在分析工作区。"
+  },
+  {
+    "id": "m0592",
+    "en": "Separate displacement, timing and structural error",
+    "zh": "分清位置、相位与结构误差"
+  },
+  {
+    "id": "m0593",
+    "en": "Resolve position error along and across the reference motion, and separate an early or late turn from a wrong turning direction. Compare sea-level-pressure, low-level circulation and layer-wise vorticity centers. In both Earth-fixed and storm-relative coordinates, diagnose vortex tilt, radius of maximum wind, warm-core depth and azimuthal wavenumber-one asymmetry. Track how these quantities evolve before the forecasts diverge.",
+    "zh": "将位置误差分解到参照移动方向的沿轨和横轨分量，区分转向偏早、偏晚与转向方向错误。比较海平面气压中心、低层环流中心和逐层涡度中心。在地球固定与风暴相对坐标中诊断涡旋倾斜、最大风速半径、暖心深度及方位波数 1 非对称分量，追踪预报分歧出现前的结构演变。"
+  },
+  {
+    "id": "m0594",
+    "en": "Use the identical model fields to compare trackers. Report center uncertainty and repeat the diagnostics for plausible alternative centers. Earth-fixed differences reveal displacement; recentered differences reveal structural changes. Keep both, so recentering does not erase a real dynamical error.",
+    "zh": "在完全相同的模式场上比较追踪器，给出中心位置的不确定性，并用合理的备选中心重算诊断。地球固定坐标保留位移误差，重新对中心的结果显示结构差异；两者都要保留，以免对中心操作消去真正的动力误差。"
+  },
+  {
+    "id": "m0595",
+    "en": "Identify the flow that changes the motion",
+    "zh": "找出改变移动方向的环流"
+  },
+  {
+    "id": "m0596",
+    "en": "Diagnose mass-weighted, vortex-removed steering in the 850–300 and 700–300 hPa layers. Compare 200–500 and 300–800 km annuli, with terrain masks and valid-area weights. Follow the subtropical ridge, upstream trough, monsoon circulation and nearby vortices. Separate errors in environmental wind from errors caused by the forecast vortex sampling a different location or depth.",
+    "zh": "诊断去涡旋后的 850—300 hPa 与 700—300 hPa 质量加权引导气流，比较 200—500 km、300—800 km 环带，并处理地形遮挡和有效面积权重。追踪副热带高压、上游槽、季风环流和邻近涡旋，区分环境风本身的偏差与预报涡旋处于不同位置、不同深度所造成的取样偏差。"
+  },
+  {
+    "id": "m0597",
+    "en": "Integrate the steering-error vector over time and compare its direction and magnitude with the developing track error. Diagnose beta-related asymmetry and storm–environment interaction in the remaining motion; the motion-minus-steering residual is not, by definition, beta drift. Test the attribution against a second vortex-removal method and the alternative layers and annuli.",
+    "zh": "对引导气流误差矢量作时间积分，比较它与路径误差增长的方向和量级。进一步诊断剩余移动中的 β 效应非对称环流及涡旋—环境相互作用；移动速度减去引导气流的残差，不能直接命名为 β 漂移。用另一种去涡旋方法及不同层次、环带检验归因是否稳定。"
+  },
+  {
+    "id": "m0598",
+    "en": "Close a potential-vorticity tendency budget",
+    "zh": "完成位涡倾向收支"
+  },
+  {
+    "id": "m0599",
+    "en": "Compute Ertel potential vorticity and its azimuthal wavenumber-one tendency in a translating storm frame. Resolve horizontal and vertical advection, diabatic production, friction and the terms required by the chosen moist thermodynamics. Include center motion in the budget. To diagnose propagation independently, restore the Earth-fixed physical tendency and fit its translation component; retain deformation and fitting residuals. Compare the inferred velocity with tracked motion.",
+    "zh": "计算 Ertel 位涡及其在随风暴平移坐标中的方位波数 1 倾向，分解水平与垂直平流、非绝热生成、摩擦及所用湿热力学定义要求的其他项。收支中计入中心移动。独立诊断传播速度时，先还原地球固定坐标中的物理倾向，再拟合平移分量，保留形变和拟合残差；将推得的速度与追踪结果比较。"
+  },
+  {
+    "id": "m0600",
+    "en": "Calculate budgets on the native staggered grid before remapping. Save the observed tendency, every resolved term and the residual, with consistent averaging intervals. Compare integrated contributions and residuals across radius, height and time; repeat with finer sampling. A process attribution must resolve a change larger than its numerical uncertainty. Treat any unresolved remainder as a remainder, rather than assigning it to heating.",
+    "zh": "先在原生交错网格上计算收支，再重映射。保存实际倾向、每个已解析项与残差，统一平均时段；按半径、高度和时间比较积分贡献及残差，并用更密采样复算。归因所依赖的变化必须能从数值不确定性中分辨出来；未闭合部分保留为残差，不归到加热项。"
+  },
+  {
+    "id": "m0601",
+    "en": "Connect shear, convection and vortex evolution",
+    "zh": "连接切变、对流与涡旋演变"
+  },
+  {
+    "id": "m0602",
+    "en": "In coordinates aligned with the 200–850 hPa environmental shear, follow tilt orientation, quadrant rainfall, vertical mass flux, lower-tropospheric equivalent potential temperature and midlevel dry-air inflow. Diagnose the height and azimuth of heating, its relation to vortex alignment, and upper-level outflow and ridge changes. Compare AHI cloud organization and IMERG rainfall with the corresponding model fields.",
+    "zh": "以 200—850 hPa 环境垂直风切变方向为参照，追踪涡旋倾斜方向、各象限降水、垂直质量通量、低层相当位温与中层干空气流入。诊断加热的高度和方位、它与涡旋垂直对齐的关系，以及高层外流和脊区的变化。用 AHI 云系组织与 IMERG 降水检验对应的模式结构。"
+  },
+  {
+    "id": "m0603",
+    "en": "Compare the chronology under matched microphysics or boundary-layer perturbations. Test whether convection reorganizes before the motion changes, or instead responds to a displaced vortex. Include a competing explanation involving environmental steering, and carry the observed time lag into the intervention test. Use a radiative-transfer operator if directly comparing simulated and observed brightness temperatures.",
+    "zh": "在配对的微物理或边界层扰动试验中比较先后顺序：是对流先重组、随后移动改变，还是涡旋偏移后对流才响应？同时检验环境引导气流这一竞争解释，将诊断得到的时间滞后带入干预试验。直接比较模拟与观测亮温时，应使用辐射传输观测算子。"
+  },
+  {
+    "id": "m0604",
+    "en": "Explain the moisture and rainfall response",
+    "zh": "解释水汽供应与降水响应"
+  },
+  {
+    "id": "m0605",
+    "en": "Close a column total-water budget for moving disks of 200, 400 and 600 km radius: storage change, transport through the moving boundary, evaporation, precipitation and residual. Include vapor and all active condensates, the model-top flux and the terrain lower boundary. Separate moisture convergence from depletion of stored water, and diagnose the contribution of storm motion to the apparent transport.",
+    "zh": "对半径 200、400、600 km 的随风暴移动圆域，计算整层总水收支：储存变化、穿过移动边界的输送、蒸发、降水和残差。计入水汽与当前方案中的全部凝结物、模式顶通量和地形下边界。区分水汽辐合与储存水的消耗，并诊断风暴平移对表观输送的贡献。"
+  },
+  {
+    "id": "m0606",
+    "en": "Evaluate rainfall in geographic and storm-relative coordinates, with the same accumulation interval and observation support. Quantify displacement and intensity errors separately. Follow the nearshore change in moisture inflow and surface enthalpy flux; determine whether a better track also improves the rainfall process, or merely moves a biased rain field into the observed location.",
+    "zh": "在地理坐标与风暴相对坐标中分别评价降水，统一累积时段和观测支撑尺度，分别量化位移与强度误差。追踪近岸水汽流入和地表焓通量的变化，判断路径变好后降水过程是否也得到改善，还是仅把有偏的雨区移到了观测位置。"
+  },
+  {
+    "id": "m0607",
+    "en": "Test lower-boundary and terrain mechanisms",
+    "zh": "检验下边界与地形作用"
+  },
+  {
+    "id": "m0608",
+    "en": "For a coastal development case, run paired SST and terrain sensitivities, changing one factor at a time. Perturb SST by ±0.5 K and ±1 K with a smooth ocean-only mask. Compare the original terrain with a smoothly reduced-height experiment, keeping the coastline and land-use categories fixed and rebuilding balanced initial fields. Save adjustment transients as well as the later response.",
+    "zh": "选取近岸开发个例，分别开展海温与地形配对敏感性试验，每次只改变一个因素。海温用仅覆盖海面的平滑掩膜作 ±0.5 K、±1 K 扰动；地形比较原始地形与平滑减高试验，固定海岸线和土地利用类别，并重建平衡初始场。保留初始调整过程及后续响应。"
+  },
+  {
+    "id": "m0609",
+    "en": "Trace the response through surface fluxes, frictional convergence, vertical motion, vortex structure and track or rainfall change. The imposed-SST runs measure atmospheric sensitivity to a lower boundary; they do not establish an interactive cold-wake feedback. Explain which part of the terrain response survives after the initial adjustment and whether its sign persists across members.",
+    "zh": "沿地表通量、摩擦辐合、垂直运动、涡旋结构到路径或降水变化，逐步检查响应。规定海温试验衡量大气对下边界的敏感性，不能据此认定双向海气冷尾流反馈。说明地形响应中哪些部分在初始调整后仍然存在，以及其符号在不同集合成员中是否一致。"
+  },
+  {
+    "id": "m0610",
+    "en": "Explain the split between trajectory branches",
+    "zh": "解释轨迹分叉与可预报性"
+  },
+  {
+    "id": "m0611",
+    "en": "Group members into physical trajectory branches and compare their states before separation. Evaluate ridge position, steering depth, tilt and convective asymmetry as candidate precursors. Re-run matched small perturbations to the initial state and boundary forcing, keeping each family separate. Estimate how branch probabilities and error growth respond to perturbation amplitude and to removal of each retained intervention.",
+    "zh": "按物理上不同的轨迹分支对成员分组，比较分叉发生前的状态。检验高压脊位置、引导层深度、涡旋倾斜与对流非对称是否构成先兆；分别重跑初值与边界强迫的小扰动配对试验，保持两类扰动独立。估计分支概率和误差增长如何随扰动幅度及逐项移除干预而变化。"
+  },
+  {
+    "id": "m0612",
+    "en": "Choose any branch predictor within the training storms and test it on the omitted storm. Correlations among ensemble members identify a candidate process; targeted reruns test it. Report regimes where the explanation transfers, where it changes sign and where the available observations cannot distinguish the branches. A persistent spread by itself does not establish an intrinsic predictability limit.",
+    "zh": "分支预测指标在训练台风内选择，再用于被留出台风。成员间相关性用来提出候选过程，定向重跑用来检验它。报告解释能够迁移、符号反转和现有观测无法区分分支的环流情形。集合离散持续存在本身，不能证明内禀可预报性极限。"
+  },
+  {
+    "id": "m0613",
+    "en": "Test a physical explanation beyond the original case",
+    "zh": "让机制解释接受跨事件检验"
+  },
+  {
+    "id": "m0614",
+    "en": "Before each targeted rerun, state the expected sign, location and timing of the process response and of the track or rainfall response. Use matched controls, at least two perturbation amplitudes, and a check that the intervention changed its intended process. Test the strongest explanation on the third development storm without revising the predicted sign after viewing that result.",
+    "zh": "每次定向重跑前，写明预期过程响应与路径或降水响应的符号、位置及时间顺序。使用配对对照、至少两个扰动幅度，并检查干预是否确实改变了目标过程。将最有力的解释用于第三场开发台风，看到结果后不重新改写预期符号。"
+  },
+  {
+    "id": "m0615",
+    "en": "Compare the leading explanation with its strongest alternative, and classify each hypothesis as supported, rejected or unresolved according to the evidence. Report effect sizes, storm-level uncertainty and budget residuals. A null response can reject a predicted effect under the tested conditions when the intervention worked and the response interval lies within a physically meaningful tolerance stated before the rerun. Otherwise, specify the observation or intervention needed to distinguish the remaining explanations.",
+    "zh": "将主要解释与最强竞争解释比较，按证据将各假设归为支持、反驳或未解决，报告效应量、台风层面的不确定性和收支残差。确认干预有效后，若响应区间落在重跑前规定的、具有物理意义的容差内，零响应可以否定试验条件下所预期的效应；否则应说明还需要哪一种观测或干预来区分解释。"
+  },
+  {
+    "id": "m0616",
+    "en": "Atmospheric diagnostics",
+    "zh": "大气过程诊断"
+  },
+  {
+    "id": "m0617",
+    "en": "Save storm-relative fields, center definitions, steering vectors, tilt, shear, heating and water-budget terms in diagnostics.nc. Include units, grid geometry, time bounds, masks, averaging weights and residuals. Keep each storm, cycle, member and experiment identifiable, and retain the Earth-fixed fields needed to reconstruct the comparison.",
+    "zh": "在 diagnostics.nc 中保存风暴相对场、中心定义、引导气流矢量、涡旋倾斜、切变、加热和水收支项，附单位、网格几何、时段边界、掩膜、平均权重与残差。每条结果对应台风、起报时次、成员与试验，并保留重建比较所需的地球固定坐标场。"
+  },
+  {
+    "id": "m0618",
+    "en": "Process responses and competing hypotheses",
+    "zh": "过程响应与竞争假设"
+  },
+  {
+    "id": "m0619",
+    "en": "mechanism_tests.parquet connects each hypothesis and matched control to the intervention amplitude, target-process response, track or rainfall response, uncertainty and alternative explanation. hypotheses.md records predictions before reruns and the interpretation afterward, including supported, rejected and unresolved claims. Keep the original predictions alongside the outcome.",
+    "zh": "mechanism_tests.parquet 将每个假设及配对对照与扰动幅度、目标过程响应、路径或降水响应、不确定性及竞争解释相连。hypotheses.md 分别记录重跑前的预期与重跑后的解释，标明得到支持、被否定和未解决的主张；原始预期与结果并列保留。"
+  },
+  {
+    "id": "m0620",
+    "en": "Figures that explain the result",
+    "zh": "能够解释结论的图件"
+  },
+  {
+    "id": "m0621",
+    "en": "Provide reproducible figure scripts and plotted data: the error timeline; steering and environmental circulation; radius–height and azimuth–time structure; signed PV and water budgets with residuals; intervention dose–response; and branch and cross-storm comparisons. Pair observations and model fields on common scales, include units and sample counts, and distinguish measured quantities from inferred processes.",
+    "zh": "提交可重绘的脚本与绘图数据：误差演变时间线、引导气流与环境环流、半径—高度及方位—时间结构、带残差的有符号位涡和水收支、干预剂量—响应、轨迹分支及跨台风比较。观测与模式使用可比较的色标，注明单位与样本数，并区分直接测得的量和推断的过程。"
+  },
+  {
+    "id": "m0622",
+    "en": "Scientific evidence: eight dimensions, 40 points",
+    "zh": "科学证据：八项维度，40 分"
+  },
+  {
+    "id": "m0623",
+    "en": "M01–M08 correspond to the eight analyses above. Each receives an integer score from 0 to 5. Two domain reviewers score the saved diagnostics and rerunnable experiments independently; a third resolves differences greater than one point or disagreements about passing. Numerical scripts check the submitted fields and effects; scientific reviewers assess the physical inference.",
+    "zh": "M01—M08 与上面的八项分析一一对应，每项取 0—5 的整数分。两名领域评审分别根据保存的诊断和可重跑试验评分；相差超过 1 分或对是否通过有分歧时，由第三名评审裁定。数值程序检查诊断场与效应量，领域评审判断物理推论是否成立。"
+  },
+  {
+    "id": "m0624",
+    "en": "0: no usable analysis. 1: descriptive plots only. 2: quantitative diagnosis, but the proposed cause has not been distinguished from an alternative. 3: a reproducible comparison tests the alternative, with effect size, uncertainty and a conclusion bounded by the evidence.",
+    "zh": "0 分：没有可用分析。1 分：只有描述性图件。2 分：完成定量诊断，但尚未区分所提原因与竞争解释。3 分：可复现比较检验了竞争解释，给出效应量与不确定性，结论与证据相称。"
+  },
+  {
+    "id": "m0625",
+    "en": "4: the comparison also survives the relevant center, sampling, budget, observation or perturbation sensitivities. 5: a physical prediction is confirmed by a separate paired rerun or storm, or a successful intervention yields a response interval entirely within a prespecified physical tolerance, rejecting the predicted effect under those conditions. Score the inference, not whether the initially favored hypothesis survives.",
+    "zh": "4 分：上述比较还通过了对应的中心定义、采样、收支、观测或扰动敏感性检验。5 分：物理预期在独立配对重跑或另一场台风中得到验证；或者有效干预后的响应区间完全落在预先规定的物理容差内，否定了相应条件下所预期的效应。按推论质量评分，不按最初看好的假设是否成立评分。"
+  },
+  {
+    "id": "m0626",
+    "en": "For M01–M02, show that the error decomposition and flow attribution survive changes in coordinates and steering definitions. M03 and M05 require an explicit residual and convergence evidence. M04 and M06 require an observed or simulated process response preceding the proposed consequence. M07 tests branch predictions outside the fitting storm; M08 tests the stated causal chain and its strongest alternative.",
+    "zh": "M01—M02 要求误差分解与环流归因经得起坐标和引导气流定义的变化；M03、M05 要求显式残差和收敛证据；M04、M06 要求观测或模拟中的过程响应先于所解释的后果；M07 在拟合台风之外检验分支预期；M08 检验提出的因果链及其最强竞争解释。"
+  },
+  {
+    "id": "m0627",
+    "en": "Task source and runnable examples",
+    "zh": "任务源码与运行示例"
+  },
+  {
+    "id": "m0628",
+    "en": "Run locally",
+    "zh": "本地可运行"
+  },
+  {
+    "id": "m0629",
+    "en": "Atmospheric water budget",
+    "zh": "大气水量收支示例"
+  },
+  {
+    "id": "m0630",
+    "en": "A synthetic storm task with observations, a reference solution and scientific checks. Follow water storage, transport and the moving storm boundary.",
+    "zh": "包含合成观测、参考解和科学验收的风暴任务，分析水量储存、输送与移动的风暴边界。"
+  },
+  {
+    "id": "m0631",
+    "en": "Research draft",
+    "zh": "研究草案"
+  },
+  {
+    "id": "m0632",
+    "en": "Full typhoon study",
+    "zh": "完整台风研究"
+  },
+  {
+    "id": "m0633",
+    "en": "M01–M08 mechanism analyses, paired experiments and a Harbor task generator. Configure your data, compute limits and Docker profile.",
+    "zh": "涵盖 M01–M08 机理分析、配对试验与 Harbor 任务生成器，可配置资料、计算资源上限和 Docker 环境。"
+  },
+  {
+    "id": "m0634",
+    "en": "Environment setup",
+    "zh": "环境配置"
+  },
+  {
+    "id": "m0635",
+    "en": "Analysis + WRF/WPS",
+    "zh": "分析工具 + WRF/WPS"
+  },
+  {
+    "id": "m0636",
+    "en": "xarray, Dask, NetCDF, MetPy, ecCodes, Cartopy and Satpy, plus optional WRF/WPS build recipes and a runtime doctor.",
+    "zh": "提供 xarray、Dask、NetCDF、MetPy、ecCodes、Cartopy 和 Satpy，以及可选的 WRF/WPS 构建脚本与运行环境检查工具。"
+  },
+  {
+    "id": "m0637",
+    "en": "Python 3.12+ · no additional packages for the example",
+    "zh": "Python 3.12+ · 示例无需额外安装依赖"
+  },
+  {
+    "id": "m0638",
+    "en": "Source ZIP · examples, study files and environment recipes",
+    "zh": "源码 ZIP · 示例、研究文件与环境构建脚本"
+  },
+  {
+    "id": "research_label",
+    "en": "From our research workspace",
+    "zh": "来自研究工作区"
+  },
+  {
+    "id": "research_heading",
+    "en": "Data and experiments so far",
+    "zh": "已有数据与实验"
+  },
+  {
+    "id": "research_intro",
+    "en": "These figures come from our work on the typhoon task: calibrated satellite observations, ensemble tracking and a comparison of two center-finding methods. The full task requirements follow below.",
+    "zh": "以下图像来自台风任务已完成的工作，包括卫星资料定标、集合路径追踪和两种中心定位方法的比较。完整任务的研究要求列在后文。"
+  },
+  {
+    "id": "research_obs",
+    "en": "Infrared observations",
+    "zh": "红外观测"
+  },
+  {
+    "id": "research_tracks",
+    "en": "Ensemble tracks",
+    "zh": "集合路径"
+  },
+  {
+    "id": "research_diagnosis",
+    "en": "Center diagnosis",
+    "zh": "中心诊断"
+  },
+  {
+    "id": "research_obsTitle",
+    "en": "Himawari-9 infrared brightness temperature",
+    "zh": "葵花 9 号红外亮温"
+  },
+  {
+    "id": "research_obsBody",
+    "en": "Himawari-9 AHI band 13, calibrated from the original files. These two scans use the same brightness-temperature scale; the workspace contains 34 complete scans with navigation and observation times.",
+    "zh": "葵花 9 号 AHI B13 原始资料定标结果。两幅图使用相同的亮温色标；工作区已保存 34 次完整扫描，并保留导航和观测时间。"
+  },
+  {
+    "id": "research_trackTitle",
+    "en": "GFS and GEFS tracks over 96 hours",
+    "zh": "GFS 与 GEFS 的 96 小时路径"
+  },
+  {
+    "id": "research_trackBody",
+    "en": "GFS and all 31 GEFS members, followed for 96 hours and compared with JMA positions. This development experiment starts from the retrospective JMA center and shows the original, uncalibrated ensemble.",
+    "zh": "GFS 与全部 31 个 GEFS 成员的 96 小时轨迹及 JMA 位置误差。这轮开发实验以事后 JMA 中心初始化，展示未经概率校准的原始集合。"
+  },
+  {
+    "id": "research_diagTitle",
+    "en": "Comparing two storm-center estimates",
+    "zh": "两种方法定位的台风中心"
+  },
+  {
+    "id": "research_diagBody",
+    "en": "The two trackers disagree at 16 member-times. We replayed each selection on the original pressure and wind fields. A smaller position error alone does not tell us whether the tracker followed the same vortex.",
+    "zh": "两种追踪器在 16 组成员时次中选择了不同中心。我们已回到原始气压和风场逐一重放。位置误差变小，还需要检查追踪的是否仍是同一个涡旋。"
+  },
+  {
+    "id": "research_open",
+    "en": "Open the original figure",
+    "zh": "查看完整原图"
+  },
+  {
+    "id": "research_pan",
+    "en": "Scroll across the figure to inspect its detail.",
+    "zh": "横向滑动图像，查看完整细节。"
+  },
+  {
+    "id": "research_credit",
+    "en": "Figures by EvolventAI · JMA / NOAA data · GSHHG coastlines",
+    "zh": "EvolventAI 绘制 · JMA / NOAA 资料 · GSHHG 海岸线"
+  },
+  {
+    "id": "research_ready",
+    "en": "Already in the workspace",
+    "zh": "已有资料与实现"
+  },
+  {
+    "id": "research_readyBody",
+    "en": "Real observations and forecast fields, two tracking methods, coast-crossing calculations and numerical scoring. Historical storm references are grouped for development, calibration and evaluation.",
+    "zh": "真实观测与预报场、两种追踪方法、海岸穿越计算和数值评分。历史台风参照资料已按开发、校准与评价分组。"
+  },
+  {
+    "id": "research_next",
+    "en": "Work remaining for the full task",
+    "zh": "完整任务尚待完成的部分"
+  },
+  {
+    "id": "research_nextBody",
+    "en": "WRF integrations, paired physical interventions and full mechanism analysis. Docker and Harbor trials remain to be run; the research requirements below describe the complete task.",
+    "zh": "WRF 积分、配对物理干预与完整机制分析。Docker 和 Harbor 试验尚未运行；下方研究要求描述的是完整任务。"
+  },
+  {
+    "id": "research_inventory",
+    "en": "Current data preparation",
+    "zh": "当前数据准备"
+  },
+  {
+    "id": "research_inventoryBody",
+    "en": "64 of 66 regional-model input files are saved; the full Khanun set has been decoded. ERA5 has 57 saved variable files, including all ten variables at Khanun initialization. Geography and precipitation inputs remain incomplete.",
+    "zh": "区域模式初边值已保存 64／66 份，卡努整组已完成解码。ERA5 已保存 57 个变量文件，包括卡努起报时刻的全部十类变量。模式地理资料和降水资料尚未齐备。"
+  },
+  {
+    "id": "research_reference",
+    "en": "View the experiments",
+    "zh": "查看已有实验"
+  },
+  {
+    "id": "research_stage",
+    "en": "Development experiments",
+    "zh": "开发实验"
+  },
+  {
+    "id": "research_homeBody",
+    "en": "The typhoon task uses Himawari-9 infrared observations alongside GFS and GEFS forecasts. The figures show the tracking experiments completed so far, including cases where two methods locate different storm centers.",
+    "zh": "台风任务结合葵花 9 号红外观测与 GFS、GEFS 预报资料。已有实验展示了台风追踪结果，也保留了两种方法选出不同中心的情况，供进一步分析。"
+  },
+  {
+    "id": "research_envBody",
+    "en": "Our atmospheric workspace brings together archived forecasts, calibrated satellite observations and tracking diagnostics. WRF/WPS configurations provide the starting point for the model experiments in the full task.",
+    "zh": "大气工作区已接入存档预报、定标卫星观测和路径诊断。WRF／WPS 配置为完整任务中的模式实验提供起点。"
+  },
+  {
+    "id": "research_releaseBody",
+    "en": "The source package includes the real-data acquisition tools, tracking experiments, numerical scorer and scientific figures. Full WRF experiments and Docker/Harbor execution are still being prepared.",
+    "zh": "源码包已包含真实数据获取工具、路径实验、数值评分器和科学图像。完整 WRF 实验与 Docker／Harbor 运行仍在准备。"
+  },
+  {
+    "id": "research_zoom",
+    "en": "Inspect figure detail",
+    "zh": "放大查看细节"
+  },
+  {
+    "id": "file_list",
+    "en": "Task file list",
+    "zh": "任务文件清单"
+  },
+  {
+    "id": "file_config",
+    "en": "Task configuration",
+    "zh": "任务配置"
+  },
+  {
+    "id": "file_background",
+    "en": "Scientific background and data notes",
+    "zh": "科学背景与资料说明"
+  },
+  {
+    "id": "file_image",
+    "en": "Software environment",
+    "zh": "软件环境"
+  },
+  {
+    "id": "file_inputs",
+    "en": "Working data and documentation",
+    "zh": "研究资料与文档"
+  }
+]

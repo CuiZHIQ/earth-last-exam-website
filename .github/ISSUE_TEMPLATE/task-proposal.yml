@@ -1,0 +1,24 @@
+name: Recommend a research question
+description: A few sentences are enough. We can develop the task together.
+title: '[Task proposal] '
+body:
+  - type: markdown
+    attributes:
+      value: 'Start with a question from your work. Only the question below is required. This issue is public; for unpublished work, share an outline you are comfortable discussing.'
+  - type: textarea
+    id: question
+    attributes:
+      label: What would you like an agent to investigate?
+      description: Tell us the question or where your research gets difficult. An unfinished idea is welcome.
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Paper or materials link (optional)
+      placeholder: A paper, DOI, dataset or workflow
+  - type: textarea
+    id: context
+    attributes:
+      label: More context (optional)
+      description: Your research area, materials you already have, what a useful result would look like, or where the team could help. We can discuss this later.

@@ -1,0 +1,664 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Earth Last Exam is an EvolventAI research initiative evaluating frontier agents in Earth science. Explore research tasks and domain environments, contribute a problem, or join our scientific advisory team.">
+<meta name="ele-title" data-en="Typhoon research task — Earth Last Exam" data-zh="台风原创例题 — Earth Last Exam">
+<title>Typhoon research task — Earth Last Exam</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/InterVariable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="styles.css">
+<script src="locales.js" defer></script>
+<script src="i18n.js" defer></script>
+<script src="config.js" defer>
+</script>
+<script src="proposal.js" defer>
+</script>
+<script src="app.js" defer>
+</script>
+<script src="motion.js" defer></script>
+<meta name="theme-color" content="#fbfcf8">
+<meta name="author" content="EvolventAI">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Earth Last Exam">
+</head>
+<body class="inner-page">
+<a class="skip" href="#main" data-en="Skip to content" data-zh="跳至正文">Skip to content</a>
+<noscript>
+<div class="no-js">English content is available below. Enable JavaScript for Chinese and proposal export. / 中文切换和提案导出需要 JavaScript。</div>
+</noscript>
+<header class="site-header">
+<div class="wrap header-inner">
+<a class="brand" href="index.html">
+<svg viewBox="0 0 64 64" fill="none" aria-hidden="true">
+  <g stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M43.5 12.94A24 24 0 1 0 55.63 29.8"/>
+    <path d="M8.35 30C19 30 20 23 30 23S44 30 55.63 29.8"/>
+    <path d="M9.37 42C22 42 24 34 35 34S47 39 55.47 39"/>
+    <path d="M16.5 52.32C27 52 30 45 40 45C44 45 47 47 50.07 49.8"/>
+  </g>
+  <circle cx="53" cy="14" r="4.5" fill="currentColor"/>
+</svg>
+<span>Earth Last Exam</span>
+</a>
+<nav class="nav" aria-label="Main navigation" data-aria-en="Main navigation" data-aria-zh="主导航">
+<a href="index.html#mission" class="nav-link">
+<span data-en="Our work" data-zh="我们的工作" >Our work</span>
+<span aria-hidden="true">↗</span>
+</a>
+<a href="typhoon.html" class="nav-link" aria-current="page">
+<span data-en="The task" data-zh="原创任务" >The task</span>
+<span aria-hidden="true">↗</span>
+</a>
+<a href="benchmark.html" class="nav-link">
+<span data-en="Evaluation" data-zh="评测设计" >Evaluation</span>
+<span aria-hidden="true">↗</span>
+</a>
+<a href="contribute.html" class="nav-cta">
+<span data-en="Join us" data-zh="参与共建" >Join us</span>
+<span aria-hidden="true">↗</span>
+</a>
+</nav>
+<label class="language-switch">
+<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c5 5 5 13 0 18-5-5-5-13 0-18Z"/></svg>
+<span class="sr-only" data-en="Language" data-zh="语言">Language</span>
+<select class="language-select" data-language aria-label="Language" data-aria-en="Language" data-aria-zh="语言">
+<option value="en" lang="en">English</option><option value="zh" lang="zh-CN">简体中文</option><option value="ja" lang="ja">日本語</option><option value="ko" lang="ko">한국어</option><option value="fr" lang="fr">Français</option><option value="es" lang="es">Español</option>
+</select>
+</label>
+</div>
+</header>
+<main id="main" class="wrap">
+<header class="article-head" data-enter>
+<div class="breadcrumbs">
+<a href="index.html">Earth Last Exam</a> / <span data-en="Example task" data-zh="原创例题" >Example task</span>
+</div>
+<div class="eyebrow">
+<i class="dot">
+</i>
+<span data-en="Atmosphere · Original research task" data-zh="大气 · 原创研究任务" >Atmosphere · Original research task</span>
+</div>
+<h1 data-en="Typhoon turns, coastal tracks and landfall uncertainty" data-zh="台风转向、近岸路径与登陆不确定性">Typhoon turns, coastal tracks and landfall uncertainty</h1>
+<p data-en="Explain how environmental flow, vortex structure and diabatic processes shape a typhoon’s path. Use process budgets and controlled experiments to diagnose forecast errors, test the causes and improve predictions across storms." data-zh="解释环境环流、涡旋结构与非绝热过程如何影响台风路径。通过过程收支和受控实验追查预报误差、检验原因，并在不同台风上验证改进。" class="">Explain how environmental flow, vortex structure and diabatic processes shape a typhoon’s path. Use process budgets and controlled experiments to diagnose forecast errors, test the causes and improve predictions across storms.</p>
+<dl class="study-facts">
+<div><dt data-en="Forecast horizon" data-zh="预报范围">Forecast horizon</dt><dd>0–96 <span data-en="hours" data-zh="小时">hours</span></dd></div>
+<div><dt data-en="Paired interventions" data-zh="配对干预">Paired interventions</dt><dd>2 × 2 <span data-en="design" data-zh="试验设计">design</span></dd></div>
+<div><dt data-en="Scientific acceptance" data-zh="科学验收">Scientific acceptance</dt><dd>8 <span data-en="research criteria" data-zh="项研究标准">research criteria</span></dd></div>
+</dl>
+</header>
+<section class="research-notebook" id="reference" aria-labelledby="reference-heading">
+<div class="notebook-heading" data-enter><div><p class="eyebrow"><span  data-en="From our research workspace" data-zh="来自研究工作区">From our research workspace</span></p><h2 id="reference-heading" data-en="Data and experiments so far" data-zh="已有数据与实验">Data and experiments so far</h2></div><p  data-en="These figures come from our work on the typhoon task: calibrated satellite observations, ensemble tracking and a comparison of two center-finding methods. The full task requirements follow below." data-zh="以下图像来自台风任务已完成的工作，包括卫星资料定标、集合路径追踪和两种中心定位方法的比较。完整任务的研究要求列在后文。">These figures come from our work on the typhoon task: calibrated satellite observations, ensemble tracking and a comparison of two center-finding methods. The full task requirements follow below.</p></div>
+<div class="notebook-toolbar"><div class="notebook-tabs" role="tablist" aria-label="From our research workspace" data-aria-en="From our research workspace" data-aria-zh="来自研究工作区">
+<button type="button" role="tab" id="evidence-observation-tab" aria-controls="evidence-observation" aria-selected="true" tabindex="0"><span  data-en="Infrared observations" data-zh="红外观测">Infrared observations</span></button>
+<button type="button" role="tab" id="evidence-tracks-tab" aria-controls="evidence-tracks" aria-selected="false" tabindex="-1"><span  data-en="Ensemble tracks" data-zh="集合路径">Ensemble tracks</span></button>
+<button type="button" role="tab" id="evidence-diagnosis-tab" aria-controls="evidence-diagnosis" aria-selected="false" tabindex="-1"><span  data-en="Center diagnosis" data-zh="中心诊断">Center diagnosis</span></button>
+</div><span class="notebook-stage" data-en="Development experiments" data-zh="开发实验">Development experiments</span></div>
+<div class="notebook-panel" role="tabpanel" id="evidence-observation" aria-labelledby="evidence-observation-tab"><figure class="experiment-figure">
+<button type="button" class="figure-detail-toggle" data-figure-zoom aria-pressed="false"><span aria-hidden="true">⊕</span><span data-en="Inspect figure detail" data-zh="放大查看细节">Inspect figure detail</span></button>
+<div class="experiment-image" tabindex="0"> <img src="images/typhoon-ahi-b13.png" width="3408" height="1944" loading="lazy" decoding="async" alt="Himawari-9 infrared brightness temperature" data-alt-en="Himawari-9 infrared brightness temperature" data-alt-zh="葵花 9 号红外亮温"></div>
+<p class="figure-pan-hint" data-en="Scroll across the figure to inspect its detail." data-zh="横向滑动图像，查看完整细节。">Scroll across the figure to inspect its detail.</p>
+<figcaption><div><h3  data-en="Himawari-9 infrared brightness temperature" data-zh="葵花 9 号红外亮温">Himawari-9 infrared brightness temperature</h3><p  data-en="Himawari-9 AHI band 13, calibrated from the original files. These two scans use the same brightness-temperature scale; the workspace contains 34 complete scans with navigation and observation times." data-zh="葵花 9 号 AHI B13 原始资料定标结果。两幅图使用相同的亮温色标；工作区已保存 34 次完整扫描，并保留导航和观测时间。">Himawari-9 AHI band 13, calibrated from the original files. These two scans use the same brightness-temperature scale; the workspace contains 34 complete scans with navigation and observation times.</p></div><a class="text-link figure-open" href="images/typhoon-ahi-b13.png" target="_blank" rel="noopener noreferrer"><span  data-en="Open the original figure" data-zh="查看完整原图">Open the original figure</span><span aria-hidden="true">↗</span></a></figcaption>
+</figure></div>
+<div class="notebook-panel" role="tabpanel" id="evidence-tracks" aria-labelledby="evidence-tracks-tab" hidden><figure class="experiment-figure">
+<button type="button" class="figure-detail-toggle" data-figure-zoom aria-pressed="false"><span aria-hidden="true">⊕</span><span data-en="Inspect figure detail" data-zh="放大查看细节">Inspect figure detail</span></button>
+<div class="experiment-image" tabindex="0"> <img src="images/typhoon-tracks.png" width="3168" height="2375" loading="lazy" decoding="async" alt="GFS and GEFS tracks over 96 hours" data-alt-en="GFS and GEFS tracks over 96 hours" data-alt-zh="GFS 与 GEFS 的 96 小时路径"></div>
+<p class="figure-pan-hint" data-en="Scroll across the figure to inspect its detail." data-zh="横向滑动图像，查看完整细节。">Scroll across the figure to inspect its detail.</p>
+<figcaption><div><h3  data-en="GFS and GEFS tracks over 96 hours" data-zh="GFS 与 GEFS 的 96 小时路径">GFS and GEFS tracks over 96 hours</h3><p  data-en="GFS and all 31 GEFS members, followed for 96 hours and compared with JMA positions. This development experiment starts from the retrospective JMA center and shows the original, uncalibrated ensemble." data-zh="GFS 与全部 31 个 GEFS 成员的 96 小时轨迹及 JMA 位置误差。这轮开发实验以事后 JMA 中心初始化，展示未经概率校准的原始集合。">GFS and all 31 GEFS members, followed for 96 hours and compared with JMA positions. This development experiment starts from the retrospective JMA center and shows the original, uncalibrated ensemble.</p></div><a class="text-link figure-open" href="images/typhoon-tracks.png" target="_blank" rel="noopener noreferrer"><span  data-en="Open the original figure" data-zh="查看完整原图">Open the original figure</span><span aria-hidden="true">↗</span></a></figcaption>
+</figure></div>
+<div class="notebook-panel" role="tabpanel" id="evidence-diagnosis" aria-labelledby="evidence-diagnosis-tab" hidden><figure class="experiment-figure">
+<button type="button" class="figure-detail-toggle" data-figure-zoom aria-pressed="false"><span aria-hidden="true">⊕</span><span data-en="Inspect figure detail" data-zh="放大查看细节">Inspect figure detail</span></button>
+<div class="experiment-image" tabindex="0"> <img src="images/typhoon-tracker-divergences.png" width="2860" height="2310" loading="lazy" decoding="async" alt="Comparing two storm-center estimates" data-alt-en="Comparing two storm-center estimates" data-alt-zh="两种方法定位的台风中心"></div>
+<p class="figure-pan-hint" data-en="Scroll across the figure to inspect its detail." data-zh="横向滑动图像，查看完整细节。">Scroll across the figure to inspect its detail.</p>
+<figcaption><div><h3  data-en="Comparing two storm-center estimates" data-zh="两种方法定位的台风中心">Comparing two storm-center estimates</h3><p  data-en="The two trackers disagree at 16 member-times. We replayed each selection on the original pressure and wind fields. A smaller position error alone does not tell us whether the tracker followed the same vortex." data-zh="两种追踪器在 16 组成员时次中选择了不同中心。我们已回到原始气压和风场逐一重放。位置误差变小，还需要检查追踪的是否仍是同一个涡旋。">The two trackers disagree at 16 member-times. We replayed each selection on the original pressure and wind fields. A smaller position error alone does not tell us whether the tracker followed the same vortex.</p></div><a class="text-link figure-open" href="images/typhoon-tracker-divergences.png" target="_blank" rel="noopener noreferrer"><span  data-en="Open the original figure" data-zh="查看完整原图">Open the original figure</span><span aria-hidden="true">↗</span></a></figcaption>
+</figure></div>
+<p class="notebook-credit"><span  data-en="Figures by EvolventAI · JMA / NOAA data · GSHHG coastlines" data-zh="EvolventAI 绘制 · JMA / NOAA 资料 · GSHHG 海岸线">Figures by EvolventAI · JMA / NOAA data · GSHHG coastlines</span> · <a href="images/CREDITS.md">JMA / NOAA / GSHHG ↗</a></p>
+<div class="research-state"><div><div class="state-marker" aria-hidden="true">01</div><h3  data-en="Already in the workspace" data-zh="已有资料与实现">Already in the workspace</h3><p  data-en="Real observations and forecast fields, two tracking methods, coast-crossing calculations and numerical scoring. Historical storm references are grouped for development, calibration and evaluation." data-zh="真实观测与预报场、两种追踪方法、海岸穿越计算和数值评分。历史台风参照资料已按开发、校准与评价分组。">Real observations and forecast fields, two tracking methods, coast-crossing calculations and numerical scoring. Historical storm references are grouped for development, calibration and evaluation.</p></div><div><div class="state-marker" aria-hidden="true">02</div><h3  data-en="Work remaining for the full task" data-zh="完整任务尚待完成的部分">Work remaining for the full task</h3><p  data-en="WRF integrations, paired physical interventions and full mechanism analysis. Docker and Harbor trials remain to be run; the research requirements below describe the complete task." data-zh="WRF 积分、配对物理干预与完整机制分析。Docker 和 Harbor 试验尚未运行；下方研究要求描述的是完整任务。">WRF integrations, paired physical interventions and full mechanism analysis. Docker and Harbor trials remain to be run; the research requirements below describe the complete task.</p></div></div>
+<details class="data-availability"><summary><span  data-en="Current data preparation" data-zh="当前数据准备">Current data preparation</span></summary><p  data-en="64 of 66 regional-model input files are saved; the full Khanun set has been decoded. ERA5 has 57 saved variable files, including all ten variables at Khanun initialization. Geography and precipitation inputs remain incomplete." data-zh="区域模式初边值已保存 64／66 份，卡努整组已完成解码。ERA5 已保存 57 个变量文件，包括卡努起报时刻的全部十类变量。模式地理资料和降水资料尚未齐备。">64 of 66 regional-model input files are saved; the full Khanun set has been decoded. ERA5 has 57 saved variable files, including all ten variables at Khanun initialization. Geography and precipitation inputs remain incomplete.</p></details>
+</section>
+<div class="article-layout">
+<aside class="toc" aria-label="On this page" data-aria-en="On this page" data-aria-zh="本页目录">
+<a href="#reference"><span  data-en="Development experiments" data-zh="开发实验">Development experiments</span></a>
+<a href="#brief">
+<span data-en="Research brief" data-zh="研究目标" >Research brief</span>
+</a>
+<a href="#inputs">
+<span data-en="Data &amp; environment" data-zh="数据与环境" >Data &amp; environment</span>
+</a>
+<a href="#experiments">
+<span data-en="Research work" data-zh="研究工作" >Research work</span>
+</a>
+<a href="#mechanisms">
+<span data-en="Atmospheric mechanisms" data-zh="大气过程与机制">Atmospheric mechanisms</span>
+</a>
+<a href="#outputs">
+<span data-en="Deliverables" data-zh="交付产物" >Deliverables</span>
+</a>
+<a href="#evaluation">
+<span data-en="Evaluation" data-zh="验收标准" >Evaluation</span>
+</a>
+<a href="#sources">
+<span data-en="Data sources" data-zh="数据来源" >Data sources</span>
+</a>
+</aside>
+<article class="article">
+<section id="brief">
+<h2 data-en="A method that works across storms" data-zh="在不同台风上验证同一方法">A method that works across storms</h2>
+<nav class="study-route" aria-label="Task reading guide" data-aria-en="Task reading guide" data-aria-zh="任务阅读导引">
+<a href="#inputs"><span class="route-index">01</span><span data-en="Inspect the workspace" data-zh="接手研究环境">Inspect the workspace</span><span aria-hidden="true">↘</span></a>
+<a href="#experiments"><span class="route-index">02</span><span data-en="Test the explanations" data-zh="检验竞争解释">Test the explanations</span><span aria-hidden="true">↘</span></a>
+<a href="#outputs"><span class="route-index">03</span><span data-en="Deliver the evidence" data-zh="交付研究证据">Deliver the evidence</span><span aria-hidden="true">↘</span></a>
+<a href="#evaluation"><span class="route-index">04</span><span data-en="Evaluate the results" data-zh="评价研究结果">Evaluate the results</span><span aria-hidden="true">↘</span></a>
+</nav>
+<p data-en="Take over a regional ensemble project whose largest errors occur around recurvature, weak steering and coast-parallel motion. Establish which failures arise in the atmospheric forecast, which are introduced by the tracker, and which are hidden by probability calibration. Deliver one automated method for 0–96 h track and first-landfall forecasts." data-zh="接手一套区域集合预报工程，其主要误差集中在急转向、弱引导与沿岸移动过程。判断偏差来自大气预报、中心追踪，还是概率校准掩盖了问题。交付一套自动运行的方法，完成 0—96 小时路径与首次登陆预报。">Take over a regional ensemble project whose largest errors occur around recurvature, weak steering and coast-parallel motion. Establish which failures arise in the atmospheric forecast, which are introduced by the tracker, and which are hidden by probability calibration. Deliver one automated method for 0–96 h track and first-landfall forecasts.</p>
+<p data-en="Khanun and Saola are the intensive diagnostic cases. Historical storms form separate development, calibration and evaluation sets, with all cycles of a storm kept together. New-event forecasts use the data available at their initialization time." data-zh="卡努与苏拉用于深入诊断。历史台风分别用于方法开发、参数校准和最终评价，同一台风的所有起报时次放在同一组。新事件预报使用起报时已经发布的资料。">Khanun and Saola are the intensive diagnostic cases. Historical storms form separate development, calibration and evaluation sets, with all cycles of a storm kept together. New-event forecasts use the data available at their initialization time.</p>
+<p data-en="Establish why the storms take different paths, why the inherited forecast fails, and which interventions change the responsible processes. Deliver both a forecast method and a physical explanation that survives tests on another storm. A useful result may also rule out a plausible mechanism or locate a limit to predictability." data-zh="解释台风为什么沿不同路径移动、已有预报为什么出错，以及干预改变了哪些物理过程。交付预报方法，也交付能在另一场台风上接受检验的机制解释。排除一种合理解释，或找出可预报性的边界，同样属于研究结果。">Establish why the storms take different paths, why the inherited forecast fails, and which interventions change the responsible processes. Deliver both a forecast method and a physical explanation that survives tests on another storm. A useful result may also rule out a plausible mechanism or locate a limit to predictability.</p>
+<figure class="pressure-observation" data-enter>
+<div class="figure-topline"><span data-en="03 / The storms through time" data-zh="03 / 风暴的时间演变">03 / The storms through time</span><span class="figure-kind" data-en="JMA retrospective analyses" data-zh="JMA 事后分析">JMA retrospective analyses</span></div>
+<a href="images/typhoon-observed-pressure.svg" target="_blank" rel="noopener noreferrer" aria-label="Open the observed central-pressure figure" data-aria-en="Open the observed central-pressure figure" data-aria-zh="打开中心气压观测图"><img src="images/typhoon-observed-pressure.svg" width="1040" height="440" loading="lazy" decoding="async" alt="JMA archived central-pressure records for Khanun and Saola in 2023, on a common 900–1020 hPa scale. Minimum recorded values are 930 and 920 hPa respectively." data-alt-en="JMA archived central-pressure records for Khanun and Saola in 2023, on a common 900–1020 hPa scale. Minimum recorded values are 930 and 920 hPa respectively." data-alt-zh="JMA 存档的 2023 年卡努与苏拉中心气压，共用 900—1020 hPa 刻度。两者记录中的最低值分别为 930 和 920 hPa。"></a>
+<figcaption><p class="figure-title" data-en="A track is only one part of the evidence" data-zh="路径只是证据的一部分">A track is only one part of the evidence</p><p class="figure-description" data-en="Central-pressure records place the changing track alongside the storm’s evolution. Both panels use the same pressure scale and retain all archived times. These are observations used for context, not forecast scores." data-zh="中心气压记录让路径变化与风暴演变可以对照阅读。两图共用气压刻度，保留全部存档时次；这些资料用于理解研究背景，不是预报成绩。">Central-pressure records place the changing track alongside the storm’s evolution. Both panels use the same pressure scale and retain all archived times. These are observations used for context, not forecast scores.</p><p class="figure-credit">EvolventAI · <a href="https://www.jma.go.jp/jma/jma-eng/jma-center/rsmc-hp-pub-eg/besttrack.html" target="_blank" rel="noopener noreferrer" data-en="JMA best-track archive ↗" data-zh="JMA 最佳路径资料 ↗">JMA best-track archive ↗</a></p></figcaption>
+</figure>
+</section>
+<section id="inputs">
+<h2 data-en="The research environment" data-zh="专业研究环境">The research environment</h2>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>
+<span data-en="Resource" data-zh="资源">Resource</span>
+</th>
+<th>
+<span data-en="What is available" data-zh="具体内容">What is available</span>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GFS / GEFS</td>
+<td>
+<span data-en="GRIB2 initial and boundary fields through 96 h, including the control and perturbed members. The data index describes each cycle, forecast lead, release time, vertical level and grid." data-zh="提供至 96 小时的 GRIB2 初始场与侧边界场，包括控制成员和扰动成员。资料说明列出起报时次、预报时效、发布时间、垂直层次与网格。">GRIB2 initial and boundary fields through 96 h, including the control and perturbed members. The data index describes each cycle, forecast lead, release time, vertical level and grid.</span>
+</td>
+</tr>
+<tr>
+<td>Himawari AHI</td>
+<td>
+<span data-en="Calibrated infrared B13 observations up to the decision cutoff, navigation, scan times and quality masks. Missing scans remain identifiable; spatial remapping must preserve their time and quality information." data-zh="提供决策截止前的 B13 定标红外观测、导航、扫描时间与质量掩膜。缺失扫描须可辨识，空间重采样须保留时间与质量信息。">Calibrated infrared B13 observations up to the decision cutoff, navigation, scan times and quality masks. Missing scans remain identifiable; spatial remapping must preserve their time and quality information.</span>
+</td>
+</tr>
+<tr>
+<td>JMA / IBTrACS</td>
+<td>
+<span data-en="JMA agency-specific development tracks, with IBTrACS identifiers for event matching. The JMA position convention is used consistently; agency intensities are not mixed. Held-out reference tracks remain evaluator-side." data-zh="提供 JMA 开发事件路径，以 IBTrACS 编号对应事件；位置统一遵循 JMA 约定，不混合不同机构的强度记录。保留事件参照路径留在评测端。">JMA agency-specific development tracks, with IBTrACS identifiers for event matching. The JMA position convention is used consistently; agency intensities are not mixed. Held-out reference tracks remain evaluator-side.</span>
+</td>
+</tr>
+<tr>
+<td>ERA5</td>
+<td>
+<span data-en="Retrospective development diagnostics for pressure-level circulation, potential vorticity, shear and steering flow. These fields are unavailable to the forecast entry point for held-out events." data-zh="用于开发事件的事后等压面环流、位涡、切变和引导气流诊断；保留事件的预报入口无法读取这些资料。">Retrospective development diagnostics for pressure-level circulation, potential vorticity, shear and steering flow. These fields are unavailable to the forecast entry point for held-out events.</span>
+</td>
+</tr>
+<tr>
+<td>Terrain / coast / SST</td>
+<td>
+<span data-en="Model geography, land masks, terrain, pre-cutoff SST and a versioned high-resolution coastline segmented along arc length. The plotting basemap is separate from the landfall verification geometry." data-zh="提供模式地理场、陆海掩膜、地形、截止前海温，以及按弧长分段的固定高分辨率海岸线。展示用底图与登陆验收用几何资料分开。">Model geography, land masks, terrain, pre-cutoff SST and a versioned high-resolution coastline segmented along arc length. The plotting basemap is separate from the landfall verification geometry.</span>
+</td>
+</tr>
+<tr>
+<td>Baseline archive</td>
+<td>
+<span data-en="Global-ensemble tracks, original WRF fields and tracking logs, historical bias correction, restart files and notes on completed and failed experiments." data-zh="提供全球集合路径、原始 WRF 场与追踪日志、历史偏差订正、重启文件，以及既有实验和失败运行的记录。">Global-ensemble tracks, original WRF fields and tracking logs, historical bias correction, restart files and notes on completed and failed experiments.</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 data-en="An environment for numerical weather research" data-zh="完整的领域环境">An environment for numerical weather research</h3>
+<p data-en="WRF-ARW / WPS, MPI, NetCDF and ecCodes are installed with local manuals, compiled executables, geography tables and tested namelists. The baseline uses 27 km and 9 km fixed nests with 61 vertical levels. A supplied 3 km nest configuration supports a controlled sensitivity experiment; its domain is selected from pre-cutoff information. Boundary interpolation, restart handling and failure diagnosis are part of the work." data-zh="工作区安装 WRF-ARW / WPS、MPI、NetCDF 与 ecCodes，配齐本地手册、编译程序、地理表和验证过的 namelist。基线采用 27 km / 9 km 固定嵌套与 61 个垂直层，另提供 3 km 嵌套配置用于受控敏感性试验，其区域依据截止前信息选定。侧边界插值、重启处理与故障诊断均属于任务的一部分。">WRF-ARW / WPS, MPI, NetCDF and ecCodes are installed with local manuals, compiled executables, geography tables and tested namelists. The baseline uses 27 km and 9 km fixed nests with 61 vertical levels. A supplied 3 km nest configuration supports a controlled sensitivity experiment; its domain is selected from pre-cutoff information. Boundary interpolation, restart handling and failure diagnosis are part of the work.</p>
+<p data-en="Python tools include xarray, Dask, cfgrib, wrf-python, MetPy, Satpy, Cartopy, SciPy and a geodesic geometry library. Read-only source data, editable analysis code, scratch space, checkpoints and submission outputs occupy separate paths. A full baseline run and a small input-validation case are supplied." data-zh="Python 环境包含 xarray、Dask、cfgrib、wrf-python、MetPy、Satpy、Cartopy、SciPy 与大地测量几何库。原始只读资料、可编辑分析代码、临时空间、检查点及提交产物分别存放，提供完整基线运行和小型输入验证个例。">Python tools include xarray, Dask, cfgrib, wrf-python, MetPy, Satpy, Cartopy, SciPy and a geodesic geometry library. Read-only source data, editable analysis code, scratch space, checkpoints and submission outputs occupy separate paths. A full baseline run and a small input-validation case are supplied.</p>
+<h3 data-en="Fields for process diagnosis" data-zh="为过程诊断准备的资料">Fields for process diagnosis</h3>
+<p data-en="The diagnostic package includes native-grid pressure, geopotential, density, three-dimensional winds, potential temperature and all active water species; surface sensible and latent heat fluxes, radiation and precipitation; and scheme-specific accumulated tendencies. It supplies 10-minute state output, integration-step accumulated budget terms for selected experiments, variable definitions and restart-aware readers. Compare finer sampling where closure is sensitive to output frequency." data-zh="诊断资料包括原生网格上的气压、位势、密度、三维风、位温及当前物理方案中的全部水成物，还包括地表感热与潜热通量、辐射、降水和分物理过程累积倾向。提供 10 分钟状态场、选定试验按积分步累积的收支项、变量定义与支持重启衔接的读取程序；收支对输出频率敏感时，需比较更密的采样。">The diagnostic package includes native-grid pressure, geopotential, density, three-dimensional winds, potential temperature and all active water species; surface sensible and latent heat fluxes, radiation and precipitation; and scheme-specific accumulated tendencies. It supplies 10-minute state output, integration-step accumulated budget terms for selected experiments, variable definitions and restart-aware readers. Compare finer sampling where closure is sensitive to output frequency.</p>
+<p data-en="Development diagnostics also include post-initialization AHI scans and GPM IMERG Final precipitation with quality and sampling information. ERA5 supplies environmental context. Match each observation at its actual spatial and temporal support. Infrared cloud-top temperature describes cloud structure, not latent heating; AHI and IMERG also share retrieval information and are not fully independent evidence. These retrospective products belong to the analysis workspace." data-zh="开发事件的事后分析另配起报后的 AHI 扫描、GPM IMERG Final 降水及其质量与采样说明，并用 ERA5 描述环境环流。按各观测实际的时空分辨率比较。红外云顶亮温描述云系结构，不能直接当作潜热加热；AHI 与 IMERG 还共享部分反演信息，并非完全独立的证据。这些事后资料放在分析工作区。">Development diagnostics also include post-initialization AHI scans and GPM IMERG Final precipitation with quality and sampling information. ERA5 supplies environmental context. Match each observation at its actual spatial and temporal support. Infrared cloud-top temperature describes cloud structure, not latent heating; AHI and IMERG also share retrieval information and are not fully independent evidence. These retrospective products belong to the analysis workspace.</p>
+<p class="note" data-en="Forecast inputs are selected by release time. A cycle published before initialization can supply boundary fields for the next 96 hours. ERA5 and best tracks support retrospective diagnosis; the new-event forecast uses the operational inputs available at initialization." data-zh="预报输入按发布时间选取。起报前已经发布的预报周期，可提供未来 96 小时的侧边界场。ERA5 与最佳路径用于事后诊断，新事件预报则使用起报时已经发布的业务资料。">Forecast inputs are selected by release time. A cycle published before initialization can supply boundary fields for the next 96 hours. ERA5 and best tracks support retrospective diagnosis; the new-event forecast uses the operational inputs available at initialization.</p>
+</section>
+<section id="experiments">
+<h2 data-en="The investigation" data-zh="需要完成的研究">The investigation</h2>
+<p data-en="Investigate how much of the error comes from the atmospheric forecast and how much from extracting a track. The paired experiments below distinguish those explanations. Choose the diagnostics and implementation, revise the method as evidence develops, and use further experiments where a mechanism remains uncertain." data-zh="研究需要分清，大气预报本身和路径提取各自造成了多少误差。以下配对实验用于区分这些解释。具体诊断和实现由 Agent 选择，并根据证据调整方法；机制尚不清楚的地方，需要继续设计实验。">Investigate how much of the error comes from the atmospheric forecast and how much from extracting a track. The paired experiments below distinguish those explanations. Choose the diagnostics and implementation, revise the method as evidence develops, and use further experiments where a mechanism remains uncertain.</p>
+<div class="experiment-design" data-enter>
+<div class="design-heading"><span data-en="CONTROLLED EXPERIMENT" data-zh="受控实验设计">CONTROLLED EXPERIMENT</span><span data-en="Same cases · members · seeds" data-zh="相同事件、成员与种子">Same cases · members · seeds</span></div>
+<div class="table-scroll"><table class="factorial-table">
+<caption data-en="Two interventions, four matched experiments" data-zh="两种干预，四组配对实验">Two interventions, four matched experiments</caption>
+<thead><tr><th scope="col" data-en="Initial state ↓ / Boundary treatment →" data-zh="初始场 ↓ / 边界处理 →">Initial state ↓ / Boundary treatment →</th><th scope="col">B0 <span data-en="Original boundary" data-zh="原边界处理">Original boundary</span></th><th scope="col">B1 <span data-en="Boundary intervention" data-zh="边界干预">Boundary intervention</span></th></tr></thead>
+<tbody><tr><th scope="row">A0 <span data-en="Original initial state" data-zh="原初始场">Original initial state</span></th><td><code>L00</code> <strong data-en="Baseline" data-zh="基线实验">Baseline</strong> <span data-en="Both factors unchanged" data-zh="两项因素均不变">Both factors unchanged</span></td><td><code>L01</code> <strong data-en="Boundary only" data-zh="仅干预边界">Boundary only</strong> <span data-en="Keep the initial state" data-zh="保持初始场不变">Keep the initial state</span></td></tr>
+<tr><th scope="row">A1 <span data-en="Initial-state intervention" data-zh="初始场干预">Initial-state intervention</span></th><td><code>L10</code> <strong data-en="Initial state only" data-zh="仅干预初始场">Initial state only</strong> <span data-en="Keep the boundary treatment" data-zh="保持边界处理不变">Keep the boundary treatment</span></td><td class="joint-cell"><code>L11</code> <strong data-en="Joint intervention" data-zh="联合干预">Joint intervention</strong> <span data-en="Measure the interaction" data-zh="识别交互效应">Measure the interaction</span></td></tr></tbody>
+</table></div>
+<p class="design-equation"><span data-en="Interaction in loss" data-zh="损失的交互项">Interaction in loss</span><code>L11 − L10 − L01 + L00</code></p>
+</div>
+<p data-en="Compute contrasts on paired cases, then aggregate by storm. A negative interaction means the joint loss reduction exceeds the sum of the two individual reductions. Use circulation diagnostics and ablations to explain which physical process produces that difference." data-zh="先在配对个例上计算对比，再按台风汇总。交互项为负，表示联合改进超过两项单独改进之和。结合环流诊断与消融实验，解释这一差异对应的物理过程。">Compute contrasts on paired cases, then aggregate by storm. A negative interaction means the joint loss reduction exceeds the sum of the two individual reductions. Use circulation diagnostics and ablations to explain which physical process produces that difference.</p>
+<ol class="research-steps">
+<li>
+<span class="step-number">01</span>
+<div>
+<h3 data-en="Reconstruct the inherited experiment" data-zh="重建接手的实验">Reconstruct the inherited experiment</h3>
+<p data-en="Reproduce the inherited baseline. Bring time, coordinates, units and accumulated fields onto a consistent basis, then compare the archived tracks with centers extracted from the raw model fields. Describe how any differences affect the forecast." data-zh="复现已有基线，统一时间、坐标、单位与累积变量的处理，再比较存档路径和从原始模式场提取的中心位置，说明这些差异如何影响预报。">Reproduce the inherited baseline. Bring time, coordinates, units and accumulated fields onto a consistent basis, then compare the archived tracks with centers extracted from the raw model fields. Describe how any differences affect the forecast.</p>
+</div>
+</li>
+<li>
+<span class="step-number">02</span>
+<div>
+<h3 data-en="Separate a misplaced vortex from a lost tracker" data-zh="区分涡旋偏移与追踪失锁">Separate a misplaced vortex from a lost tracker</h3>
+<p data-en="Build storm-centered composites using pressure, 850 hPa vorticity, wind symmetry and temporal continuity. Retain competing centers near terrain or interacting systems. Re-run the old and revised trackers on identical fields; then hold the tracker fixed while comparing model configurations." data-zh="结合气压、850 hPa 涡度、风场对称性与时间连续性构建风暴相对合成。近地形或多系统相互作用时保留竞争中心。先在同一模式场上比较新旧追踪器，再固定追踪器比较模式配置。">Build storm-centered composites using pressure, 850 hPa vorticity, wind symmetry and temporal continuity. Retain competing centers near terrain or interacting systems. Re-run the old and revised trackers on identical fields; then hold the tracker fixed while comparing model configurations.</p>
+</div>
+</li>
+<li>
+<span class="step-number">03</span>
+<div>
+<h3 data-en="Locate the mechanism of a failed turn" data-zh="定位转向失败的机制">Locate the mechanism of a failed turn</h3>
+<p data-en="Compare vortex-removed, mass-weighted steering over 850–300 hPa and 700–300 hPa. Examine subtropical-ridge displacement, upstream trough evolution, beta drift and asymmetric convection. Identify when and where the mechanisms diverge, then design an intervention that distinguishes them." data-zh="比较去涡旋后 850—300 hPa 与 700—300 hPa 的质量加权引导气流，检查副热带高压位移、上游槽演变、β 漂移与非对称对流。找出几种解释在时间和空间上的分歧，再设计能够区分它们的干预实验。">Compare vortex-removed, mass-weighted steering over 850–300 hPa and 700–300 hPa. Examine subtropical-ridge displacement, upstream trough evolution, beta drift and asymmetric convection. Identify when and where the mechanisms diverge, then design an intervention that distinguishes them.</p>
+</div>
+</li>
+<li>
+<span class="step-number">04</span>
+<div>
+<h3 data-en="Run a controlled intervention matrix" data-zh="完成受控干预矩阵">Run a controlled intervention matrix</h3>
+<p data-en="Cross an initialization or vortex treatment with a large-scale boundary or nudging treatment in a 2×2 experiment. Use matched members and random seeds, with nudging fields from the available forecasts. Cover both diagnostic storms and another development event; estimate each effect and their interaction." data-zh="以初值或涡旋处理为一条轴、大尺度侧边界或约束处理为另一条轴，使用匹配成员与随机种子开展 2×2 试验。约束场采用当时可用的预报资料。实验覆盖两个诊断台风及另一开发事件，分别估计主效应与交互作用。">Cross an initialization or vortex treatment with a large-scale boundary or nudging treatment in a 2×2 experiment. Use matched members and random seeds, with nudging fields from the available forecasts. Cover both diagnostic storms and another development event; estimate each effect and their interaction.</p>
+</div>
+</li>
+<li>
+<span class="step-number">05</span>
+<div>
+<h3 data-en="Test resolution and structural uncertainty" data-zh="检验分辨率与结构不确定性">Test resolution and structural uncertainty</h3>
+<p data-en="Evaluate the supplied 3 km nest on a coastal development case against its 9 km parent. Keep initialization and eligible boundary data matched. Test a physically motivated microphysics or boundary-layer alternative, measure changes in vortex structure, and distinguish a resolution effect from a changed tracking or coast-crossing rule." data-zh="在近岸开发事件上比较提供的 3 km 嵌套与 9 km 父网格，匹配初值及合格边界资料。检验有物理依据的微物理或边界层方案替代，量化涡旋结构变化，并区分分辨率效应与追踪或海岸穿越规则改变。">Evaluate the supplied 3 km nest on a coastal development case against its 9 km parent. Keep initialization and eligible boundary data matched. Test a physically motivated microphysics or boundary-layer alternative, measure changes in vortex structure, and distinguish a resolution effect from a changed tracking or coast-crossing rule.</p>
+<p data-en="Use one-way nesting (feedback=0), keeping the parent realization fixed. Record the physical settings that change with resolution. For each experiment, save its hypothesis, model and tracker settings, member seeds and diagnostic results." data-zh="分辨率对照采用单向嵌套（feedback=0），保持父网格实现一致，并说明随分辨率调整的物理设置。每次实验保存研究假设、模式与追踪器配置、成员种子和诊断结果。">Use one-way nesting (feedback=0), keeping the parent realization fixed. Record the physical settings that change with resolution. For each experiment, save its hypothesis, model and tracker settings, member seeds and diagnostic results.</p>
+</div>
+</li>
+<li>
+<span class="step-number">06</span>
+<div>
+<h3 data-en="Preserve separate trajectory branches" data-zh="保留独立的轨迹分支">Preserve separate trajectory branches</h3>
+<p data-en="Represent recurving and coast-following branches in a weighted trajectory distribution. Fit bias correction, member weights and bandwidth on development and calibration storms. Quantify how missing scans, ambiguous centers and model failures change the probability assigned to each branch." data-zh="用带权轨迹分布保留转向与沿岸移动的不同分支。用开发及校准台风拟合偏差订正、成员权重和带宽，量化卫星缺测、中心歧义与模式失败对各分支概率的影响。">Represent recurving and coast-following branches in a weighted trajectory distribution. Fit bias correction, member weights and bandwidth on development and calibration storms. Quantify how missing scans, ambiguous centers and model failures change the probability assigned to each branch.</p>
+</div>
+</li>
+<li>
+<span class="step-number">07</span>
+<div>
+<h3 data-en="Derive landfall from the same forecast" data-zh="从同一预报推导登陆">Derive landfall from the same forecast</h3>
+<p data-en="Intersect each weighted trajectory with the fixed coastline and identify its first sea-to-land crossing within 96 h, including island crossings. Resolve segment boundaries and time interpolation deterministically. Produce segment probabilities, conditional crossing times, no-landfall probability and explicit unresolved mass from those same trajectories." data-zh="让带权轨迹与固定海岸线求交，识别 96 小时内首次由海到陆的穿越，包含岛屿登陆。确定性处理海岸分段边界与时间插值，由同一批轨迹生成区段概率、条件登陆时间、未登陆概率和显式未解析质量。">Intersect each weighted trajectory with the fixed coastline and identify its first sea-to-land crossing within 96 h, including island crossings. Resolve segment boundaries and time interpolation deterministically. Produce segment probabilities, conditional crossing times, no-landfall probability and explicit unresolved mass from those same trajectories.</p>
+</div>
+</li>
+<li>
+<span class="step-number">08</span>
+<div>
+<h3 data-en="Test the method on new storms and incomplete observations" data-zh="在新台风与不完整观测下检验方法">Test the method on new storms and incomplete observations</h3>
+<p data-en="Run leave-one-storm-out validation, a missing-scan experiment and a fixed 10% member-loss experiment. Remove each retained intervention in turn to measure its contribution. Save the final code and calibration, then use the same entry point to forecast new storms." data-zh="开展逐台风留一验证、扫描缺失试验与固定 10% 成员损失试验。逐项移除保留的干预，测量各项改动的贡献。保存最终代码与校准参数，再用同一入口完成新台风预报。">Run leave-one-storm-out validation, a missing-scan experiment and a fixed 10% member-loss experiment. Remove each retained intervention in turn to measure its contribution. Save the final code and calibration, then use the same entry point to forecast new storms.</p>
+<p data-en="In each leave-one-storm-out fold, refit bias correction, ensemble weights and bandwidth, and select the interventions using the remaining development storms. Keep every cycle of the omitted storm out of fitting and selection. Save the fold forecasts and failures before fitting the final method." data-zh="每一折逐台风留一验证，都在剩余开发台风上重新拟合偏差订正、成员权重与带宽，并重新选择干预。被留出台风的所有起报时次均不参与拟合和方法选择。先保存各折预报与失败结果，再拟合最终方法。">In each leave-one-storm-out fold, refit bias correction, ensemble weights and bandwidth, and select the interventions using the remaining development storms. Keep every cycle of the omitted storm out of fitting and selection. Save the fold forecasts and failures before fitting the final method.</p>
+</div>
+</li>
+</ol>
+</section>
+<section id="mechanisms">
+<h2 data-en="Explain the atmosphere behind the track" data-zh="从路径变化追到大气过程">Explain the atmosphere behind the track</h2>
+<p data-en="Complete the eight analyses below on Khanun and Saola. Use the same matched runs as the forecast experiments, then test the leading explanation on a third development storm. Start with competing hypotheses and the observations that would distinguish them. The task does not prescribe which mechanism should win." data-zh="在卡努与苏拉上完成以下八项分析，与预报试验使用同一组配对运行，再用第三场开发台风检验主要解释。先写出相互竞争的假设，以及能够区分它们的观测现象。题目不预设哪一种机制一定成立。">Complete the eight analyses below on Khanun and Saola. Use the same matched runs as the forecast experiments, then test the leading explanation on a third development storm. Start with competing hypotheses and the observations that would distinguish them. The task does not prescribe which mechanism should win.</p>
+<div class="mechanism-studies">
+<details class="mechanism-study" open>
+<summary><span class="mechanism-index">M01</span><span data-en="Separate displacement, timing and structural error" data-zh="分清位置、相位与结构误差">Separate displacement, timing and structural error</span><span class="file-toggle" aria-hidden="true"></span></summary>
+<div class="mechanism-body"><p data-en="Resolve position error along and across the reference motion, and separate an early or late turn from a wrong turning direction. Compare sea-level-pressure, low-level circulation and layer-wise vorticity centers. In both Earth-fixed and storm-relative coordinates, diagnose vortex tilt, radius of maximum wind, warm-core depth and azimuthal wavenumber-one asymmetry. Track how these quantities evolve before the forecasts diverge." data-zh="将位置误差分解到参照移动方向的沿轨和横轨分量，区分转向偏早、偏晚与转向方向错误。比较海平面气压中心、低层环流中心和逐层涡度中心。在地球固定与风暴相对坐标中诊断涡旋倾斜、最大风速半径、暖心深度及方位波数 1 非对称分量，追踪预报分歧出现前的结构演变。">Resolve position error along and across the reference motion, and separate an early or late turn from a wrong turning direction. Compare sea-level-pressure, low-level circulation and layer-wise vorticity centers. In both Earth-fixed and storm-relative coordinates, diagnose vortex tilt, radius of maximum wind, warm-core depth and azimuthal wavenumber-one asymmetry. Track how these quantities evolve before the forecasts diverge.</p>
+<p data-en="Use the identical model fields to compare trackers. Report center uncertainty and repeat the diagnostics for plausible alternative centers. Earth-fixed differences reveal displacement; recentered differences reveal structural changes. Keep both, so recentering does not erase a real dynamical error." data-zh="在完全相同的模式场上比较追踪器，给出中心位置的不确定性，并用合理的备选中心重算诊断。地球固定坐标保留位移误差，重新对中心的结果显示结构差异；两者都要保留，以免对中心操作消去真正的动力误差。">Use the identical model fields to compare trackers. Report center uncertainty and repeat the diagnostics for plausible alternative centers. Earth-fixed differences reveal displacement; recentered differences reveal structural changes. Keep both, so recentering does not erase a real dynamical error.</p></div>
+</details>
+<details class="mechanism-study">
+<summary><span class="mechanism-index">M02</span><span data-en="Identify the flow that changes the motion" data-zh="找出改变移动方向的环流">Identify the flow that changes the motion</span><span class="file-toggle" aria-hidden="true"></span></summary>
+<div class="mechanism-body"><p data-en="Diagnose mass-weighted, vortex-removed steering in the 850–300 and 700–300 hPa layers. Compare 200–500 and 300–800 km annuli, with terrain masks and valid-area weights. Follow the subtropical ridge, upstream trough, monsoon circulation and nearby vortices. Separate errors in environmental wind from errors caused by the forecast vortex sampling a different location or depth." data-zh="诊断去涡旋后的 850—300 hPa 与 700—300 hPa 质量加权引导气流，比较 200—500 km、300—800 km 环带，并处理地形遮挡和有效面积权重。追踪副热带高压、上游槽、季风环流和邻近涡旋，区分环境风本身的偏差与预报涡旋处于不同位置、不同深度所造成的取样偏差。">Diagnose mass-weighted, vortex-removed steering in the 850–300 and 700–300 hPa layers. Compare 200–500 and 300–800 km annuli, with terrain masks and valid-area weights. Follow the subtropical ridge, upstream trough, monsoon circulation and nearby vortices. Separate errors in environmental wind from errors caused by the forecast vortex sampling a different location or depth.</p>
+<p data-en="Integrate the steering-error vector over time and compare its direction and magnitude with the developing track error. Diagnose beta-related asymmetry and storm–environment interaction in the remaining motion; the motion-minus-steering residual is not, by definition, beta drift. Test the attribution against a second vortex-removal method and the alternative layers and annuli." data-zh="对引导气流误差矢量作时间积分，比较它与路径误差增长的方向和量级。进一步诊断剩余移动中的 β 效应非对称环流及涡旋—环境相互作用；移动速度减去引导气流的残差，不能直接命名为 β 漂移。用另一种去涡旋方法及不同层次、环带检验归因是否稳定。">Integrate the steering-error vector over time and compare its direction and magnitude with the developing track error. Diagnose beta-related asymmetry and storm–environment interaction in the remaining motion; the motion-minus-steering residual is not, by definition, beta drift. Test the attribution against a second vortex-removal method and the alternative layers and annuli.</p></div>
+</details>
+<details class="mechanism-study">
+<summary><span class="mechanism-index">M03</span><span data-en="Close a potential-vorticity tendency budget" data-zh="完成位涡倾向收支">Close a potential-vorticity tendency budget</span><span class="file-toggle" aria-hidden="true"></span></summary>
+<div class="mechanism-body"><p data-en="Compute Ertel potential vorticity and its azimuthal wavenumber-one tendency in a translating storm frame. Resolve horizontal and vertical advection, diabatic production, friction and the terms required by the chosen moist thermodynamics. Include center motion in the budget. To diagnose propagation independently, restore the Earth-fixed physical tendency and fit its translation component; retain deformation and fitting residuals. Compare the inferred velocity with tracked motion." data-zh="计算 Ertel 位涡及其在随风暴平移坐标中的方位波数 1 倾向，分解水平与垂直平流、非绝热生成、摩擦及所用湿热力学定义要求的其他项。收支中计入中心移动。独立诊断传播速度时，先还原地球固定坐标中的物理倾向，再拟合平移分量，保留形变和拟合残差；将推得的速度与追踪结果比较。">Compute Ertel potential vorticity and its azimuthal wavenumber-one tendency in a translating storm frame. Resolve horizontal and vertical advection, diabatic production, friction and the terms required by the chosen moist thermodynamics. Include center motion in the budget. To diagnose propagation independently, restore the Earth-fixed physical tendency and fit its translation component; retain deformation and fitting residuals. Compare the inferred velocity with tracked motion.</p>
+<p data-en="Calculate budgets on the native staggered grid before remapping. Save the observed tendency, every resolved term and the residual, with consistent averaging intervals. Compare integrated contributions and residuals across radius, height and time; repeat with finer sampling. A process attribution must resolve a change larger than its numerical uncertainty. Treat any unresolved remainder as a remainder, rather than assigning it to heating." data-zh="先在原生交错网格上计算收支，再重映射。保存实际倾向、每个已解析项与残差，统一平均时段；按半径、高度和时间比较积分贡献及残差，并用更密采样复算。归因所依赖的变化必须能从数值不确定性中分辨出来；未闭合部分保留为残差，不归到加热项。">Calculate budgets on the native staggered grid before remapping. Save the observed tendency, every resolved term and the residual, with consistent averaging intervals. Compare integrated contributions and residuals across radius, height and time; repeat with finer sampling. A process attribution must resolve a change larger than its numerical uncertainty. Treat any unresolved remainder as a remainder, rather than assigning it to heating.</p></div>
+</details>
+<details class="mechanism-study">
+<summary><span class="mechanism-index">M04</span><span data-en="Connect shear, convection and vortex evolution" data-zh="连接切变、对流与涡旋演变">Connect shear, convection and vortex evolution</span><span class="file-toggle" aria-hidden="true"></span></summary>
+<div class="mechanism-body"><p data-en="In coordinates aligned with the 200–850 hPa environmental shear, follow tilt orientation, quadrant rainfall, vertical mass flux, lower-tropospheric equivalent potential temperature and midlevel dry-air inflow. Diagnose the height and azimuth of heating, its relation to vortex alignment, and upper-level outflow and ridge changes. Compare AHI cloud organization and IMERG rainfall with the corresponding model fields." data-zh="以 200—850 hPa 环境垂直风切变方向为参照，追踪涡旋倾斜方向、各象限降水、垂直质量通量、低层相当位温与中层干空气流入。诊断加热的高度和方位、它与涡旋垂直对齐的关系，以及高层外流和脊区的变化。用 AHI 云系组织与 IMERG 降水检验对应的模式结构。">In coordinates aligned with the 200–850 hPa environmental shear, follow tilt orientation, quadrant rainfall, vertical mass flux, lower-tropospheric equivalent potential temperature and midlevel dry-air inflow. Diagnose the height and azimuth of heating, its relation to vortex alignment, and upper-level outflow and ridge changes. Compare AHI cloud organization and IMERG rainfall with the corresponding model fields.</p>
+<p data-en="Compare the chronology under matched microphysics or boundary-layer perturbations. Test whether convection reorganizes before the motion changes, or instead responds to a displaced vortex. Include a competing explanation involving environmental steering, and carry the observed time lag into the intervention test. Use a radiative-transfer operator if directly comparing simulated and observed brightness temperatures." data-zh="在配对的微物理或边界层扰动试验中比较先后顺序：是对流先重组、随后移动改变，还是涡旋偏移后对流才响应？同时检验环境引导气流这一竞争解释，将诊断得到的时间滞后带入干预试验。直接比较模拟与观测亮温时，应使用辐射传输观测算子。">Compare the chronology under matched microphysics or boundary-layer perturbations. Test whether convection reorganizes before the motion changes, or instead responds to a displaced vortex. Include a competing explanation involving environmental steering, and carry the observed time lag into the intervention test. Use a radiative-transfer operator if directly comparing simulated and observed brightness temperatures.</p></div>
+</details>
+<details class="mechanism-study">
+<summary><span class="mechanism-index">M05</span><span data-en="Explain the moisture and rainfall response" data-zh="解释水汽供应与降水响应">Explain the moisture and rainfall response</span><span class="file-toggle" aria-hidden="true"></span></summary>
+<div class="mechanism-body"><p data-en="Close a column total-water budget for moving disks of 200, 400 and 600 km radius: storage change, transport through the moving boundary, evaporation, precipitation and residual. Include vapor and all active condensates, the model-top flux and the terrain lower boundary. Separate moisture convergence from depletion of stored water, and diagnose the contribution of storm motion to the apparent transport." data-zh="对半径 200、400、600 km 的随风暴移动圆域，计算整层总水收支：储存变化、穿过移动边界的输送、蒸发、降水和残差。计入水汽与当前方案中的全部凝结物、模式顶通量和地形下边界。区分水汽辐合与储存水的消耗，并诊断风暴平移对表观输送的贡献。">Close a column total-water budget for moving disks of 200, 400 and 600 km radius: storage change, transport through the moving boundary, evaporation, precipitation and residual. Include vapor and all active condensates, the model-top flux and the terrain lower boundary. Separate moisture convergence from depletion of stored water, and diagnose the contribution of storm motion to the apparent transport.</p>
+<p data-en="Evaluate rainfall in geographic and storm-relative coordinates, with the same accumulation interval and observation support. Quantify displacement and intensity errors separately. Follow the nearshore change in moisture inflow and surface enthalpy flux; determine whether a better track also improves the rainfall process, or merely moves a biased rain field into the observed location." data-zh="在地理坐标与风暴相对坐标中分别评价降水，统一累积时段和观测支撑尺度，分别量化位移与强度误差。追踪近岸水汽流入和地表焓通量的变化，判断路径变好后降水过程是否也得到改善，还是仅把有偏的雨区移到了观测位置。">Evaluate rainfall in geographic and storm-relative coordinates, with the same accumulation interval and observation support. Quantify displacement and intensity errors separately. Follow the nearshore change in moisture inflow and surface enthalpy flux; determine whether a better track also improves the rainfall process, or merely moves a biased rain field into the observed location.</p></div>
+</details>
+<details class="mechanism-study">
+<summary><span class="mechanism-index">M06</span><span data-en="Test lower-boundary and terrain mechanisms" data-zh="检验下边界与地形作用">Test lower-boundary and terrain mechanisms</span><span class="file-toggle" aria-hidden="true"></span></summary>
+<div class="mechanism-body"><p data-en="For a coastal development case, run paired SST and terrain sensitivities, changing one factor at a time. Perturb SST by ±0.5 K and ±1 K with a smooth ocean-only mask. Compare the original terrain with a smoothly reduced-height experiment, keeping the coastline and land-use categories fixed and rebuilding balanced initial fields. Save adjustment transients as well as the later response." data-zh="选取近岸开发个例，分别开展海温与地形配对敏感性试验，每次只改变一个因素。海温用仅覆盖海面的平滑掩膜作 ±0.5 K、±1 K 扰动；地形比较原始地形与平滑减高试验，固定海岸线和土地利用类别，并重建平衡初始场。保留初始调整过程及后续响应。">For a coastal development case, run paired SST and terrain sensitivities, changing one factor at a time. Perturb SST by ±0.5 K and ±1 K with a smooth ocean-only mask. Compare the original terrain with a smoothly reduced-height experiment, keeping the coastline and land-use categories fixed and rebuilding balanced initial fields. Save adjustment transients as well as the later response.</p>
+<p data-en="Trace the response through surface fluxes, frictional convergence, vertical motion, vortex structure and track or rainfall change. The imposed-SST runs measure atmospheric sensitivity to a lower boundary; they do not establish an interactive cold-wake feedback. Explain which part of the terrain response survives after the initial adjustment and whether its sign persists across members." data-zh="沿地表通量、摩擦辐合、垂直运动、涡旋结构到路径或降水变化，逐步检查响应。规定海温试验衡量大气对下边界的敏感性，不能据此认定双向海气冷尾流反馈。说明地形响应中哪些部分在初始调整后仍然存在，以及其符号在不同集合成员中是否一致。">Trace the response through surface fluxes, frictional convergence, vertical motion, vortex structure and track or rainfall change. The imposed-SST runs measure atmospheric sensitivity to a lower boundary; they do not establish an interactive cold-wake feedback. Explain which part of the terrain response survives after the initial adjustment and whether its sign persists across members.</p></div>
+</details>
+<details class="mechanism-study">
+<summary><span class="mechanism-index">M07</span><span data-en="Explain the split between trajectory branches" data-zh="解释轨迹分叉与可预报性">Explain the split between trajectory branches</span><span class="file-toggle" aria-hidden="true"></span></summary>
+<div class="mechanism-body"><p data-en="Group members into physical trajectory branches and compare their states before separation. Evaluate ridge position, steering depth, tilt and convective asymmetry as candidate precursors. Re-run matched small perturbations to the initial state and boundary forcing, keeping each family separate. Estimate how branch probabilities and error growth respond to perturbation amplitude and to removal of each retained intervention." data-zh="按物理上不同的轨迹分支对成员分组，比较分叉发生前的状态。检验高压脊位置、引导层深度、涡旋倾斜与对流非对称是否构成先兆；分别重跑初值与边界强迫的小扰动配对试验，保持两类扰动独立。估计分支概率和误差增长如何随扰动幅度及逐项移除干预而变化。">Group members into physical trajectory branches and compare their states before separation. Evaluate ridge position, steering depth, tilt and convective asymmetry as candidate precursors. Re-run matched small perturbations to the initial state and boundary forcing, keeping each family separate. Estimate how branch probabilities and error growth respond to perturbation amplitude and to removal of each retained intervention.</p>
+<p data-en="Choose any branch predictor within the training storms and test it on the omitted storm. Correlations among ensemble members identify a candidate process; targeted reruns test it. Report regimes where the explanation transfers, where it changes sign and where the available observations cannot distinguish the branches. A persistent spread by itself does not establish an intrinsic predictability limit." data-zh="分支预测指标在训练台风内选择，再用于被留出台风。成员间相关性用来提出候选过程，定向重跑用来检验它。报告解释能够迁移、符号反转和现有观测无法区分分支的环流情形。集合离散持续存在本身，不能证明内禀可预报性极限。">Choose any branch predictor within the training storms and test it on the omitted storm. Correlations among ensemble members identify a candidate process; targeted reruns test it. Report regimes where the explanation transfers, where it changes sign and where the available observations cannot distinguish the branches. A persistent spread by itself does not establish an intrinsic predictability limit.</p></div>
+</details>
+<details class="mechanism-study">
+<summary><span class="mechanism-index">M08</span><span data-en="Test a physical explanation beyond the original case" data-zh="让机制解释接受跨事件检验">Test a physical explanation beyond the original case</span><span class="file-toggle" aria-hidden="true"></span></summary>
+<div class="mechanism-body"><p data-en="Before each targeted rerun, state the expected sign, location and timing of the process response and of the track or rainfall response. Use matched controls, at least two perturbation amplitudes, and a check that the intervention changed its intended process. Test the strongest explanation on the third development storm without revising the predicted sign after viewing that result." data-zh="每次定向重跑前，写明预期过程响应与路径或降水响应的符号、位置及时间顺序。使用配对对照、至少两个扰动幅度，并检查干预是否确实改变了目标过程。将最有力的解释用于第三场开发台风，看到结果后不重新改写预期符号。">Before each targeted rerun, state the expected sign, location and timing of the process response and of the track or rainfall response. Use matched controls, at least two perturbation amplitudes, and a check that the intervention changed its intended process. Test the strongest explanation on the third development storm without revising the predicted sign after viewing that result.</p>
+<p data-en="Compare the leading explanation with its strongest alternative, and classify each hypothesis as supported, rejected or unresolved according to the evidence. Report effect sizes, storm-level uncertainty and budget residuals. A null response can reject a predicted effect under the tested conditions when the intervention worked and the response interval lies within a physically meaningful tolerance stated before the rerun. Otherwise, specify the observation or intervention needed to distinguish the remaining explanations." data-zh="将主要解释与最强竞争解释比较，按证据将各假设归为支持、反驳或未解决，报告效应量、台风层面的不确定性和收支残差。确认干预有效后，若响应区间落在重跑前规定的、具有物理意义的容差内，零响应可以否定试验条件下所预期的效应；否则应说明还需要哪一种观测或干预来区分解释。">Compare the leading explanation with its strongest alternative, and classify each hypothesis as supported, rejected or unresolved according to the evidence. Report effect sizes, storm-level uncertainty and budget residuals. A null response can reject a predicted effect under the tested conditions when the intervention worked and the response interval lies within a physically meaningful tolerance stated before the rerun. Otherwise, specify the observation or intervention needed to distinguish the remaining explanations.</p></div>
+</details>
+</div>
+</section>
+<section id="outputs">
+<h2 data-en="The research files" data-zh="交付的研究文件">The research files</h2>
+<p data-en="Deliver a method that forecasts new storms, together with the experiments that explain its improvement. The research files connect individual trajectories, probability estimates and landfall results to the physical interpretation in the report." data-zh="交付一套能够用于新台风的预报方法，并用实验说明改进从何而来。研究文件把成员轨迹、概率估计和登陆结果，与报告中的物理解释联系起来。">Deliver a method that forecasts new storms, together with the experiments that explain its improvement. The research files connect individual trajectories, probability estimates and landfall results to the physical interpretation in the report.</p>
+<dl class="file-inventory" id="research-files">
+<div data-enter><dt><code>data_notes.md</code></dt><dd><span data-en="Data and preparation" data-zh="数据与处理说明">Data and preparation</span></dd></div>
+<div data-enter><dt><code>tracks.parquet</code></dt><dd><span data-en="Ensemble trajectories" data-zh="集合路径">Ensemble trajectories</span></dd></div>
+<div data-enter><dt><code>position_distribution.nc</code></dt><dd><span data-en="Position and uncertainty" data-zh="位置与不确定性">Position and uncertainty</span></dd></div>
+<div data-enter><dt><code>landfall.json</code></dt><dd><span data-en="First landfall" data-zh="首次登陆">First landfall</span></dd></div>
+<div data-enter><dt><code>experiments.parquet</code></dt><dd><span data-en="Experiment notebook" data-zh="实验记录">Experiment notebook</span></dd></div>
+<div data-enter><dt><code>ablation.json + report.md</code></dt><dd><span data-en="Results and interpretation" data-zh="实验结果与解释">Results and interpretation</span></dd></div>
+<div data-enter><dt><code>run_case.sh + environment.lock</code></dt><dd><span data-en="Run the method" data-zh="运行方法">Run the method</span></dd></div>
+<div data-enter><dt><code>diagnostics.nc</code></dt><dd><span data-en="Atmospheric diagnostics" data-zh="大气过程诊断">Atmospheric diagnostics</span></dd></div>
+<div data-enter><dt><code>mechanism_tests.parquet + hypotheses.md</code></dt><dd><span data-en="Process responses and competing hypotheses" data-zh="过程响应与竞争假设">Process responses and competing hypotheses</span></dd></div>
+<div data-enter><dt><code>figures/ + plot_data/</code></dt><dd><span data-en="Figures that explain the result" data-zh="能够解释结论的图件">Figures that explain the result</span></dd></div>
+</dl>
+</section>
+<section id="evaluation">
+<h2 data-en="How the work is evaluated" data-zh="如何评价这项研究">How the work is evaluated</h2>
+<p data-en="A successful solution meets all eight research criteria, earns at least 90/100 overall and at least 80% in each scoring dimension. Compare against three fixed baselines: the global ensemble, the original regional pipeline and historical bias correction. All methods use the same evaluation events." data-zh="完成任务需满足下列八项研究标准，总分达到 90/100，且每个维度达到该维度分值的 80%。对照包括全球集合、原区域流程与历史偏差订正，使用同一组事件比较各方法的表现。">A successful solution meets all eight research criteria, earns at least 90/100 overall and at least 80% in each scoring dimension. Compare against three fixed baselines: the global ensemble, the original regional pipeline and historical bias correction. All methods use the same evaluation events.</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>
+<span data-en="Criterion" data-zh="编号">Criterion</span>
+</th>
+<th>
+<span data-en="Dimension" data-zh="检查对象">Dimension</span>
+</th>
+<th>
+<span data-en="Pass condition" data-zh="通过条件">Pass condition</span>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T01</td>
+<td>
+<span data-en="Integrity" data-zh="资料与产物">Integrity</span>
+</td>
+<td>
+<span data-en="Run every evaluation case with consistent units, coordinates and ensemble members. Probability mass sums to one within 10⁻⁶; unresolved mass is at most 1% per cycle on ordinary inputs. Missing members keep their original probability weight." data-zh="完成全部评测个例，统一单位、坐标和集合成员。概率质量归一化误差 ≤10⁻⁶；正常输入下每次起报的未解析质量 ≤1%，缺失成员保留原有概率权重。">Run every evaluation case with consistent units, coordinates and ensemble members. Probability mass sums to one within 10⁻⁶; unresolved mass is at most 1% per cycle on ordinary inputs. Missing members keep their original probability weight.</span>
+</td>
+</tr>
+<tr>
+<td>T02</td>
+<td>
+<span data-en="Tracks &amp; turns" data-zh="路径与转向">Tracks &amp; turns</span>
+</td>
+<td>
+<span data-en="Storm-balanced track error improves ≥20% overall and ≥10% at each of 24/48/72/96 h against every frozen baseline. Turning-time MAE improves ≥15%, with no increase in missed turns or false turns." data-zh="台风等权轨迹误差相对每个冻结对照总体改善 ≥20%，24/48/72/96 小时各自改善 ≥10%；转向时间 MAE 改善 ≥15%，漏报与误报均不增加。">Storm-balanced track error improves ≥20% overall and ≥10% at each of 24/48/72/96 h against every frozen baseline. Turning-time MAE improves ≥15%, with no increase in missed turns or false turns.</span>
+</td>
+</tr>
+<tr>
+<td>T03</td>
+<td>
+<span data-en="First landfall" data-zh="首次登陆">First landfall</span>
+</td>
+<td>
+<span data-en="All-event multiclass Brier score improves ≥10% against every baseline. Conditional first-crossing time MAE improves ≥15% on the fixed common set; false-landfall rate does not increase." data-zh="全事件多分类 Brier score 相对每个对照改善 ≥10%；固定共同事件集上的首次登陆条件时间 MAE 改善 ≥15%，登陆误报率不升高。">All-event multiclass Brier score improves ≥10% against every baseline. Conditional first-crossing time MAE improves ≥15% on the fixed common set; false-landfall rate does not increase.</span>
+</td>
+</tr>
+<tr>
+<td>T04</td>
+<td>
+<span data-en="Distribution quality" data-zh="分布质量">Distribution quality</span>
+</td>
+<td>
+<span data-en="Spherical-vector energy score improves ≥15% at every lead. The nominal 90% regions cover 85–95% of references at each lead, while their mean area does not exceed the frozen calibrated reference." data-zh="各时效球面向量 energy score 改善 ≥15%；名义 90% 区域在各时效达到 85–95% 覆盖率，平均面积不超过冻结的校准参照。">Spherical-vector energy score improves ≥15% at every lead. The nominal 90% regions cover 85–95% of references at each lead, while their mean area does not exceed the frozen calibrated reference.</span>
+</td>
+</tr>
+<tr>
+<td>T05</td>
+<td>
+<span data-en="Transfer" data-zh="跨事件迁移">Transfer</span>
+</td>
+<td>
+<span data-en="At least 70% of held-out storms improve against the strongest track baseline selected on calibration storms. No difficult group regresses in track, landfall Brier or energy score; the paired storm-bootstrap 95% lower bound for overall track gain is positive." data-zh="至少 70% 保留台风优于在校准集选定的最强路径对照；各困难组的路径、登陆 Brier 和 energy score 均不退步；配对台风 bootstrap 的总体路径改进 95% 置信区间下限 &gt;0。">At least 70% of held-out storms improve against the strongest track baseline selected on calibration storms. No difficult group regresses in track, landfall Brier or energy score; the paired storm-bootstrap 95% lower bound for overall track gain is positive.</span>
+</td>
+</tr>
+<tr>
+<td>T06</td>
+<td>
+<span data-en="Scientific evidence" data-zh="科学证据">Scientific evidence</span>
+</td>
+<td>
+<span data-en="Complete the factorial, tracker, resolution/physics and ablation experiments, plus M01–M08 below. At least one retained intervention has a positive lower 95% bound for paired improvement evaluated on omitted development storms, with intervention selection inside each training fold. Earn at least 32/40 for scientific evidence, with no mechanism dimension below 3/5." data-zh="完成四格因子、追踪器、分辨率/物理敏感性与消融试验，并完成下列 M01—M08。干预在各训练折内选择；至少一项保留干预在被留出的开发台风上，其配对改进 95% 置信区间下限 &gt;0。科学证据 ≥32/40，且每项机制维度 ≥3/5。">Complete the factorial, tracker, resolution/physics and ablation experiments, plus M01–M08 below. At least one retained intervention has a positive lower 95% bound for paired improvement evaluated on omitted development storms, with intervention selection inside each training fold. Earn at least 32/40 for scientific evidence, with no mechanism dimension below 3/5.</span>
+</td>
+</tr>
+<tr>
+<td>T07</td>
+<td>
+<span data-en="Controlled stress" data-zh="受控压力">Controlled stress</span>
+</td>
+<td>
+<span data-en="Under the fixed missing-scan and 10% member-loss inputs, all outputs remain valid, missing weight is explicit and unresolved mass ≤12%. Track error and landfall Brier score, both conditional on resolved mass for this stress check only, degrade by ≤10% relative to the method’s own complete-input result." data-zh="在固定扫描缺失与 10% 成员损失输入下，产物保持有效，缺失权重显式记录，未解析质量 ≤12%；仅此压力检查对已解析质量条件化评价：相对自身完整输入结果，轨迹误差与登陆 Brier score 的劣化均 ≤10%。">Under the fixed missing-scan and 10% member-loss inputs, all outputs remain valid, missing weight is explicit and unresolved mass ≤12%. Track error and landfall Brier score, both conditional on resolved mass for this stress check only, degrade by ≤10% relative to the method’s own complete-input result.</span>
+</td>
+</tr>
+<tr>
+<td>T08</td>
+<td>
+<span data-en="Repeatability" data-zh="重复实验">Repeatability</span>
+</td>
+<td>
+<span data-en="Run the same method on the evaluation storms. With the same software and random seeds, two runs agree within 1 km in position, 10⁻⁴ in probability and 1% in aggregate metrics, with the same research-criterion outcomes." data-zh="在评测台风上运行同一方法。软件环境与随机种子相同时，两次运行的位置差异 ≤1 km、概率差异 ≤10⁻⁴、汇总指标差异 ≤1%，研究标准的判定一致。">Run the same method on the evaluation storms. With the same software and random seeds, two runs agree within 1 km in position, 10⁻⁴ in probability and 1% in aggregate metrics, with the same research-criterion outcomes.</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 data-en="Exactly what is compared" data-zh="明确比较什么">Exactly what is compared</h3>
+<details class="contract-detail">
+<summary>
+<span data-en="Aggregation and uncertainty" data-zh="汇总与不确定性">Aggregation and uncertainty</span>
+</summary>
+<p data-en="At each lead, average eligible cycles within a storm, then average storms equally; the overall track metric weights the four leads equally. Gains are 1 − candidate loss / baseline loss. A zero baseline loss must be matched exactly. Use 10,000 paired bootstrap resamples of complete storms, preserving all cycles. The 95% interval is the 2.5th–97.5th percentile range." data-zh="每个时效先平均台风内的合格起报时次，再对台风等权平均；总体路径指标对四个时效等权。改进定义为 1−候选损失/对照损失；对照为零时须精确达到零。以完整台风为单位进行 10,000 次配对 bootstrap，保留全部起报时次，取 2.5%—97.5% 分位区间。">At each lead, average eligible cycles within a storm, then average storms equally; the overall track metric weights the four leads equally. Gains are 1 − candidate loss / baseline loss. A zero baseline loss must be matched exactly. Use 10,000 paired bootstrap resamples of complete storms, preserving all cycles. The 95% interval is the 2.5th–97.5th percentile range.</p>
+<p data-en="Recompute the ratio of mean losses inside each bootstrap draw; do not average the ratios of individual storms. If any draw has zero baseline loss, report the relative interval as undefined and give the number of such draws. For T05 and T06, use the 95% lower bound of the paired absolute loss reduction in that case. The zero-baseline exact-match requirement still applies." data-zh="每次 bootstrap 抽样都重新计算平均损失之比，不对单个台风的改进比例直接求平均。若抽样中出现对照损失为零，将相对改进区间记为未定义，并报告这样的抽样次数。此时 T05 与 T06 使用配对绝对损失下降的 95% 区间下限；对照为零时须精确达到零的要求仍然适用。">Recompute the ratio of mean losses inside each bootstrap draw; do not average the ratios of individual storms. If any draw has zero baseline loss, report the relative interval as undefined and give the number of such draws. For T05 and T06, use the 95% lower bound of the paired absolute loss reduction in that case. The zero-baseline exact-match requirement still applies.</p>
+</details>
+<details class="contract-detail">
+<summary>
+<span data-en="Track geometry and event groups" data-zh="路径几何与事件分组">Track geometry and event groups</span>
+</summary>
+<p data-en="The point track is the weighted geodesic medoid of the resolved samples. Distances use the fixed reference ellipsoid. A turning event changes bearing by ≥60° over 12 h and retains the new direction for the next 6 h, with both compared 6 h displacements ≥30 km and the following 6 h bearing within 30° of the new bearing. Candidate turn times within 12 h of one another are merged at the largest angle change; reference and forecast turns are matched one-to-one within ±12 h. A missing match receives a 96 h penalty. Coastal cases approach within 200 km of the fixed coastline; weak-steering cases have development-diagnostic steering &lt;3 m s⁻¹ for ≥12 h. Event grouping is performed from references, never from a submitted forecast." data-zh="点轨迹采用已解析样本的带权大地测量 medoid，距离使用固定参考椭球。转向事件定义为 12 小时内方位角变化 ≥60°、新方向在随后 6 小时持续，且用于比较的两段 6 小时位移均 ≥30 km、随后 6 小时的方位角偏离新方向 ≤30°。相距 12 小时以内的候选转向合并至角度变化最大处，参照与预报转向在 ±12 小时内一一匹配，漏配记 96 小时惩罚。近岸组距固定海岸线 ≤200 km；弱引导组在事后诊断中引导速度 &lt;3 m/s 持续 ≥12 小时。分组依参照资料确定，不依赖提交预报。">The point track is the weighted geodesic medoid of the resolved samples. Distances use the fixed reference ellipsoid. A turning event changes bearing by ≥60° over 12 h and retains the new direction for the next 6 h, with both compared 6 h displacements ≥30 km and the following 6 h bearing within 30° of the new bearing. Candidate turn times within 12 h of one another are merged at the largest angle change; reference and forecast turns are matched one-to-one within ±12 h. A missing match receives a 96 h penalty. Coastal cases approach within 200 km of the fixed coastline; weak-steering cases have development-diagnostic steering &lt;3 m s⁻¹ for ≥12 h. Event grouping is performed from references, never from a submitted forecast.</p>
+</details>
+<details class="contract-detail">
+<summary>
+<span data-en="Probability and unresolved members" data-zh="概率与未解析成员">Probability and unresolved members</span>
+</summary>
+<p data-en="Map positions to 3-D unit vectors scaled by Earth’s mean radius. Compute weighted energy score with Euclidean chord distances in that space. With unresolved weight u, the loss is (1−u) × conditional energy score + u × Earth’s diameter. Track loss is (1−u) × medoid error + u × half the circumference. If no mass resolves, only the failure term remains. The landfall Brier vector includes every coast segment, no landfall and unresolved; the observed unresolved category is always zero." data-zh="位置映射到按地球平均半径缩放的三维单位向量，以该空间中的欧氏弦长计算带权 energy score。设未解析权重为 u，损失为 (1−u)×条件 energy score + u×地球直径；路径损失为 (1−u)×medoid 误差 + u×半周长。全部未解析时只计失败项。登陆 Brier 向量包含所有区段、未登陆与未解析类别，观测的未解析类别恒为零。">Map positions to 3-D unit vectors scaled by Earth’s mean radius. Compute weighted energy score with Euclidean chord distances in that space. With unresolved weight u, the loss is (1−u) × conditional energy score + u × Earth’s diameter. Track loss is (1−u) × medoid error + u × half the circumference. If no mass resolves, only the failure term remains. The landfall Brier vector includes every coast segment, no landfall and unresolved; the observed unresolved category is always zero.</p>
+</details>
+<details class="contract-detail">
+<summary>
+<span data-en="Landfall and timing" data-zh="登陆与时间">Landfall and timing</span>
+</summary>
+<p data-en="The first sea-to-land crossing determines the landfall category; no crossing within 96 h is also an outcome. Use the supplied coastline and geodesic interpolation at steps of at most 15 min, assigning boundary ties in the published segment order. Evaluate timing on the fixed set of observed landfalls where all three baselines give at least 5% landfall probability. Candidate probability below 5% receives a 96 h timing loss. Report the conditional median landfall time and its MAE." data-zh="首次由海到陆的几何穿越确定登陆类别，96 小时内未登陆也是一种结果。采用提供的海岸线，以不超过 15 分钟的步长进行大地测量插值，边界并列按公布的区段顺序归属。时间评价采用固定事件集：实际发生登陆，且三个对照均给出至少 5% 的登陆概率。候选方法的登陆概率低于 5% 时计 96 小时时间损失；其余报告条件中位登陆时间与 MAE。">The first sea-to-land crossing determines the landfall category; no crossing within 96 h is also an outcome. Use the supplied coastline and geodesic interpolation at steps of at most 15 min, assigning boundary ties in the published segment order. Evaluate timing on the fixed set of observed landfalls where all three baselines give at least 5% landfall probability. Candidate probability below 5% receives a 96 h timing loss. Report the conditional median landfall time and its MAE.</p>
+</details>
+<details class="contract-detail">
+<summary>
+<span data-en="Coverage and sharpness" data-zh="覆盖率与集中程度">Coverage and sharpness</span>
+</summary>
+<p data-en="Construct 90% highest-density regions on the supplied equal-area grid using the bandwidth selected during development. Include every forecast case and the full grid, with its cell areas. Compare the mean area with the global ensemble calibrated on the separate calibration storms; use those saved parameters throughout evaluation." data-zh="在提供的等面积网格上，使用开发阶段选定的带宽构建 90% 最高密度区域。评价覆盖全部预报个例与完整网格，并采用相应的网格面积。面积参照为在独立校准台风上完成校准的全球集合，评测期间使用同一组参数。">Construct 90% highest-density regions on the supplied equal-area grid using the bandwidth selected during development. Include every forecast case and the full grid, with its cell areas. Compare the mean area with the global ensemble calibrated on the separate calibration storms; use those saved parameters throughout evaluation.</p>
+</details>
+<p data-en="The missing-scan test removes the final two hours of pre-cutoff infrared observations; the member-loss test removes 10% of members by a supplied deterministic mask, rounded up, with weights recorded before the mask. Apply the two tests separately. The ordinary-input gates T01–T05 are evaluated on complete supplied inputs; T07 uses conditional skill on resolved mass and reports the penalized losses separately." data-zh="扫描缺失试验移除截止前最后两小时红外观测；成员损失试验按提供的确定性掩膜移除 10% 成员，数量向上取整，权重在掩膜施加前记录。两项试验分别运行。T01—T05 在完整提供的输入上评价；T07 检查已解析质量的条件预报水平，并另报含失败惩罚的损失。">The missing-scan test removes the final two hours of pre-cutoff infrared observations; the member-loss test removes 10% of members by a supplied deterministic mask, rounded up, with weights recorded before the mask. Apply the two tests separately. The ordinary-input gates T01–T05 are evaluated on complete supplied inputs; T07 uses conditional skill on resolved mass and reports the penalized losses separately.</p>
+<p data-en="Evaluation uses a fixed set of forecast cases, with one record per case. The candidate and all baselines share the same storms at each lead, including recorded failed runs. The chord-based position score uses R = 6371.0088 km; multicategory Brier loss is the sum of squared errors across all declared categories." data-zh="评测使用固定的预报个例集，每个个例对应一条记录；候选方法与各对照在每个时效使用同一组台风，并保留运行失败的记录。弦长位置评分取 R = 6371.0088 km；多分类 Brier 损失为所有类别平方误差之和。">Evaluation uses a fixed set of forecast cases, with one record per case. The candidate and all baselines share the same storms at each lead, including recorded failed runs. The chord-based position score uses R = 6371.0088 km; multicategory Brier loss is the sum of squared errors across all declared categories.</p>
+<p data-en="Report the paired loss difference for every storm, the sample size of each difficult group and the overall improvement after omitting each storm in turn. Use this sensitivity analysis to describe how widely the improvement holds. Omitting an already predicted storm measures influence; it does not replace refitted leave-one-storm-out validation." data-zh="报告每个台风的配对损失差、各困难组的样本量，以及依次移除单个台风后的总体改进。用这些敏感性结果说明改进适用于多大范围。移除已有预报中的一个台风衡量的是影响程度，不能代替重新拟合的逐台风留一验证。">Report the paired loss difference for every storm, the sample size of each difficult group and the overall improvement after omitting each storm in turn. Use this sensitivity analysis to describe how widely the improvement holds. Omitting an already predicted storm measures influence; it does not replace refitted leave-one-storm-out validation.</p>
+<p data-en="Reference uncertainty is part of the report: recompute geometric landfall labels for the nine combinations of ±0.05° and zero latitude/longitude offsets, reflecting the archived coordinate precision. Report which classifications or timing conclusions change. Nominal scoring uses the published central coordinates and the fixed interpolation rule." data-zh="报告还须检查参照不确定性：对经纬度分别取 −0.05°、0、+0.05° 的九种组合，重新计算几何登陆标签，以反映存档坐标精度；说明哪些类别或时间结论发生改变。正式计分采用发布的中心坐标与固定插值规则。">Reference uncertainty is part of the report: recompute geometric landfall labels for the nine combinations of ±0.05° and zero latitude/longitude offsets, reflecting the archived coordinate precision. Report which classifications or timing conclusions change. Nominal scoring uses the published central coordinates and the fixed interpolation rule.</p>
+<h3 data-en="Rubric: 100 points" data-zh="评分：100 分">Rubric: 100 points</h3>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>
+<span data-en="Dimension" data-zh="维度">Dimension</span>
+</th>
+<th>
+<span data-en="Points" data-zh="分值">Points</span>
+</th>
+<th>
+<span data-en="Evidence used" data-zh="依据">Evidence used</span>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<span data-en="Observation handling and ensemble consistency" data-zh="观测处理与集合一致性">Observation handling and ensemble consistency</span>
+</td>
+<td>10</td>
+<td>
+<span data-en="Five components, 2 points each: forecast-time data selection, units and grids, member correspondence, probability conservation and agreement between the research files." data-zh="起报时的资料选取、单位与网格、成员对应关系、概率守恒、研究文件之间的一致性，各 2 分。">Five components, 2 points each: forecast-time data selection, units and grids, member correspondence, probability conservation and agreement between the research files.</span>
+</td>
+</tr>
+<tr>
+<td>
+<span data-en="Track, turns and transfer" data-zh="路径、转向与迁移">Track, turns and transfer</span>
+</td>
+<td>20</td>
+<td>
+<span data-en="Overall gain, all-lead gain, turning gain, storm coverage, and group/interval criteria: 4 points each." data-zh="总体改进、全部时效改进、转向改进、台风覆盖比例、分组/置信区间要求，各 4 分。">Overall gain, all-lead gain, turning gain, storm coverage, and group/interval criteria: 4 points each.</span>
+</td>
+</tr>
+<tr>
+<td>
+<span data-en="Landfall" data-zh="登陆">Landfall</span>
+</td>
+<td>10</td>
+<td>
+<span data-en="Brier improvement: 4 points. Timing improvement and false-landfall control: 3 points each." data-zh="Brier 改进 4 分；时间改进、登陆误报控制各 3 分。">Brier improvement: 4 points. Timing improvement and false-landfall control: 3 points each.</span>
+</td>
+</tr>
+<tr>
+<td>
+<span data-en="Probability" data-zh="概率">Probability</span>
+</td>
+<td>10</td>
+<td>
+<span data-en="Energy-score improvement: 4 points. Coverage and area: 3 points each." data-zh="Energy score 改进 4 分；覆盖率、面积各 3 分。">Energy-score improvement: 4 points. Coverage and area: 3 points each.</span>
+</td>
+</tr>
+<tr>
+<td>
+<span data-en="Scientific evidence" data-zh="科学证据">Scientific evidence</span>
+</td>
+<td>40</td>
+<td>
+<span data-en="Eight mechanism dimensions, M01–M08, worth 5 points each. Score the process diagnosis, the test of competing explanations and the evidence for transfer using the anchors below." data-zh="M01—M08 八项机制维度各 5 分。按下列分档标准评价过程诊断、竞争解释检验与迁移证据。">Eight mechanism dimensions, M01–M08, worth 5 points each. Score the process diagnosis, the test of competing explanations and the evidence for transfer using the anchors below.</span>
+</td>
+</tr>
+<tr>
+<td>
+<span data-en="Incomplete inputs and repeatability" data-zh="缺测条件与重复实验">Incomplete inputs and repeatability</span>
+</td>
+<td>10</td>
+<td>
+<span data-en="Missing satellite scans and lost ensemble members: 3 points each. Repeated experiments: 4 points." data-zh="卫星扫描缺失、集合成员损失各 3 分；重复实验 4 分。">Missing satellite scans and lost ensemble members: 3 points each. Repeated experiments: 4 points.</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="caption" data-en="Numerical criteria retain their stated thresholds. Scientific evidence contributes 40 points and is scored separately from forecast skill. A persuasive mechanism analysis cannot replace a failed forecast requirement, and improved forecast scores cannot replace a missing physical explanation." data-zh="数值条目仍按原有阈值评价。科学证据占 40 分，与预报表现分别计分；机制分析与预报改进两部分都需要完成。">Numerical criteria retain their stated thresholds. Scientific evidence contributes 40 points and is scored separately from forecast skill. A persuasive mechanism analysis cannot replace a failed forecast requirement, and improved forecast scores cannot replace a missing physical explanation.</p>
+
+<h3 data-en="Scientific evidence: eight dimensions, 40 points" data-zh="科学证据：八项维度，40 分">Scientific evidence: eight dimensions, 40 points</h3>
+<p data-en="M01–M08 correspond to the eight analyses above. Each receives an integer score from 0 to 5. Two domain reviewers score the saved diagnostics and rerunnable experiments independently; a third resolves differences greater than one point or disagreements about passing. Numerical scripts check the submitted fields and effects; scientific reviewers assess the physical inference." data-zh="M01—M08 与上面的八项分析一一对应，每项取 0—5 的整数分。两名领域评审分别根据保存的诊断和可重跑试验评分；相差超过 1 分或对是否通过有分歧时，由第三名评审裁定。数值程序检查诊断场与效应量，领域评审判断物理推论是否成立。">M01–M08 correspond to the eight analyses above. Each receives an integer score from 0 to 5. Two domain reviewers score the saved diagnostics and rerunnable experiments independently; a third resolves differences greater than one point or disagreements about passing. Numerical scripts check the submitted fields and effects; scientific reviewers assess the physical inference.</p>
+<p data-en="0: no usable analysis. 1: descriptive plots only. 2: quantitative diagnosis, but the proposed cause has not been distinguished from an alternative. 3: a reproducible comparison tests the alternative, with effect size, uncertainty and a conclusion bounded by the evidence." data-zh="0 分：没有可用分析。1 分：只有描述性图件。2 分：完成定量诊断，但尚未区分所提原因与竞争解释。3 分：可复现比较检验了竞争解释，给出效应量与不确定性，结论与证据相称。">0: no usable analysis. 1: descriptive plots only. 2: quantitative diagnosis, but the proposed cause has not been distinguished from an alternative. 3: a reproducible comparison tests the alternative, with effect size, uncertainty and a conclusion bounded by the evidence.</p>
+<p data-en="4: the comparison also survives the relevant center, sampling, budget, observation or perturbation sensitivities. 5: a physical prediction is confirmed by a separate paired rerun or storm, or a successful intervention yields a response interval entirely within a prespecified physical tolerance, rejecting the predicted effect under those conditions. Score the inference, not whether the initially favored hypothesis survives." data-zh="4 分：上述比较还通过了对应的中心定义、采样、收支、观测或扰动敏感性检验。5 分：物理预期在独立配对重跑或另一场台风中得到验证；或者有效干预后的响应区间完全落在预先规定的物理容差内，否定了相应条件下所预期的效应。按推论质量评分，不按最初看好的假设是否成立评分。">4: the comparison also survives the relevant center, sampling, budget, observation or perturbation sensitivities. 5: a physical prediction is confirmed by a separate paired rerun or storm, or a successful intervention yields a response interval entirely within a prespecified physical tolerance, rejecting the predicted effect under those conditions. Score the inference, not whether the initially favored hypothesis survives.</p>
+<p data-en="For M01–M02, show that the error decomposition and flow attribution survive changes in coordinates and steering definitions. M03 and M05 require an explicit residual and convergence evidence. M04 and M06 require an observed or simulated process response preceding the proposed consequence. M07 tests branch predictions outside the fitting storm; M08 tests the stated causal chain and its strongest alternative." data-zh="M01—M02 要求误差分解与环流归因经得起坐标和引导气流定义的变化；M03、M05 要求显式残差和收敛证据；M04、M06 要求观测或模拟中的过程响应先于所解释的后果；M07 在拟合台风之外检验分支预期；M08 检验提出的因果链及其最强竞争解释。">For M01–M02, show that the error decomposition and flow attribution survive changes in coordinates and steering definitions. M03 and M05 require an explicit residual and convergence evidence. M04 and M06 require an observed or simulated process response preceding the proposed consequence. M07 tests branch predictions outside the fitting storm; M08 tests the stated causal chain and its strongest alternative.</p>
+</section>
+<section id="sources">
+<h2 data-en="Data and software references" data-zh="数据与软件来源" >Data and software references</h2>
+<ul>
+<li>
+<a href="https://registry.opendata.aws/noaa-gfs-bdp-pds/" target="_blank" rel="noopener noreferrer">NOAA GFS ↗</a>
+</li>
+<li>
+<a href="https://registry.opendata.aws/noaa-gefs/" target="_blank" rel="noopener noreferrer">NOAA GEFS ↗</a>
+</li>
+<li>
+<a href="https://ds.data.jma.go.jp/mscweb/en/himawari89/space_segment/spsg_ahi.html" target="_blank" rel="noopener noreferrer">Himawari AHI ↗</a>
+</li>
+<li>
+<a href="https://gpm.nasa.gov/data/imerg" target="_blank" rel="noopener noreferrer">GPM IMERG ↗</a>
+</li>
+<li>
+<a href="https://www.ncei.noaa.gov/products/international-best-track-archive" target="_blank" rel="noopener noreferrer">IBTrACS ↗</a>
+</li>
+<li>
+<a href="https://cds.climate.copernicus.eu/datasets/reanalysis-era5-pressure-levels?tab=overview" target="_blank" rel="noopener noreferrer">ERA5 ↗</a>
+</li>
+<li>
+<a href="https://www2.mmm.ucar.edu/wrf/site/documentation/users_guide/wps.html" target="_blank" rel="noopener noreferrer">WRF / WPS ↗</a>
+</li>
+</ul>
+</section>
+<div class="callout" style="padding-top:0">
+<div>
+<h2 data-en="A task from your field?" data-zh="你所在领域有什么难题？" >A task from your field?</h2>
+<p data-en="Bring a research question or an existing workflow." data-zh="欢迎提供研究问题或已有工作流。" class="">Bring a research question or an existing workflow.</p>
+</div>
+<a href="contribute.html" class="button">
+<span data-en="Contribute" data-zh="参与供题" >Contribute</span> <span aria-hidden="true">↗</span>
+</a>
+</div>
+</article>
+</div>
+</main>
+<footer class="site-footer">
+<div class="wrap">
+<div class="footer-main">
+<div>
+<a class="brand" href="index.html">
+<svg viewBox="0 0 64 64" fill="none" aria-hidden="true">
+  <g stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M43.5 12.94A24 24 0 1 0 55.63 29.8"/>
+    <path d="M8.35 30C19 30 20 23 30 23S44 30 55.63 29.8"/>
+    <path d="M9.37 42C22 42 24 34 35 34S47 39 55.47 39"/>
+    <path d="M16.5 52.32C27 52 30 45 40 45C44 45 47 47 50.07 49.8"/>
+  </g>
+  <circle cx="53" cy="14" r="4.5" fill="currentColor"/>
+</svg>
+<span>Earth Last Exam</span>
+</a>
+<p data-en="Earth Last Exam · An EvolventAI research project" data-zh="Earth Last Exam · 由 EvolventAI 发起">Earth Last Exam · An EvolventAI research project</p>
+</div>
+<div class="footer-links">
+<a href="benchmark.html#task-files" class="text-link">
+<span data-en="Task file list" data-zh="任务文件清单">Task file list</span>
+<span aria-hidden="true">↗</span>
+</a>
+<a href="benchmark.html" class="text-link">
+<span data-en="How we evaluate" data-zh="如何评测" >How we evaluate</span>
+<span aria-hidden="true">↗</span>
+</a>
+<a href="typhoon.html" class="text-link">
+<span data-en="Explore the example" data-zh="了解原创例题" >Explore the example</span>
+<span aria-hidden="true">↗</span>
+</a>
+<a href="contribute.html?route=advisor#proposal" class="text-link">
+<span data-en="Become an advisor" data-zh="担任学术顾问" >Become an advisor</span>
+<span aria-hidden="true">↗</span>
+</a>
+<a href="contribute.html" class="text-link">
+<span data-en="Contribute a task" data-zh="提供研究任务" >Contribute a task</span>
+<span aria-hidden="true">↗</span>
+</a>
+<a data-github-link hidden target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+</div>
+</div>
+<div class="footer-bottom">
+<a href="https://evolvent.co/" class="footer-parent" target="_blank" rel="noopener noreferrer" aria-label="EvolventAI company website" data-aria-en="EvolventAI company website" data-aria-zh="EvolventAI 公司网站">
+<img class="evolvent-symbol" src="evolvent-symbol.svg" width="22" height="48" alt="" aria-hidden="true">
+<img class="evolvent-wordmark" src="evolvent-wordmark.svg" width="174" height="24" alt="EvolventAI" data-alt-en="EvolventAI" data-alt-zh="EvolventAI">
+<span aria-hidden="true">↗</span>
+</a>
+<span data-en="An invitation to build the benchmark together." data-zh="邀请研究者一起定义科研 Agent 的能力标准。" >An invitation to build the benchmark together.</span>
+</div>
+</div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760">
+  <defs><symbol id="mark" viewBox="0 0 64 64" fill="none">  <g stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M43.5 12.94A24 24 0 1 0 55.63 29.8"/>
+    <path d="M8.35 30C19 30 20 23 30 23S44 30 55.63 29.8"/>
+    <path d="M9.37 42C22 42 24 34 35 34S47 39 55.47 39"/>
+    <path d="M16.5 52.32C27 52 30 45 40 45C44 45 47 47 50.07 49.8"/>
+  </g>
+  <circle cx="53" cy="14" r="4.5" fill="currentColor"/>
+</symbol></defs>
+  <rect width="1200" height="760" fill="#fbfcf8"/>
+  <g font-family="Segoe UI, Arial, sans-serif" fill="#122b28">
+    <text x="60" y="72" font-size="30" font-weight="600">Earth Last Exam</text>
+    <text x="1140" y="68" text-anchor="end" font-size="12" letter-spacing="2.5" fill="#56685e">THE EARTH MARK</text>
+    <path d="M60 101H1140" stroke="#d8e0d7"/>
+    <rect x="60" y="140" width="524" height="420" rx="8" fill="#eaf0e4"/>
+    <rect x="616" y="140" width="524" height="420" rx="8" fill="#122b28"/>
+    <use href="#mark" x="222" y="194" width="200" height="200" color="#285d4e"/>
+    <use href="#mark" x="778" y="194" width="200" height="200" color="#d9f99d"/>
+    <text x="322" y="452" text-anchor="middle" font-size="24" font-weight="650" letter-spacing="1">EARTH LAST EXAM</text>
+    <text x="878" y="452" text-anchor="middle" font-size="24" font-weight="650" letter-spacing="1" fill="#eff5e9">EARTH LAST EXAM</text>
+    <text x="322" y="483" text-anchor="middle" font-size="11" letter-spacing="2" fill="#56685e">RESEARCH AGENT BENCHMARK</text>
+    <text x="878" y="483" text-anchor="middle" font-size="11" letter-spacing="2" fill="#bbccc2">RESEARCH AGENT BENCHMARK</text>
+    <text x="60" y="624" font-size="11" letter-spacing="2" fill="#56685e">EARTH / STRATA / OBSERVATION</text>
+    <use href="#mark" x="60" y="650" width="24" height="24" color="#285d4e"/>
+    <use href="#mark" x="112" y="646" width="32" height="32" color="#285d4e"/>
+    <use href="#mark" x="174" y="638" width="48" height="48" color="#285d4e"/>
+    <circle cx="911" cy="664" r="12" fill="#122b28"/>
+    <circle cx="947" cy="664" r="12" fill="#285d4e"/>
+    <circle cx="983" cy="664" r="12" fill="#d9f99d"/>
+    <text x="1140" y="669" text-anchor="end" font-size="12" fill="#56685e">ELE identity</text>
+  </g>
+</svg>
